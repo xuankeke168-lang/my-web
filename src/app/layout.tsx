@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "我的个人作品集",
-  description: "展示我的作品和想法",
+  title: "AI共学 - 与AI一起学习，一起成长",
+  description:
+    "分享AI学习经验、实操工具和优质课程，汇聚一批热爱AI、想要用AI提升效率的共学者",
 };
 
 export default function RootLayout({
@@ -29,9 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <main className="pt-16">
-          {children}
-        </main>
+        <main className="pt-16">{children}</main>
       </body>
     </html>
   );
