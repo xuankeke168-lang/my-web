@@ -11,7 +11,7 @@ export default function About() {
             关于我
           </h1>
           <p className="text-zinc-600 dark:text-zinc-400">
-            十余年深耕油田财务管理，目前专注数智化转型实践
+            十余年深耕企业财务管理，目前专注数智化转型实践
           </p>
         </div>
 
@@ -27,14 +27,14 @@ export default function About() {
 
             <div className="space-y-4 text-zinc-600 dark:text-zinc-400 leading-relaxed">
               <p>
-                我是一名在油田企业从事财务信息化工作十余年的老兵。从最初的会计电算化到如今的数智化转型，我亲历了油田财务信息化从起步到成熟的整个历程。
+                我是一名在企业从事财务信息化工作十余年的老兵。从最初的会计电算化到如今的数智化转型，我亲历了财务信息化从起步到成熟的整个历程。
               </p>
               <p>
                 这些年做过不少项目：SAP
                 ERP实施、财务共享中心建设、预算管理系统上线、管理会计报表体系搭建……踩过的坑、填过的坑，都变成了宝贵的经验。
               </p>
               <p>
-                现在想把这些实战经验整理出来，分享给同样在油田财务领域奋斗的同行们。
+                现在想把这些实战经验整理出来，分享给同样在财务领域奋斗的同行们。
                 希望我的分享能帮你少走一些弯路。
               </p>
             </div>
@@ -52,7 +52,7 @@ export default function About() {
                   desc: "目标成本、作业成本、标准成本体系设计",
                 },
                 { name: "管理会计", desc: "阿米巴经营、利润中心、内部市场化" },
-                { name: "ERP系统实施", desc: "SAP PS/FI/CO模块，深耕油田业务" },
+                { name: "ERP系统实施", desc: "SAP PS/FI/CO模块，深耕企业业务" },
                 { name: "数智化转型", desc: "业财一体、数据治理、智能化应用" },
               ].map((skill) => (
                 <div
@@ -79,7 +79,7 @@ export default function About() {
               {[
                 "预算成本管理",
                 "管理会计报表",
-                "油田ERP深化应用",
+                "ERP深化应用",
                 "数智化转型",
                 "RPA智能报销",
                 "AI+财务场景",
@@ -102,43 +102,43 @@ export default function About() {
               <span>📬</span> 交流探讨
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-              如果你有油田财务信息化方面的问题，或者想交流经验，欢迎联系我。
+              如果你有财务信息化方面的问题，或者想交流经验，欢迎联系我。
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* 微信公众号 */}
               <div className="text-center p-4 bg-zinc-50 dark:bg-zinc-700/50 rounded-xl">
-                <div className="w-32 h-32 mx-auto mb-3 rounded-lg overflow-hidden">
+                <div className="w-40 h-40 mx-auto mb-3 rounded-lg overflow-hidden">
                   <Image
                     src="/wechat-gzh-qr.png"
                     alt="微信公众号"
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-cover"
+                    width={160}
+                    height={160}
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <p className="font-medium text-zinc-900 dark:text-white">
                   微信公众号
                 </p>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                  油田财务数智化
+                  财务数智化
                 </p>
               </div>
               {/* 个人微信 */}
               <div className="text-center p-4 bg-zinc-50 dark:bg-zinc-700/50 rounded-xl">
-                <div className="w-32 h-32 mx-auto mb-3 rounded-lg overflow-hidden">
+                <div className="w-40 h-40 mx-auto mb-3 rounded-lg overflow-hidden">
                   <Image
                     src="/wechat-personal.png"
                     alt="个人微信"
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-cover"
+                    width={160}
+                    height={160}
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <p className="font-medium text-zinc-900 dark:text-white">
                   个人微信
                 </p>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                  加好友请备注油田财务
+                  加好友请备注财务数智化
                 </p>
               </div>
             </div>
