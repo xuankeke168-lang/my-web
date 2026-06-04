@@ -6,7 +6,7 @@ export default function Academy() {
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
-      <div className="max-w-3xl mx-auto px-6 py-12">
+      <div className="max-w-4xl mx-auto px-6 py-12">
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-zinc-900 dark:text-white mb-4">
@@ -15,6 +15,69 @@ export default function Academy() {
           <p className="text-lg text-zinc-600 dark:text-zinc-400">
             AI学习路径、实战教程、经验分享，从入门到精通
           </p>
+        </div>
+
+        {/* 学习专区入口 */}
+        <div className="mb-12">
+          <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-6">
+            📚 学习专区
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* ERP学习专区 */}
+            <Link
+              href="/erp"
+              className="group p-6 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl text-white hover:shadow-xl transition-all"
+            >
+              <div className="text-3xl mb-3">🏭</div>
+              <h3 className="text-xl font-bold mb-2">油田ERP学习站</h3>
+              <p className="text-blue-100 text-sm mb-4">
+                系统学习SAP ERP各大模块：FI/CO/SD/PP/PM/MM/PS/QM/EHS
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs">
+                <span className="px-2 py-1 bg-white/20 rounded-full">
+                  10大模块
+                </span>
+                <span className="px-2 py-1 bg-white/20 rounded-full">
+                  核心逻辑
+                </span>
+                <span className="px-2 py-1 bg-white/20 rounded-full">
+                  术语表
+                </span>
+              </div>
+            </Link>
+
+            {/* 业财融合知识库（完整版） */}
+            <Link
+              href="/academy/yecai"
+              className="group p-6 bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-2xl text-white hover:shadow-xl transition-all"
+            >
+              <div className="text-3xl mb-3">📊</div>
+              <h3 className="text-xl font-bold mb-2">
+                油气开采业财融合知识库（完整版）
+              </h3>
+              <p className="text-emerald-100 text-sm mb-4">
+                19 个完整专题 · 原文未精简 · 覆盖钻井至销售全流程
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs">
+                <span className="px-2 py-1 bg-white/20 rounded-full">
+                  19个完整专题
+                </span>
+                <span className="px-2 py-1 bg-white/20 rounded-full">
+                  原文未精简
+                </span>
+                <span className="px-2 py-1 bg-white/20 rounded-full">
+                  案例+表格
+                </span>
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        {/* AI学习文章 */}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-6">
+            📝 AI与财务数字化文章
+          </h2>
         </div>
 
         {/* Posts List */}

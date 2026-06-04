@@ -1,0 +1,230 @@
+interface Topic {
+  id: number;
+  title: string;
+  slug: string;
+  subtitle: string;
+  tags: string[];
+  module: string;
+  moduleIcon: string;
+  time?: string;
+  level?: string;
+}
+
+const topics: Topic[] = [
+  {
+    id: 1,
+    title: "钻井工程管理与成本控制",
+    slug: "zuanjing-guanli",
+    subtitle: "揭开油气井诞生的神秘面纱",
+    tags: ["资本支出", "日费制/总包制"],
+    module: "油田开发基础",
+    moduleIcon: "📐",
+  },
+  {
+    id: 2,
+    title: "采油工程与生产管理",
+    slug: "caiyou-guanli",
+    subtitle: "让地下的原油流向地面",
+    tags: ["举升方式", "能耗成本"],
+    module: "油田开发基础",
+    moduleIcon: "📐",
+  },
+  {
+    id: 3,
+    title: "油气集输与处理工艺",
+    slug: "qiyou-jishu",
+    subtitle: "从井口到外输的旅程",
+    tags: ["商品量", "损耗率"],
+    module: "油田开发基础",
+    moduleIcon: "📐",
+  },
+  {
+    id: 4,
+    title: "油田设备管理与折旧策略",
+    slug: "shebei-guanli",
+    subtitle: "资产管理的财务视角",
+    tags: ["折旧", "设备更新"],
+    module: "油田开发基础",
+    moduleIcon: "📐",
+  },
+  {
+    id: 5,
+    title: "油田安全环保管理",
+    slug: "anquan-huanjing",
+    subtitle: "红线之内的责任与成本",
+    tags: ["HSE", "安全成本"],
+    module: "油田开发基础",
+    moduleIcon: "📐",
+  },
+  {
+    id: 6,
+    title: "油气勘探技术与管理",
+    slug: "tanqiu-jishu",
+    subtitle: "寻找地下的宝藏",
+    tags: ["风险勘探", "成功率"],
+    module: "勘探与储量",
+    moduleIcon: "🔍",
+  },
+  {
+    id: 7,
+    title: "油气储量资产管理",
+    slug: "chuliang-zichan",
+    subtitle: "地下的财富如何计量",
+    tags: ["SEC储量", "折耗"],
+    module: "勘探与储量",
+    moduleIcon: "🔍",
+  },
+  {
+    id: 8,
+    title: "修井作业与井筒维护",
+    slug: "xiujing-zuoye",
+    subtitle: "让老井重焕青春",
+    tags: ["小修/大修", "免修期"],
+    module: "生产作业与成本",
+    moduleIcon: "🛠️",
+  },
+  {
+    id: 9,
+    title: "油田注水开发与管理",
+    slug: "zhushui-kaifa",
+    subtitle: "油田开发的能量补给",
+    tags: ["电耗", "水处理"],
+    module: "生产作业与成本",
+    moduleIcon: "🛠️",
+  },
+  {
+    id: 10,
+    title: "稠油热采技术与管理",
+    slug: "chongyou-recai",
+    subtitle: "用热量融化沉睡的油藏",
+    tags: ["SAGD", "蒸汽吞吐"],
+    module: "生产作业与成本",
+    moduleIcon: "🛠️",
+  },
+  {
+    id: 11,
+    title: "油田化学与提高采收率",
+    slug: "huaxue-caishoulv",
+    subtitle: "用化学手段唤醒沉睡的油",
+    tags: ["聚合物驱", "EOR"],
+    module: "生产作业与成本",
+    moduleIcon: "🛠️",
+  },
+  {
+    id: 12,
+    title: "天然气开发与处理管理",
+    slug: "tianranqi-kaifa",
+    subtitle: "从气藏到市场的价值实现",
+    tags: ["管输费", "气价机制"],
+    module: "生产作业与成本",
+    moduleIcon: "🛠️",
+  },
+  {
+    id: 13,
+    title: "油田生产运行与调度管理",
+    slug: "shengchan-yunxing",
+    subtitle: "让复杂的系统有序运转",
+    tags: ["躺井率", "生产时率"],
+    module: "运营与信息化",
+    moduleIcon: "⚡",
+  },
+  {
+    id: 14,
+    title: "油田信息化建设与智能化",
+    slug: "xinxihua-jianhua",
+    subtitle: "数字时代的油田管理",
+    tags: ["数字化", "业财一体"],
+    module: "运营与信息化",
+    moduleIcon: "⚡",
+  },
+  {
+    id: 15,
+    title: "油田数据治理与财务分析",
+    slug: "shuju-zhili",
+    subtitle: "从数据到决策的桥梁",
+    tags: ["数据治理", "财务分析", "数字化"],
+    module: "运营与信息化",
+    moduleIcon: "⚡",
+  },
+  {
+    id: 16,
+    title: "油田人力资源与人工成本管理",
+    slug: "rengli-zhongjie",
+    subtitle: "最复杂的成本之一——人的价值",
+    tags: ["用工模式", "人均效能"],
+    module: "资产与风险管理",
+    moduleIcon: "💎",
+  },
+  {
+    id: 17,
+    title: "油气资产减值与处置管理",
+    slug: "jianzhi-chuzhi",
+    subtitle: "让不良资产退出历史舞台",
+    tags: ["减值测试", "DCF"],
+    module: "资产与风险管理",
+    moduleIcon: "💎",
+  },
+  {
+    id: 18,
+    title: "油价风险管理与其他商品衍生品",
+    slug: "youjia-fengxian",
+    subtitle: "在波动中寻找确定性",
+    tags: ["套期保值", "期货期权"],
+    module: "资产与风险管理",
+    moduleIcon: "💎",
+  },
+  {
+    id: 19,
+    title: "油气开发项目经济评价",
+    slug: "xiangmu-jingjipingjia",
+    subtitle: "用财务语言评估技术方案",
+    tags: ["NPV/IRR", "敏感性"],
+    module: "资产与风险管理",
+    moduleIcon: "💎",
+  },
+  {
+    id: 20,
+    title: "塔河油田提高采收率技术",
+    slug: "tahe-caishoulv",
+    subtitle: "特殊油气藏的开发实践",
+    tags: ["提高采收率", "塔河实践"],
+    module: "资产与风险管理",
+    moduleIcon: "💎",
+  },
+];
+
+const modules = [
+  {
+    name: "油田开发基础",
+    icon: "📐",
+    description: "钻井·采油·集输·设备·安全",
+    accent: "var(--accent-gold)",
+  },
+  {
+    name: "勘探与储量",
+    icon: "🔍",
+    description: "勘探技术·储量评估",
+    accent: "var(--accent-cyan)",
+  },
+  {
+    name: "生产作业与成本",
+    icon: "🛠️",
+    description: "修井·注水·稠油热采·化学驱",
+    accent: "var(--accent-green)",
+  },
+  {
+    name: "运营与信息化",
+    icon: "⚡",
+    description: "生产调度·信息化建设",
+    accent: "var(--accent-purple)",
+  },
+  {
+    name: "资产与风险管理",
+    icon: "💎",
+    description: "减值测试·油价风险·项目评价",
+    accent: "var(--accent-amber)",
+  },
+];
+
+export { topics, modules };
+export type { Topic };
