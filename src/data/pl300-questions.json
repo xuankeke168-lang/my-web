@@ -2,4321 +2,2881 @@
   {
     "id": 1,
     "module": "数据准备",
-    "skill": "Power Query清洗",
+    "skill": "Power Query 编辑器",
     "difficulty": "初级",
-    "question": "导入后需要删除无用列、替换空值、转换日期类型，最推荐在哪完成？",
+    "question": "删除列、替换空值、转换日期类型，最推荐在哪个阶段完成？",
     "options": [
+      "Folder 文件夹连接器",
+      "Power BI 数据流",
       "Power Query 编辑器",
-      "报表视图",
-      "Power BI Service 仪表板",
-      "DAX FORMAT函数"
+      "使用区域设置更改类型"
     ],
-    "answer": "A",
-    "explanation": "Power Query 的转换步骤会在刷新时重复执行，适合做数据准备。",
-    "practice": "导入CSV，完成列类型、空值、删除列三步。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“Power Query 编辑器”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“Power Query 编辑器”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 2,
     "module": "数据准备",
-    "skill": "合并查询Merge",
+    "skill": "DirectQuery 模式",
     "difficulty": "中级",
-    "question": "按CustomerID把客户名称带入销售表，并保留销售表所有行，应选哪种合并？",
+    "question": "业务要求近实时查询源系统且不导入全量数据，应选择哪种连接模式？",
     "options": [
-      "Left Outer",
-      "Inner",
-      "Right Anti",
-      "Full Outer"
+      "Power BI 数据流",
+      "列数据类型",
+      "DirectQuery 模式",
+      "统一大小写"
     ],
-    "answer": "A",
-    "explanation": "Left Outer保留左表全部行，并返回右表匹配记录。",
-    "practice": "用客户表和销售表做Left Outer合并。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“DirectQuery 模式”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“DirectQuery 模式”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 3,
     "module": "数据准备",
-    "skill": "追加查询Append",
-    "difficulty": "初级",
-    "question": "多个结构一致的月度销售表需要纵向合并，应使用？",
+    "skill": "Import 模式",
+    "difficulty": "中级",
+    "question": "报表交互速度优先、数据量可控且允许定时刷新，应选哪种模式？",
     "options": [
-      "Append Queries",
-      "Merge Queries",
-      "Drillthrough",
-      "RLS"
+      "Import 模式",
+      "数据类别为城市",
+      "本地数据网关",
+      "查询折叠中断"
     ],
     "answer": "A",
-    "explanation": "Append用于纵向追加行；Merge用于横向匹配列。",
-    "practice": "把1月和2月销售表追加为一张表。"
+    "explanation": "该题考查数据准备中的“Import 模式”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“Import 模式”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 4,
     "module": "数据准备",
-    "skill": "逆透视Unpivot",
-    "difficulty": "中级",
-    "question": "1月到12月分别为12列，想变成月份和金额两列，应使用？",
+    "skill": "Left Outer 合并",
+    "difficulty": "初级",
+    "question": "按 CustomerID 将客户字段带入销售表并保留所有销售行，应选哪种合并？",
     "options": [
-      "逆透视列",
-      "透视列",
-      "分组依据",
-      "字段参数"
+      "RangeStart 和 RangeEnd",
+      "数据类别为城市",
+      "检查自动 Changed Type 步骤",
+      "Left Outer 合并"
     ],
-    "answer": "A",
-    "explanation": "逆透视可将宽表转为适合分析的长表。",
-    "practice": "对月度宽表执行Unpivot。"
+    "answer": "D",
+    "explanation": "该题考查数据准备中的“Left Outer 合并”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“Left Outer 合并”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 5,
     "module": "数据准备",
-    "skill": "查询折叠",
-    "difficulty": "高级",
-    "question": "SQL源上筛选行和选择列，为提升刷新效率应尽量保持？",
+    "skill": "Append Queries",
+    "difficulty": "中级",
+    "question": "多个结构一致的月度销售表需要纵向合并，应使用？",
     "options": [
-      "查询折叠",
-      "双向筛选",
-      "书签状态",
-      "手机布局"
+      "组合文件转换函数",
+      "禁用加载",
+      "Append Queries",
+      "条件列"
     ],
-    "answer": "A",
-    "explanation": "查询折叠把转换下推到源系统，减少传输和本地处理。",
-    "practice": "右键步骤查看本机查询。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“Append Queries”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“Append Queries”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 6,
     "module": "数据准备",
-    "skill": "参数",
+    "skill": "逆透视列 Unpivot",
     "difficulty": "中级",
-    "question": "开发、测试、生产环境切换服务器名，最适合使用？",
+    "question": "预算表中 1月到12月是列，想变成月份和金额两列，应使用？",
     "options": [
-      "Power Query 参数",
-      "页面筛选器",
-      "卡片视觉对象",
-      "度量值表"
+      "逆透视列 Unpivot",
+      "Power Query 编辑器",
+      "使用区域设置更改类型",
+      "透视列 Pivot"
     ],
     "answer": "A",
-    "explanation": "参数适合管理路径、服务器、日期范围等可变输入。",
-    "practice": "创建ServerName参数并用于数据源。"
+    "explanation": "该题考查数据准备中的“逆透视列 Unpivot”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“逆透视列 Unpivot”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 7,
     "module": "数据准备",
-    "skill": "隐私级别",
-    "difficulty": "中级",
-    "question": "合并组织内部数据和公开Web数据时，隐私级别主要用于？",
+    "skill": "透视列 Pivot",
+    "difficulty": "初级",
+    "question": "属性-值长表需要把属性展开为多个列，应使用？",
     "options": [
-      "防止不同数据源之间不当泄露",
-      "控制图表颜色",
-      "自动创建关系",
-      "提高DAX速度"
+      "删除重复项",
+      "禁用加载",
+      "透视列 Pivot",
+      "列数据类型"
     ],
-    "answer": "A",
-    "explanation": "隐私级别控制数据源隔离和组合规则。",
-    "practice": "设置Public/Organizational/Private。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“透视列 Pivot”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“透视列 Pivot”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 8,
     "module": "数据准备",
-    "skill": "列质量",
-    "difficulty": "初级",
-    "question": "想查看有效值、错误值、空值比例，应启用？",
+    "skill": "列数据类型",
+    "difficulty": "中级",
+    "question": "金额列被识别为文本导致无法求和，第一步修正什么？",
     "options": [
-      "列质量",
-      "书签窗格",
-      "同步切片器",
-      "血缘视图"
+      "Folder 文件夹连接器",
+      "RangeStart 和 RangeEnd",
+      "Power Query 编辑器",
+      "列数据类型"
     ],
-    "answer": "A",
-    "explanation": "列质量/列分布/列配置文件用于数据探查。",
-    "practice": "开启列质量检查错误。"
+    "answer": "D",
+    "explanation": "该题考查数据准备中的“列数据类型”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“列数据类型”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 9,
     "module": "数据准备",
-    "skill": "数据网关",
+    "skill": "使用区域设置更改类型",
     "difficulty": "中级",
-    "question": "本地SQL Server数据发布到Service后需要计划刷新，通常需要？",
+    "question": "31/12/2025 日期文本识别错误，应使用哪种转换？",
     "options": [
-      "本地数据网关",
-      "发布到Web",
-      "移动布局",
-      "Q&A视觉对象"
+      "Trim/Clean 清理文本",
+      "使用区域设置更改类型",
+      "自定义列",
+      "查询折叠"
     ],
-    "answer": "A",
-    "explanation": "Service访问本地数据源通常依赖On-premises data gateway。",
-    "practice": "安装网关并配置数据源映射。"
+    "answer": "B",
+    "explanation": "该题考查数据准备中的“使用区域设置更改类型”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“使用区域设置更改类型”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 10,
     "module": "数据准备",
-    "skill": "增量刷新",
-    "difficulty": "高级",
-    "question": "大事实表只刷新最近数据、保留历史分区，应配置？",
+    "skill": "列质量",
+    "difficulty": "初级",
+    "question": "要查看有效值、错误值、空值比例，应启用？",
     "options": [
-      "增量刷新",
-      "书签",
-      "钻取",
-      "选择窗格"
+      "列质量",
+      "隐私级别",
+      "Power BI 数据流",
+      "Power Query 参数"
     ],
     "answer": "A",
-    "explanation": "增量刷新用RangeStart/RangeEnd等策略减少刷新量。",
-    "practice": "创建日期参数并配置增量刷新。"
+    "explanation": "该题考查数据准备中的“列质量”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“列质量”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 11,
     "module": "数据准备",
-    "skill": "数据类型",
-    "difficulty": "初级",
-    "question": "金额列被识别为文本，无法求和，最先应修正？",
+    "skill": "列分布",
+    "difficulty": "中级",
+    "question": "要看唯一值、重复值和类别分布，应启用？",
     "options": [
-      "列数据类型",
-      "页面背景",
-      "工作区角色",
-      "按钮动作"
+      "列分布",
+      "逆透视列 Unpivot",
+      "Append Queries",
+      "示例文件转换查询"
     ],
     "answer": "A",
-    "explanation": "数值计算依赖正确数据类型。",
-    "practice": "把金额列改为小数。"
+    "explanation": "该题考查数据准备中的“列分布”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“列分布”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 12,
     "module": "数据准备",
-    "skill": "区域设置",
+    "skill": "保留错误",
     "difficulty": "中级",
-    "question": "日期文本31/12/2025在当前区域识别错误，应使用？",
+    "question": "日期转换后产生 Error，想只看错误行，应使用？",
     "options": [
-      "使用区域设置更改类型",
-      "创建KPI",
-      "同步切片器",
-      "隐藏字段"
+      "网关数据源映射",
+      "保留错误",
+      "数据类别为城市",
+      "删除重复项"
     ],
-    "answer": "A",
-    "explanation": "区域设置可按指定文化解析日期和数字。",
-    "practice": "用en-GB区域转换日期。"
+    "answer": "B",
+    "explanation": "该题考查数据准备中的“保留错误”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“保留错误”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 13,
-    "module": "数据建模与DAX",
-    "skill": "星型模型",
-    "difficulty": "中级",
-    "question": "销售事实表连接客户、产品、日期维表，通常推荐的模型是？",
+    "module": "数据准备",
+    "skill": "替换错误",
+    "difficulty": "初级",
+    "question": "数值转换错误需要用 0 替代，应使用？",
     "options": [
-      "星型模型",
-      "所有表互相多对多",
-      "一个超宽表且无维表",
-      "删除日期表"
+      "预览样本不是完整数据",
+      "替换错误",
+      "列质量",
+      "删除重复项"
     ],
-    "answer": "A",
-    "explanation": "星型模型清晰、性能好，事实表在多端，维表在一端。",
-    "practice": "建立事实表到维表的一对多关系。"
+    "answer": "B",
+    "explanation": "该题考查数据准备中的“替换错误”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“替换错误”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 14,
-    "module": "数据建模与DAX",
-    "skill": "日期表",
+    "module": "数据准备",
+    "skill": "替换值",
     "difficulty": "中级",
-    "question": "使用YTD、去年同期等时间智能函数，日期表应满足？",
+    "question": "地区名称不统一，需要把华东区改为华东，应使用？",
     "options": [
-      "连续日期并标记为日期表",
-      "只包含有交易的日期",
-      "必须来自Excel",
-      "只能有年份列"
+      "替换值",
+      "DirectQuery 模式",
+      "检查自动 Changed Type 步骤",
+      "保留重复项"
     ],
     "answer": "A",
-    "explanation": "时间智能依赖连续日期列和正确日期表。",
-    "practice": "创建Calendar并Mark as date table。"
+    "explanation": "该题考查数据准备中的“替换值”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“替换值”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 15,
-    "module": "数据建模与DAX",
-    "skill": "CALCULATE",
-    "difficulty": "高级",
-    "question": "CALCULATE最核心的作用是？",
+    "module": "数据准备",
+    "skill": "Trim/Clean 清理文本",
+    "difficulty": "中级",
+    "question": "客户编号有前后空格导致匹配失败，应先执行？",
     "options": [
-      "修改筛选上下文后计算表达式",
-      "导入数据",
-      "发布报表",
-      "替换空值"
+      "数据源设置",
+      "预览样本不是完整数据",
+      "Trim/Clean 清理文本",
+      "引用 Reference"
     ],
-    "answer": "A",
-    "explanation": "CALCULATE会在新的筛选上下文中计算表达式。",
-    "practice": "写区域销售额度量。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“Trim/Clean 清理文本”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“Trim/Clean 清理文本”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 16,
-    "module": "数据建模与DAX",
-    "skill": "度量值",
+    "module": "数据准备",
+    "skill": "统一大小写",
     "difficulty": "初级",
-    "question": "总销售额需要随切片器动态变化，应创建？",
+    "question": "产品编码有 abc 与 ABC，合并前应先做？",
     "options": [
-      "度量值Measure",
-      "计算列",
-      "Power Query参数",
-      "书签"
+      "逆透视列 Unpivot",
+      "统一大小写",
+      "查询折叠",
+      "组合文件转换函数"
     ],
-    "answer": "A",
-    "explanation": "度量值根据筛选上下文动态计算。",
-    "practice": "Total Sales = SUM(Sales[Amount])。"
+    "answer": "B",
+    "explanation": "该题考查数据准备中的“统一大小写”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“统一大小写”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 17,
-    "module": "数据建模与DAX",
-    "skill": "计算列",
+    "module": "数据准备",
+    "skill": "条件列",
     "difficulty": "中级",
-    "question": "每个订单行固定保存数量*单价，适合创建？",
+    "question": "按销售额生成大单/普通分类且不写代码，应使用？",
     "options": [
-      "计算列",
-      "工作区",
-      "应用",
-      "仪表板"
+      "条件列",
+      "RangeStart 和 RangeEnd",
+      "数据类别为城市",
+      "列数据类型"
     ],
     "answer": "A",
-    "explanation": "计算列按行计算并存储，适合行级属性。",
-    "practice": "创建Line Amount计算列。"
+    "explanation": "该题考查数据准备中的“条件列”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“条件列”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 18,
-    "module": "数据建模与DAX",
-    "skill": "RELATED",
+    "module": "数据准备",
+    "skill": "自定义列",
     "difficulty": "中级",
-    "question": "销售表已有到产品表的关系，在销售表计算列取产品类别，应使用？",
+    "question": "刷新时生成收入减成本的毛利列，应使用？",
     "options": [
-      "RELATED",
-      "LOOKUPVALUE一定更优",
-      "TOTALYTD",
-      "REMOVEFILTERS"
+      "本地数据网关",
+      "Power BI 数据流",
+      "引用 Reference",
+      "自定义列"
     ],
-    "answer": "A",
-    "explanation": "RELATED通过现有关系获取一端表字段。",
-    "practice": "用RELATED获取产品类别。"
+    "answer": "D",
+    "explanation": "该题考查数据准备中的“自定义列”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“自定义列”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 19,
-    "module": "数据建模与DAX",
-    "skill": "多对多",
-    "difficulty": "高级",
-    "question": "事实表之间通过非唯一键直接相连导致重复计算，推荐？",
+    "module": "数据准备",
+    "skill": "Group By 分组依据",
+    "difficulty": "初级",
+    "question": "查询阶段按产品汇总销售额减少加载行数，应使用？",
     "options": [
-      "创建共享维度或桥表",
-      "开启所有双向关系",
-      "删除事实表",
-      "使用饼图"
+      "查询折叠",
+      "Group By 分组依据",
+      "RangeStart 和 RangeEnd",
+      "数据源凭据"
     ],
-    "answer": "A",
-    "explanation": "多对多场景应明确建模，优先共享维度/桥表。",
-    "practice": "创建唯一客户桥表。"
+    "answer": "B",
+    "explanation": "该题考查数据准备中的“Group By 分组依据”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“Group By 分组依据”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 20,
-    "module": "数据建模与DAX",
-    "skill": "SUMX",
-    "difficulty": "高级",
-    "question": "逐行计算Quantity*Price后再求和，应使用？",
+    "module": "数据准备",
+    "skill": "删除重复项",
+    "difficulty": "中级",
+    "question": "客户维表 CustomerID 必须唯一但存在重复，应先？",
     "options": [
-      "SUMX",
-      "SUM",
-      "COUNT",
-      "FORMAT"
+      "检查自动 Changed Type 步骤",
+      "条件列",
+      "删除重复项",
+      "查询折叠中断"
     ],
-    "answer": "A",
-    "explanation": "SUMX是迭代函数，逐行计算表达式后聚合。",
-    "practice": "Total = SUMX(Sales, Sales[Qty]*Sales[Price])。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“删除重复项”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“删除重复项”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 21,
-    "module": "数据建模与DAX",
-    "skill": "DIVIDE",
+    "module": "数据准备",
+    "skill": "保留重复项",
     "difficulty": "中级",
-    "question": "计算利润率并避免除以零错误，推荐？",
+    "question": "要找出哪些 CustomerID 重复，应使用？",
     "options": [
-      "DIVIDE",
-      "普通/永远安全",
-      "RELATED",
-      "APPEND"
+      "数据源凭据",
+      "保留重复项",
+      "Power BI 数据流",
+      "基于整个数据集做列配置文件"
     ],
-    "answer": "A",
-    "explanation": "DIVIDE可处理除数为0的替代结果。",
-    "practice": "Margin = DIVIDE([Profit],[Sales])。"
+    "answer": "B",
+    "explanation": "该题考查数据准备中的“保留重复项”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“保留重复项”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 22,
-    "module": "数据建模与DAX",
-    "skill": "REMOVEFILTERS",
-    "difficulty": "高级",
-    "question": "计算产品销售占总销售额比例，分母需忽略产品筛选，应使用？",
+    "module": "数据准备",
+    "skill": "Folder 文件夹连接器",
+    "difficulty": "初级",
+    "question": "每月新增同结构文件，希望刷新自动纳入，应使用？",
     "options": [
-      "REMOVEFILTERS或ALL",
-      "TRIM",
-      "Merge",
-      "Publish to web"
+      "Folder 文件夹连接器",
+      "Trim/Clean 清理文本",
+      "DirectQuery 模式",
+      "检查自动 Changed Type 步骤"
     ],
     "answer": "A",
-    "explanation": "REMOVEFILTERS/ALL可移除指定筛选上下文。",
-    "practice": "创建销售占比度量。"
+    "explanation": "该题考查数据准备中的“Folder 文件夹连接器”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“Folder 文件夹连接器”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 23,
-    "module": "数据建模与DAX",
-    "skill": "USERELATIONSHIP",
-    "difficulty": "高级",
-    "question": "订单日期为活动关系，发货日期为非活动关系。按发货日期算销售应使用？",
+    "module": "数据准备",
+    "skill": "示例文件转换查询",
+    "difficulty": "中级",
+    "question": "组合文件时每个文件都有说明行，需要统一跳过，应修改哪里？",
     "options": [
-      "USERELATIONSHIP",
-      "FORMAT",
-      "UNPIVOT",
-      "Q&A"
+      "Left Outer 合并",
+      "示例文件转换查询",
+      "使用区域设置更改类型",
+      "数据源凭据"
     ],
-    "answer": "A",
-    "explanation": "USERELATIONSHIP可在CALCULATE中临时启用非活动关系。",
-    "practice": "创建按发货日期销售额。"
+    "answer": "B",
+    "explanation": "该题考查数据准备中的“示例文件转换查询”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“示例文件转换查询”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 24,
-    "module": "数据建模与DAX",
-    "skill": "按列排序",
+    "module": "数据准备",
+    "skill": "Power Query 参数",
     "difficulty": "中级",
-    "question": "月份名称按字母排序，应修复为自然月份顺序，使用？",
+    "question": "开发测试生产服务器名不同，想方便切换，应使用？",
     "options": [
-      "按月份序号列排序",
-      "改为文本",
-      "删除月份",
-      "开启RLS"
+      "Power Query 参数",
+      "透视列 Pivot",
+      "基于整个数据集做列配置文件",
+      "引用 Reference"
     ],
     "answer": "A",
-    "explanation": "Sort by column可让MonthName按MonthNumber排序。",
-    "practice": "设置MonthName按MonthNumber排序。"
+    "explanation": "该题考查数据准备中的“Power Query 参数”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“Power Query 参数”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 25,
-    "module": "可视化与分析",
-    "skill": "图表选择",
+    "module": "数据准备",
+    "skill": "数据源设置",
     "difficulty": "初级",
-    "question": "展示月度销售趋势，最合适的视觉对象是？",
+    "question": "Excel 文件路径变化后刷新失败，应到哪里修改？",
     "options": [
-      "折线图",
-      "饼图",
-      "卡片",
-      "表格"
+      "Trim/Clean 清理文本",
+      "列质量",
+      "数据源设置",
+      "基于整个数据集做列配置文件"
     ],
-    "answer": "A",
-    "explanation": "折线图适合连续时间趋势。",
-    "practice": "制作月度销售折线图。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“数据源设置”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“数据源设置”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 26,
-    "module": "可视化与分析",
-    "skill": "矩阵",
-    "difficulty": "初级",
-    "question": "按区域和产品层级展示销售额、小计和明细，适合？",
+    "module": "数据准备",
+    "skill": "隐私级别",
+    "difficulty": "中级",
+    "question": "合并私有数据库和公开网页时，隐私设置主要控制什么？",
     "options": [
-      "矩阵",
-      "卡片",
-      "按钮",
-      "地图"
+      "隐私级别",
+      "预览样本不是完整数据",
+      "基于整个数据集做列配置文件",
+      "列数据类型"
     ],
     "answer": "A",
-    "explanation": "矩阵支持层级、行列分组和小计。",
-    "practice": "制作区域-产品矩阵。"
+    "explanation": "该题考查数据准备中的“隐私级别”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“隐私级别”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 27,
-    "module": "可视化与分析",
-    "skill": "切片器",
-    "difficulty": "初级",
-    "question": "用户需要在页面上按年份筛选报表，应添加？",
+    "module": "数据准备",
+    "skill": "查询折叠",
+    "difficulty": "中级",
+    "question": "SQL 源上筛选行列，为提升刷新效率应保持？",
     "options": [
-      "切片器",
-      "网关",
-      "计算列",
-      "数据源设置"
+      "数据类别为城市",
+      "网关数据源映射",
+      "查询折叠",
+      "条件列"
     ],
-    "answer": "A",
-    "explanation": "切片器提供页面交互筛选。",
-    "practice": "添加年份切片器。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“查询折叠”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“查询折叠”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 28,
-    "module": "可视化与分析",
-    "skill": "同步切片器",
-    "difficulty": "中级",
-    "question": "多个页面共享同一个年份选择状态，应使用？",
+    "module": "数据准备",
+    "skill": "查询折叠中断",
+    "difficulty": "初级",
+    "question": "自定义函数无法下推后，后续 SQL 转换可能发生什么？",
     "options": [
-      "同步切片器",
-      "复制PBIX",
-      "多对多关系",
-      "增量刷新"
+      "删除重复项",
+      "数据类别为城市",
+      "查询折叠中断",
+      "隐私级别"
     ],
-    "answer": "A",
-    "explanation": "同步切片器可跨页面同步筛选状态。",
-    "practice": "在两个页面同步年份切片器。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“查询折叠中断”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“查询折叠中断”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 29,
-    "module": "可视化与分析",
-    "skill": "钻取",
+    "module": "数据准备",
+    "skill": "引用 Reference",
     "difficulty": "中级",
-    "question": "从产品汇总页跳转到产品明细页并传递产品上下文，应配置？",
+    "question": "基于原查询结果生成维表且随原查询变化，应使用？",
     "options": [
-      "Drillthrough钻取",
-      "发布到Web",
-      "列质量",
-      "查询折叠"
+      "隐私级别",
+      "Power BI 数据流",
+      "引用 Reference",
+      "基于整个数据集做列配置文件"
     ],
-    "answer": "A",
-    "explanation": "钻取页可接收上下文并展示明细。",
-    "practice": "创建产品明细钻取页。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“引用 Reference”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“引用 Reference”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 30,
-    "module": "可视化与分析",
-    "skill": "书签",
+    "module": "数据准备",
+    "skill": "禁用加载",
     "difficulty": "中级",
-    "question": "按钮切换不同视图或显示隐藏对象，常用？",
+    "question": "中间查询只辅助转换，不需要进入模型，应设置？",
     "options": [
-      "书签配合按钮",
-      "RLS",
-      "数据网关",
-      "日期表"
+      "禁用加载",
+      "替换错误",
+      "查询折叠中断",
+      "Group By 分组依据"
     ],
     "answer": "A",
-    "explanation": "书签保存页面状态，配合按钮实现交互。",
-    "practice": "制作弹窗或指标切换。"
+    "explanation": "该题考查数据准备中的“禁用加载”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“禁用加载”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 31,
-    "module": "可视化与分析",
-    "skill": "编辑交互",
-    "difficulty": "中级",
-    "question": "一个图表不应影响另一个图表，应设置？",
+    "module": "数据准备",
+    "skill": "预览样本不是完整数据",
+    "difficulty": "初级",
+    "question": "Power Query 预览是否一定代表完整数据？",
     "options": [
-      "编辑交互为无",
-      "删除关系",
-      "关闭刷新",
-      "改数据类型"
+      "自定义列",
+      "Import 模式",
+      "预览样本不是完整数据",
+      "Power Query 编辑器"
     ],
-    "answer": "A",
-    "explanation": "编辑交互控制视觉对象之间筛选、高亮或无影响。",
-    "practice": "关闭柱形图对明细表的影响。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“预览样本不是完整数据”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“预览样本不是完整数据”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 32,
-    "module": "可视化与分析",
-    "skill": "条件格式",
-    "difficulty": "初级",
-    "question": "矩阵中低于目标的利润率标红，应使用？",
+    "module": "数据准备",
+    "skill": "基于整个数据集做列配置文件",
+    "difficulty": "中级",
+    "question": "要让列配置文件检查完整数据，应切换为什么？",
     "options": [
-      "条件格式",
-      "Merge",
-      "RLS",
-      "网关"
+      "禁用加载",
+      "基于整个数据集做列配置文件",
+      "本地数据网关",
+      "列质量"
     ],
-    "answer": "A",
-    "explanation": "条件格式用于按规则突出显示数值。",
-    "practice": "给利润率设置颜色规则。"
+    "answer": "B",
+    "explanation": "该题考查数据准备中的“基于整个数据集做列配置文件”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“基于整个数据集做列配置文件”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 33,
-    "module": "可视化与分析",
-    "skill": "性能分析器",
+    "module": "数据准备",
+    "skill": "RangeStart 和 RangeEnd",
     "difficulty": "中级",
-    "question": "报表页面加载慢，想查看每个视觉对象耗时，应使用？",
+    "question": "配置增量刷新通常需要哪两个参数？",
     "options": [
-      "性能分析器",
-      "列质量",
-      "隐私级别",
-      "工作区角色"
+      "Power Query 参数",
+      "RangeStart 和 RangeEnd",
+      "数据源凭据",
+      "基于整个数据集做列配置文件"
     ],
-    "answer": "A",
-    "explanation": "性能分析器记录DAX查询和视觉渲染耗时。",
-    "practice": "录制页面并定位慢视觉对象。"
+    "answer": "B",
+    "explanation": "该题考查数据准备中的“RangeStart 和 RangeEnd”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“RangeStart 和 RangeEnd”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 34,
-    "module": "可视化与分析",
-    "skill": "字段参数",
-    "difficulty": "中级",
-    "question": "用户想在同一图表切换销售额、利润、订单数，应使用？",
+    "module": "数据准备",
+    "skill": "Power BI 数据流",
+    "difficulty": "初级",
+    "question": "多个模型复用同一套清洗逻辑，可以考虑？",
     "options": [
-      "字段参数",
-      "数据源凭据",
-      "网关集群",
-      "发布到Web"
+      "Power BI 数据流",
+      "条件列",
+      "基于整个数据集做列配置文件",
+      "替换错误"
     ],
     "answer": "A",
-    "explanation": "字段参数支持动态切换字段或度量。",
-    "practice": "创建指标切换参数。"
+    "explanation": "该题考查数据准备中的“Power BI 数据流”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“Power BI 数据流”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 35,
-    "module": "可视化与分析",
-    "skill": "关键影响因素",
+    "module": "数据准备",
+    "skill": "数据源凭据",
     "difficulty": "中级",
-    "question": "分析哪些维度影响客户流失，适合？",
+    "question": "Service 刷新失败提示凭据无效，先检查什么？",
     "options": [
-      "关键影响因素视觉对象",
-      "卡片",
-      "表格",
-      "按钮"
+      "禁用加载",
+      "基于整个数据集做列配置文件",
+      "数据源凭据",
+      "RangeStart 和 RangeEnd"
     ],
-    "answer": "A",
-    "explanation": "关键影响因素用于探索目标指标的驱动因素。",
-    "practice": "用流失字段创建关键影响因素。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“数据源凭据”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“数据源凭据”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 36,
-    "module": "可视化与分析",
-    "skill": "移动布局",
-    "difficulty": "初级",
-    "question": "让报表更适合手机查看，应配置？",
+    "module": "数据准备",
+    "skill": "网关数据源映射",
+    "difficulty": "中级",
+    "question": "本地 SQL 刷新提示找不到映射，检查什么？",
     "options": [
-      "移动布局",
-      "查询折叠",
-      "RLS",
-      "对象级安全"
+      "查询折叠中断",
+      "数据类别为城市",
+      "Import 模式",
+      "网关数据源映射"
     ],
-    "answer": "A",
-    "explanation": "移动布局可优化手机端阅读体验。",
-    "practice": "制作手机端首页。"
+    "answer": "D",
+    "explanation": "该题考查数据准备中的“网关数据源映射”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“网关数据源映射”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 37,
-    "module": "管理与安全",
-    "skill": "工作区",
+    "module": "数据准备",
+    "skill": "数据类别为城市",
     "difficulty": "初级",
-    "question": "Power BI Service中用于协作管理报表、语义模型和仪表板的容器是？",
+    "question": "城市字段用于地图前最好设置什么？",
     "options": [
-      "工作区",
-      "切片器",
-      "查询步骤",
-      "计算列"
+      "禁用加载",
+      "Group By 分组依据",
+      "数据类别为城市",
+      "保留重复项"
     ],
-    "answer": "A",
-    "explanation": "工作区是Service中协作和内容管理的基本容器。",
-    "practice": "创建工作区并分配角色。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“数据类别为城市”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“数据类别为城市”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 38,
-    "module": "管理与安全",
-    "skill": "App发布",
+    "module": "数据准备",
+    "skill": "检查自动 Changed Type 步骤",
     "difficulty": "中级",
-    "question": "向大量业务用户分发稳定版本内容，推荐？",
+    "question": "自动添加 Changed Type 后，正确做法是？",
     "options": [
-      "发布Power BI App",
-      "邮件发送PBIX",
-      "发布到Web",
-      "复制截图"
+      "RangeStart 和 RangeEnd",
+      "检查自动 Changed Type 步骤",
+      "引用 Reference",
+      "透视列 Pivot"
     ],
-    "answer": "A",
-    "explanation": "App适合面向消费者分发工作区内容并控制受众。",
-    "practice": "从工作区发布App。"
+    "answer": "B",
+    "explanation": "该题考查数据准备中的“检查自动 Changed Type 步骤”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“检查自动 Changed Type 步骤”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 39,
-    "module": "管理与安全",
-    "skill": "RLS",
+    "module": "数据准备",
+    "skill": "组合文件转换函数",
     "difficulty": "中级",
-    "question": "区域经理只能看到本区域销售数据，应配置？",
+    "question": "文件夹组合文件时，Power Query 对每个 Binary 文件应用什么？",
     "options": [
-      "行级安全RLS",
-      "主题",
-      "书签",
-      "列质量"
+      "保留错误",
+      "条件列",
+      "组合文件转换函数",
+      "引用 Reference"
     ],
-    "answer": "A",
-    "explanation": "RLS通过角色规则限制用户可见数据行。",
-    "practice": "创建Region过滤角色并测试。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“组合文件转换函数”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“组合文件转换函数”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 40,
-    "module": "管理与安全",
-    "skill": "动态RLS",
-    "difficulty": "高级",
-    "question": "根据登录用户邮箱自动筛选其负责区域，常用？",
+    "module": "数据准备",
+    "skill": "本地数据网关",
+    "difficulty": "初级",
+    "question": "本地数据源发布到 Service 后计划刷新，通常需要什么？",
     "options": [
-      "USERPRINCIPALNAME()加用户映射表",
-      "复制多个报表",
-      "页面筛选器",
-      "隐藏区域列"
+      "Append Queries",
+      "预览样本不是完整数据",
+      "本地数据网关",
+      "查询折叠中断"
     ],
-    "answer": "A",
-    "explanation": "动态RLS可降低维护成本并随用户映射变化。",
-    "practice": "实现用户-区域映射表。"
+    "answer": "C",
+    "explanation": "该题考查数据准备中的“本地数据网关”。考试通常要求根据刷新、数据质量、性能或复用场景选择正确功能。",
+    "practice": "围绕“本地数据网关”做一次 Power BI Desktop 小实验。"
   },
   {
     "id": 41,
-    "module": "管理与安全",
-    "skill": "敏感度标签",
+    "module": "数据建模与DAX",
+    "skill": "星型模型",
     "difficulty": "中级",
-    "question": "报表包含机密财务数据，需要进行信息保护标识，应使用？",
+    "question": "销售事实表连接客户、产品、日期维表，通常推荐哪种模型？",
     "options": [
-      "敏感度标签",
-      "散点图",
-      "Unpivot",
-      "字段参数"
+      "ISINSCOPE",
+      "星型模型",
+      "创建聚合表",
+      "USERELATIONSHIP"
     ],
-    "answer": "A",
-    "explanation": "敏感度标签用于合规和数据保护。",
-    "practice": "给报表应用敏感度标签。"
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“星型模型”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“星型模型”的实际效果。"
   },
   {
     "id": 42,
-    "module": "管理与安全",
-    "skill": "认证内容",
+    "module": "数据建模与DAX",
+    "skill": "一对多关系",
     "difficulty": "中级",
-    "question": "企业希望标识某语义模型为权威可信来源，应使用？",
+    "question": "产品维表键唯一而销售表中多次出现，应建立哪种关系？",
     "options": [
-      "Certified或Promoted背书",
-      "隐藏字段",
-      "双向关系",
-      "手机布局"
+      "DIVIDE",
+      "一对多关系",
+      "行上下文",
+      "默认汇总为不汇总"
     ],
-    "answer": "A",
-    "explanation": "背书帮助用户发现可信内容。",
-    "practice": "申请认证语义模型。"
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“一对多关系”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“一对多关系”的实际效果。"
   },
   {
     "id": 43,
-    "module": "管理与安全",
-    "skill": "计划刷新",
-    "difficulty": "初级",
-    "question": "Import模式数据集需要定期更新，应配置？",
+    "module": "数据建模与DAX",
+    "skill": "单向：维度筛选事实",
+    "difficulty": "中级",
+    "question": "星型模型中默认更推荐的筛选方向是？",
     "options": [
-      "计划刷新",
-      "页面导航",
-      "视觉排序",
-      "替代文本"
+      "单向：维度筛选事实",
+      "ALL 或 REMOVEFILTERS",
+      "FILTER 函数",
+      "KEEPFILTERS"
     ],
     "answer": "A",
-    "explanation": "Import模式需要刷新以获取源数据变化。",
-    "practice": "设置每日刷新。"
+    "explanation": "该题考查模型与 DAX 的“单向：维度筛选事实”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“单向：维度筛选事实”的实际效果。"
   },
   {
     "id": 44,
-    "module": "管理与安全",
-    "skill": "刷新失败",
+    "module": "数据建模与DAX",
+    "skill": "连续日期且标记为日期表",
     "difficulty": "中级",
-    "question": "刷新失败提示凭据无效，第一步检查？",
+    "question": "使用 YTD 和去年同期函数时，日期表应满足什么？",
     "options": [
-      "数据源凭据",
-      "图表颜色",
-      "月份排序",
-      "页面背景"
+      "连续日期且标记为日期表",
+      "KEEPFILTERS",
+      "星型模型",
+      "计算列"
     ],
     "answer": "A",
-    "explanation": "凭据和网关是刷新失败高频原因。",
-    "practice": "在Service更新凭据。"
+    "explanation": "该题考查模型与 DAX 的“连续日期且标记为日期表”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“连续日期且标记为日期表”的实际效果。"
   },
   {
     "id": 45,
-    "module": "管理与安全",
-    "skill": "部署管道",
-    "difficulty": "高级",
-    "question": "开发、测试、生产环境之间迁移内容，推荐？",
+    "module": "数据建模与DAX",
+    "skill": "关闭自动日期/时间并使用统一日期表",
+    "difficulty": "中级",
+    "question": "大型模型中自动日期表过多，优化时可考虑？",
     "options": [
-      "部署管道",
-      "Q&A",
-      "列分布",
-      "散点图"
+      "关闭自动日期/时间并使用统一日期表",
+      "DATEADD",
+      "创建度量值表",
+      "计算列"
     ],
     "answer": "A",
-    "explanation": "部署管道支持内容生命周期管理。",
-    "practice": "配置Dev/Test/Prod管道。"
+    "explanation": "该题考查模型与 DAX 的“关闭自动日期/时间并使用统一日期表”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“关闭自动日期/时间并使用统一日期表”的实际效果。"
   },
   {
     "id": 46,
-    "module": "管理与安全",
-    "skill": "血缘视图",
+    "module": "数据建模与DAX",
+    "skill": "度量值 Measure",
     "difficulty": "中级",
-    "question": "查看报表依赖哪个语义模型和数据源，应使用？",
+    "question": "总销售额要随切片器动态变化，应创建什么？",
     "options": [
-      "血缘视图",
-      "焦点模式",
-      "同步切片器",
-      "手机布局"
+      "RELATED",
+      "度量值 Measure",
+      "TREATAS",
+      "DIVIDE"
     ],
-    "answer": "A",
-    "explanation": "血缘视图展示内容依赖关系。",
-    "practice": "打开工作区Lineage view。"
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“度量值 Measure”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“度量值 Measure”的实际效果。"
   },
   {
     "id": 47,
-    "module": "管理与安全",
-    "skill": "发布到Web",
-    "difficulty": "高级",
-    "question": "包含内部财务数据的报表适合Publish to web吗？",
+    "module": "数据建模与DAX",
+    "skill": "计算列",
+    "difficulty": "中级",
+    "question": "每个订单行固定保存数量乘单价，适合创建什么？",
     "options": [
-      "不适合，可能公开到互联网",
-      "适合所有内部数据",
-      "自动应用RLS",
-      "只有管理员可见"
+      "筛选上下文",
+      "TREATAS",
+      "计算列",
+      "单向：维度筛选事实"
     ],
-    "answer": "A",
-    "explanation": "Publish to web适合公开内容，不适合敏感数据。",
-    "practice": "区分共享、App和Publish to web。"
+    "answer": "C",
+    "explanation": "该题考查模型与 DAX 的“计算列”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“计算列”的实际效果。"
   },
   {
     "id": 48,
-    "module": "管理与安全",
-    "skill": "对象级安全",
-    "difficulty": "高级",
-    "question": "需要限制用户看不到某些敏感列或表，应考虑？",
+    "module": "数据建模与DAX",
+    "skill": "行上下文",
+    "difficulty": "中级",
+    "question": "计算列逐行计算表达式，主要体现什么？",
     "options": [
-      "OLS对象级安全",
-      "页面级筛选",
-      "视觉级筛选",
-      "书签"
+      "行上下文",
+      "USERELATIONSHIP",
+      "DATEADD",
+      "复合模型"
     ],
     "answer": "A",
-    "explanation": "OLS限制表/列对象，RLS限制行。",
-    "practice": "比较RLS和OLS。"
+    "explanation": "该题考查模型与 DAX 的“行上下文”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“行上下文”的实际效果。"
   },
   {
     "id": 49,
-    "module": "数据准备",
-    "skill": "Power Query清洗",
-    "difficulty": "初级",
-    "question": "关于【Power Query清洗】：导入后需要删除无用列、替换空值、转换日期类型，最推荐在哪完成？ 哪一项是最佳选择？",
+    "module": "数据建模与DAX",
+    "skill": "筛选上下文",
+    "difficulty": "中级",
+    "question": "切片器选择华东后度量只算华东，体现什么？",
     "options": [
-      "Power Query 编辑器",
-      "DAX FORMAT函数",
-      "报表视图",
-      "Power BI Service 仪表板"
+      "隐藏字段",
+      "删除或维度化高基数字符串列",
+      "筛选上下文",
+      "FILTER 函数"
     ],
-    "answer": "A",
-    "explanation": "最佳选择是 Power Query 编辑器。关键原因：Power Query 的转换步骤会在刷新时重复执行，适合做数据准备。",
-    "practice": "导入CSV，完成列类型、空值、删除列三步。"
+    "answer": "C",
+    "explanation": "该题考查模型与 DAX 的“筛选上下文”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“筛选上下文”的实际效果。"
   },
   {
     "id": 50,
-    "module": "数据准备",
-    "skill": "合并查询Merge",
+    "module": "数据建模与DAX",
+    "skill": "CALCULATE",
     "difficulty": "中级",
-    "question": "关于【合并查询Merge】：按CustomerID把客户名称带入销售表，并保留销售表所有行，应选哪种合并？ 考试场景中最容易混淆的正确做法是？",
+    "question": "DAX 中用于修改筛选上下文后计算表达式的核心函数是？",
     "options": [
-      "Left Outer",
-      "Full Outer",
-      "Inner",
-      "Right Anti"
+      "CALCULATE",
+      "星型模型",
+      "复合模型",
+      "两个事实表共享日期和产品维度"
     ],
     "answer": "A",
-    "explanation": "正确做法仍是 Left Outer。不要把界面展示、权限或建模问题混为一谈。Left Outer保留左表全部行，并返回右表匹配记录。",
-    "practice": "用客户表和销售表做Left Outer合并。"
+    "explanation": "该题考查模型与 DAX 的“CALCULATE”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“CALCULATE”的实际效果。"
   },
   {
     "id": 51,
-    "module": "数据准备",
-    "skill": "追加查询Append",
-    "difficulty": "初级",
-    "question": "关于【追加查询Append】：多个结构一致的月度销售表需要纵向合并，应使用？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
+    "module": "数据建模与DAX",
+    "skill": "FILTER 函数",
+    "difficulty": "中级",
+    "question": "CALCULATE 中需要复杂条件返回表筛选器时常用？",
     "options": [
-      "Append Queries",
-      "Drillthrough",
-      "RLS",
-      "Merge Queries"
+      "创建度量值表",
+      "ISINSCOPE",
+      "FILTER 函数",
+      "CALENDAR 或 CALENDARAUTO"
     ],
-    "answer": "A",
-    "explanation": "应优先选择 Append Queries。Append用于纵向追加行；Merge用于横向匹配列。",
-    "practice": "把1月和2月销售表追加为一张表。"
+    "answer": "C",
+    "explanation": "该题考查模型与 DAX 的“FILTER 函数”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“FILTER 函数”的实际效果。"
   },
   {
     "id": 52,
-    "module": "数据准备",
-    "skill": "逆透视Unpivot",
+    "module": "数据建模与DAX",
+    "skill": "SUMX",
     "difficulty": "中级",
-    "question": "关于【逆透视Unpivot】：1月到12月分别为12列，想变成月份和金额两列，应使用？ 以下哪项最符合Power BI推荐实践？",
+    "question": "逐行计算 Quantity*Price 再求和，应使用？",
     "options": [
-      "逆透视列",
-      "字段参数",
-      "透视列",
-      "分组依据"
+      "DATEADD",
+      "筛选上下文",
+      "SUMX",
+      "COUNTROWS"
     ],
-    "answer": "A",
-    "explanation": "逆透视列 更符合推荐实践。逆透视可将宽表转为适合分析的长表。",
-    "practice": "对月度宽表执行Unpivot。"
+    "answer": "C",
+    "explanation": "该题考查模型与 DAX 的“SUMX”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“SUMX”的实际效果。"
   },
   {
     "id": 53,
-    "module": "数据准备",
-    "skill": "查询折叠",
-    "difficulty": "高级",
-    "question": "关于【查询折叠】：SQL源上筛选行和选择列，为提升刷新效率应尽量保持？ 哪一项是最佳选择？",
+    "module": "数据建模与DAX",
+    "skill": "AVERAGEX",
+    "difficulty": "中级",
+    "question": "按产品逐个计算利润率再求平均，应使用？",
     "options": [
-      "查询折叠",
-      "书签状态",
-      "双向筛选",
-      "手机布局"
+      "HASONEVALUE",
+      "AVERAGEX",
+      "创建度量值表",
+      "筛选上下文"
     ],
-    "answer": "A",
-    "explanation": "最佳选择是 查询折叠。关键原因：查询折叠把转换下推到源系统，减少传输和本地处理。",
-    "practice": "右键步骤查看本机查询。"
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“AVERAGEX”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“AVERAGEX”的实际效果。"
   },
   {
     "id": 54,
-    "module": "数据准备",
-    "skill": "参数",
-    "difficulty": "中级",
-    "question": "关于【参数】：开发、测试、生产环境切换服务器名，最适合使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "Power Query 参数",
-      "卡片视觉对象",
-      "度量值表",
-      "页面筛选器"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 Power Query 参数。不要把界面展示、权限或建模问题混为一谈。参数适合管理路径、服务器、日期范围等可变输入。",
-    "practice": "创建ServerName参数并用于数据源。"
-  },
-  {
-    "id": 55,
-    "module": "数据准备",
-    "skill": "隐私级别",
-    "difficulty": "中级",
-    "question": "关于【隐私级别】：合并组织内部数据和公开Web数据时，隐私级别主要用于？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "防止不同数据源之间不当泄露",
-      "控制图表颜色",
-      "提高DAX速度",
-      "自动创建关系"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 防止不同数据源之间不当泄露。隐私级别控制数据源隔离和组合规则。",
-    "practice": "设置Public/Organizational/Private。"
-  },
-  {
-    "id": 56,
-    "module": "数据准备",
-    "skill": "列质量",
-    "difficulty": "初级",
-    "question": "关于【列质量】：想查看有效值、错误值、空值比例，应启用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "列质量",
-      "同步切片器",
-      "血缘视图",
-      "书签窗格"
-    ],
-    "answer": "A",
-    "explanation": "列质量 更符合推荐实践。列质量/列分布/列配置文件用于数据探查。",
-    "practice": "开启列质量检查错误。"
-  },
-  {
-    "id": 57,
-    "module": "数据准备",
-    "skill": "数据网关",
-    "difficulty": "中级",
-    "question": "关于【数据网关】：本地SQL Server数据发布到Service后需要计划刷新，通常需要？ 哪一项是最佳选择？",
-    "options": [
-      "本地数据网关",
-      "Q&A视觉对象",
-      "移动布局",
-      "发布到Web"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 本地数据网关。关键原因：Service访问本地数据源通常依赖On-premises data gateway。",
-    "practice": "安装网关并配置数据源映射。"
-  },
-  {
-    "id": 58,
-    "module": "数据准备",
-    "skill": "增量刷新",
-    "difficulty": "高级",
-    "question": "关于【增量刷新】：大事实表只刷新最近数据、保留历史分区，应配置？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "增量刷新",
-      "钻取",
-      "选择窗格",
-      "书签"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 增量刷新。不要把界面展示、权限或建模问题混为一谈。增量刷新用RangeStart/RangeEnd等策略减少刷新量。",
-    "practice": "创建日期参数并配置增量刷新。"
-  },
-  {
-    "id": 59,
-    "module": "数据准备",
-    "skill": "数据类型",
-    "difficulty": "初级",
-    "question": "关于【数据类型】：金额列被识别为文本，无法求和，最先应修正？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "列数据类型",
-      "工作区角色",
-      "按钮动作",
-      "页面背景"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 列数据类型。数值计算依赖正确数据类型。",
-    "practice": "把金额列改为小数。"
-  },
-  {
-    "id": 60,
-    "module": "数据准备",
-    "skill": "区域设置",
-    "difficulty": "中级",
-    "question": "关于【区域设置】：日期文本31/12/2025在当前区域识别错误，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "使用区域设置更改类型",
-      "创建KPI",
-      "同步切片器",
-      "隐藏字段"
-    ],
-    "answer": "A",
-    "explanation": "使用区域设置更改类型 更符合推荐实践。区域设置可按指定文化解析日期和数字。",
-    "practice": "用en-GB区域转换日期。"
-  },
-  {
-    "id": 61,
-    "module": "数据准备",
-    "skill": "Power Query清洗",
-    "difficulty": "初级",
-    "question": "关于【Power Query清洗】：导入后需要删除无用列、替换空值、转换日期类型，最推荐在哪完成？ 哪一项是最佳选择？",
-    "options": [
-      "Power Query 编辑器",
-      "Power BI Service 仪表板",
-      "DAX FORMAT函数",
-      "报表视图"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 Power Query 编辑器。关键原因：Power Query 的转换步骤会在刷新时重复执行，适合做数据准备。",
-    "practice": "导入CSV，完成列类型、空值、删除列三步。"
-  },
-  {
-    "id": 62,
-    "module": "数据准备",
-    "skill": "合并查询Merge",
-    "difficulty": "中级",
-    "question": "关于【合并查询Merge】：按CustomerID把客户名称带入销售表，并保留销售表所有行，应选哪种合并？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "Left Outer",
-      "Right Anti",
-      "Full Outer",
-      "Inner"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 Left Outer。不要把界面展示、权限或建模问题混为一谈。Left Outer保留左表全部行，并返回右表匹配记录。",
-    "practice": "用客户表和销售表做Left Outer合并。"
-  },
-  {
-    "id": 63,
-    "module": "数据准备",
-    "skill": "追加查询Append",
-    "difficulty": "初级",
-    "question": "关于【追加查询Append】：多个结构一致的月度销售表需要纵向合并，应使用？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "Append Queries",
-      "Merge Queries",
-      "RLS",
-      "Drillthrough"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 Append Queries。Append用于纵向追加行；Merge用于横向匹配列。",
-    "practice": "把1月和2月销售表追加为一张表。"
-  },
-  {
-    "id": 64,
-    "module": "数据准备",
-    "skill": "逆透视Unpivot",
-    "difficulty": "中级",
-    "question": "关于【逆透视Unpivot】：1月到12月分别为12列，想变成月份和金额两列，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "逆透视列",
-      "分组依据",
-      "字段参数",
-      "透视列"
-    ],
-    "answer": "A",
-    "explanation": "逆透视列 更符合推荐实践。逆透视可将宽表转为适合分析的长表。",
-    "practice": "对月度宽表执行Unpivot。"
-  },
-  {
-    "id": 65,
-    "module": "数据准备",
-    "skill": "查询折叠",
-    "difficulty": "高级",
-    "question": "关于【查询折叠】：SQL源上筛选行和选择列，为提升刷新效率应尽量保持？ 哪一项是最佳选择？",
-    "options": [
-      "查询折叠",
-      "双向筛选",
-      "书签状态",
-      "手机布局"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 查询折叠。关键原因：查询折叠把转换下推到源系统，减少传输和本地处理。",
-    "practice": "右键步骤查看本机查询。"
-  },
-  {
-    "id": 66,
-    "module": "数据准备",
-    "skill": "参数",
-    "difficulty": "中级",
-    "question": "关于【参数】：开发、测试、生产环境切换服务器名，最适合使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "Power Query 参数",
-      "卡片视觉对象",
-      "页面筛选器",
-      "度量值表"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 Power Query 参数。不要把界面展示、权限或建模问题混为一谈。参数适合管理路径、服务器、日期范围等可变输入。",
-    "practice": "创建ServerName参数并用于数据源。"
-  },
-  {
-    "id": 67,
-    "module": "数据准备",
-    "skill": "隐私级别",
-    "difficulty": "中级",
-    "question": "关于【隐私级别】：合并组织内部数据和公开Web数据时，隐私级别主要用于？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "防止不同数据源之间不当泄露",
-      "自动创建关系",
-      "提高DAX速度",
-      "控制图表颜色"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 防止不同数据源之间不当泄露。隐私级别控制数据源隔离和组合规则。",
-    "practice": "设置Public/Organizational/Private。"
-  },
-  {
-    "id": 68,
-    "module": "数据准备",
-    "skill": "列质量",
-    "difficulty": "初级",
-    "question": "关于【列质量】：想查看有效值、错误值、空值比例，应启用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "列质量",
-      "血缘视图",
-      "书签窗格",
-      "同步切片器"
-    ],
-    "answer": "A",
-    "explanation": "列质量 更符合推荐实践。列质量/列分布/列配置文件用于数据探查。",
-    "practice": "开启列质量检查错误。"
-  },
-  {
-    "id": 69,
-    "module": "数据准备",
-    "skill": "数据网关",
-    "difficulty": "中级",
-    "question": "关于【数据网关】：本地SQL Server数据发布到Service后需要计划刷新，通常需要？ 哪一项是最佳选择？",
-    "options": [
-      "本地数据网关",
-      "移动布局",
-      "发布到Web",
-      "Q&A视觉对象"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 本地数据网关。关键原因：Service访问本地数据源通常依赖On-premises data gateway。",
-    "practice": "安装网关并配置数据源映射。"
-  },
-  {
-    "id": 70,
-    "module": "数据准备",
-    "skill": "增量刷新",
-    "difficulty": "高级",
-    "question": "关于【增量刷新】：大事实表只刷新最近数据、保留历史分区，应配置？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "增量刷新",
-      "钻取",
-      "书签",
-      "选择窗格"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 增量刷新。不要把界面展示、权限或建模问题混为一谈。增量刷新用RangeStart/RangeEnd等策略减少刷新量。",
-    "practice": "创建日期参数并配置增量刷新。"
-  },
-  {
-    "id": 71,
-    "module": "数据准备",
-    "skill": "数据类型",
-    "difficulty": "初级",
-    "question": "关于【数据类型】：金额列被识别为文本，无法求和，最先应修正？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "列数据类型",
-      "工作区角色",
-      "页面背景",
-      "按钮动作"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 列数据类型。数值计算依赖正确数据类型。",
-    "practice": "把金额列改为小数。"
-  },
-  {
-    "id": 72,
-    "module": "数据准备",
-    "skill": "区域设置",
-    "difficulty": "中级",
-    "question": "关于【区域设置】：日期文本31/12/2025在当前区域识别错误，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "使用区域设置更改类型",
-      "创建KPI",
-      "隐藏字段",
-      "同步切片器"
-    ],
-    "answer": "A",
-    "explanation": "使用区域设置更改类型 更符合推荐实践。区域设置可按指定文化解析日期和数字。",
-    "practice": "用en-GB区域转换日期。"
-  },
-  {
-    "id": 73,
-    "module": "数据准备",
-    "skill": "Power Query清洗",
-    "difficulty": "初级",
-    "question": "关于【Power Query清洗】：导入后需要删除无用列、替换空值、转换日期类型，最推荐在哪完成？ 哪一项是最佳选择？",
-    "options": [
-      "Power Query 编辑器",
-      "报表视图",
-      "DAX FORMAT函数",
-      "Power BI Service 仪表板"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 Power Query 编辑器。关键原因：Power Query 的转换步骤会在刷新时重复执行，适合做数据准备。",
-    "practice": "导入CSV，完成列类型、空值、删除列三步。"
-  },
-  {
-    "id": 74,
-    "module": "数据准备",
-    "skill": "合并查询Merge",
-    "difficulty": "中级",
-    "question": "关于【合并查询Merge】：按CustomerID把客户名称带入销售表，并保留销售表所有行，应选哪种合并？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "Left Outer",
-      "Inner",
-      "Right Anti",
-      "Full Outer"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 Left Outer。不要把界面展示、权限或建模问题混为一谈。Left Outer保留左表全部行，并返回右表匹配记录。",
-    "practice": "用客户表和销售表做Left Outer合并。"
-  },
-  {
-    "id": 75,
-    "module": "数据准备",
-    "skill": "追加查询Append",
-    "difficulty": "初级",
-    "question": "关于【追加查询Append】：多个结构一致的月度销售表需要纵向合并，应使用？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "Append Queries",
-      "Merge Queries",
-      "RLS",
-      "Drillthrough"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 Append Queries。Append用于纵向追加行；Merge用于横向匹配列。",
-    "practice": "把1月和2月销售表追加为一张表。"
-  },
-  {
-    "id": 76,
-    "module": "数据准备",
-    "skill": "逆透视Unpivot",
-    "difficulty": "中级",
-    "question": "关于【逆透视Unpivot】：1月到12月分别为12列，想变成月份和金额两列，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "逆透视列",
-      "分组依据",
-      "字段参数",
-      "透视列"
-    ],
-    "answer": "A",
-    "explanation": "逆透视列 更符合推荐实践。逆透视可将宽表转为适合分析的长表。",
-    "practice": "对月度宽表执行Unpivot。"
-  },
-  {
-    "id": 77,
-    "module": "数据准备",
-    "skill": "查询折叠",
-    "difficulty": "高级",
-    "question": "关于【查询折叠】：SQL源上筛选行和选择列，为提升刷新效率应尽量保持？ 哪一项是最佳选择？",
-    "options": [
-      "查询折叠",
-      "书签状态",
-      "双向筛选",
-      "手机布局"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 查询折叠。关键原因：查询折叠把转换下推到源系统，减少传输和本地处理。",
-    "practice": "右键步骤查看本机查询。"
-  },
-  {
-    "id": 78,
-    "module": "数据准备",
-    "skill": "参数",
-    "difficulty": "中级",
-    "question": "关于【参数】：开发、测试、生产环境切换服务器名，最适合使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "Power Query 参数",
-      "度量值表",
-      "卡片视觉对象",
-      "页面筛选器"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 Power Query 参数。不要把界面展示、权限或建模问题混为一谈。参数适合管理路径、服务器、日期范围等可变输入。",
-    "practice": "创建ServerName参数并用于数据源。"
-  },
-  {
-    "id": 79,
-    "module": "数据准备",
-    "skill": "隐私级别",
-    "difficulty": "中级",
-    "question": "关于【隐私级别】：合并组织内部数据和公开Web数据时，隐私级别主要用于？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "防止不同数据源之间不当泄露",
-      "控制图表颜色",
-      "自动创建关系",
-      "提高DAX速度"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 防止不同数据源之间不当泄露。隐私级别控制数据源隔离和组合规则。",
-    "practice": "设置Public/Organizational/Private。"
-  },
-  {
-    "id": 80,
-    "module": "数据准备",
-    "skill": "列质量",
-    "difficulty": "初级",
-    "question": "关于【列质量】：想查看有效值、错误值、空值比例，应启用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "列质量",
-      "书签窗格",
-      "血缘视图",
-      "同步切片器"
-    ],
-    "answer": "A",
-    "explanation": "列质量 更符合推荐实践。列质量/列分布/列配置文件用于数据探查。",
-    "practice": "开启列质量检查错误。"
-  },
-  {
-    "id": 81,
-    "module": "数据准备",
-    "skill": "数据网关",
-    "difficulty": "中级",
-    "question": "关于【数据网关】：本地SQL Server数据发布到Service后需要计划刷新，通常需要？ 哪一项是最佳选择？",
-    "options": [
-      "本地数据网关",
-      "Q&A视觉对象",
-      "发布到Web",
-      "移动布局"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 本地数据网关。关键原因：Service访问本地数据源通常依赖On-premises data gateway。",
-    "practice": "安装网关并配置数据源映射。"
-  },
-  {
-    "id": 82,
-    "module": "数据准备",
-    "skill": "增量刷新",
-    "difficulty": "高级",
-    "question": "关于【增量刷新】：大事实表只刷新最近数据、保留历史分区，应配置？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "增量刷新",
-      "选择窗格",
-      "钻取",
-      "书签"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 增量刷新。不要把界面展示、权限或建模问题混为一谈。增量刷新用RangeStart/RangeEnd等策略减少刷新量。",
-    "practice": "创建日期参数并配置增量刷新。"
-  },
-  {
-    "id": 83,
-    "module": "数据准备",
-    "skill": "数据类型",
-    "difficulty": "初级",
-    "question": "关于【数据类型】：金额列被识别为文本，无法求和，最先应修正？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "列数据类型",
-      "按钮动作",
-      "工作区角色",
-      "页面背景"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 列数据类型。数值计算依赖正确数据类型。",
-    "practice": "把金额列改为小数。"
-  },
-  {
-    "id": 84,
-    "module": "数据准备",
-    "skill": "区域设置",
-    "difficulty": "中级",
-    "question": "关于【区域设置】：日期文本31/12/2025在当前区域识别错误，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "使用区域设置更改类型",
-      "隐藏字段",
-      "同步切片器",
-      "创建KPI"
-    ],
-    "answer": "A",
-    "explanation": "使用区域设置更改类型 更符合推荐实践。区域设置可按指定文化解析日期和数字。",
-    "practice": "用en-GB区域转换日期。"
-  },
-  {
-    "id": 85,
-    "module": "数据准备",
-    "skill": "Power Query清洗",
-    "difficulty": "初级",
-    "question": "关于【Power Query清洗】：导入后需要删除无用列、替换空值、转换日期类型，最推荐在哪完成？ 哪一项是最佳选择？",
-    "options": [
-      "Power Query 编辑器",
-      "DAX FORMAT函数",
-      "报表视图",
-      "Power BI Service 仪表板"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 Power Query 编辑器。关键原因：Power Query 的转换步骤会在刷新时重复执行，适合做数据准备。",
-    "practice": "导入CSV，完成列类型、空值、删除列三步。"
-  },
-  {
-    "id": 86,
-    "module": "数据准备",
-    "skill": "合并查询Merge",
-    "difficulty": "中级",
-    "question": "关于【合并查询Merge】：按CustomerID把客户名称带入销售表，并保留销售表所有行，应选哪种合并？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "Left Outer",
-      "Right Anti",
-      "Inner",
-      "Full Outer"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 Left Outer。不要把界面展示、权限或建模问题混为一谈。Left Outer保留左表全部行，并返回右表匹配记录。",
-    "practice": "用客户表和销售表做Left Outer合并。"
-  },
-  {
-    "id": 87,
-    "module": "数据准备",
-    "skill": "追加查询Append",
-    "difficulty": "初级",
-    "question": "关于【追加查询Append】：多个结构一致的月度销售表需要纵向合并，应使用？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "Append Queries",
-      "Merge Queries",
-      "Drillthrough",
-      "RLS"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 Append Queries。Append用于纵向追加行；Merge用于横向匹配列。",
-    "practice": "把1月和2月销售表追加为一张表。"
-  },
-  {
-    "id": 88,
-    "module": "数据准备",
-    "skill": "逆透视Unpivot",
-    "difficulty": "中级",
-    "question": "关于【逆透视Unpivot】：1月到12月分别为12列，想变成月份和金额两列，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "逆透视列",
-      "透视列",
-      "字段参数",
-      "分组依据"
-    ],
-    "answer": "A",
-    "explanation": "逆透视列 更符合推荐实践。逆透视可将宽表转为适合分析的长表。",
-    "practice": "对月度宽表执行Unpivot。"
-  },
-  {
-    "id": 89,
-    "module": "数据准备",
-    "skill": "查询折叠",
-    "difficulty": "高级",
-    "question": "关于【查询折叠】：SQL源上筛选行和选择列，为提升刷新效率应尽量保持？ 哪一项是最佳选择？",
-    "options": [
-      "查询折叠",
-      "双向筛选",
-      "书签状态",
-      "手机布局"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 查询折叠。关键原因：查询折叠把转换下推到源系统，减少传输和本地处理。",
-    "practice": "右键步骤查看本机查询。"
-  },
-  {
-    "id": 90,
-    "module": "数据准备",
-    "skill": "参数",
-    "difficulty": "中级",
-    "question": "关于【参数】：开发、测试、生产环境切换服务器名，最适合使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "Power Query 参数",
-      "页面筛选器",
-      "卡片视觉对象",
-      "度量值表"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 Power Query 参数。不要把界面展示、权限或建模问题混为一谈。参数适合管理路径、服务器、日期范围等可变输入。",
-    "practice": "创建ServerName参数并用于数据源。"
-  },
-  {
-    "id": 91,
-    "module": "数据准备",
-    "skill": "隐私级别",
-    "difficulty": "中级",
-    "question": "关于【隐私级别】：合并组织内部数据和公开Web数据时，隐私级别主要用于？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "防止不同数据源之间不当泄露",
-      "自动创建关系",
-      "提高DAX速度",
-      "控制图表颜色"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 防止不同数据源之间不当泄露。隐私级别控制数据源隔离和组合规则。",
-    "practice": "设置Public/Organizational/Private。"
-  },
-  {
-    "id": 92,
-    "module": "数据准备",
-    "skill": "列质量",
-    "difficulty": "初级",
-    "question": "关于【列质量】：想查看有效值、错误值、空值比例，应启用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "列质量",
-      "书签窗格",
-      "血缘视图",
-      "同步切片器"
-    ],
-    "answer": "A",
-    "explanation": "列质量 更符合推荐实践。列质量/列分布/列配置文件用于数据探查。",
-    "practice": "开启列质量检查错误。"
-  },
-  {
-    "id": 93,
-    "module": "数据准备",
-    "skill": "数据网关",
-    "difficulty": "中级",
-    "question": "关于【数据网关】：本地SQL Server数据发布到Service后需要计划刷新，通常需要？ 哪一项是最佳选择？",
-    "options": [
-      "本地数据网关",
-      "移动布局",
-      "发布到Web",
-      "Q&A视觉对象"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 本地数据网关。关键原因：Service访问本地数据源通常依赖On-premises data gateway。",
-    "practice": "安装网关并配置数据源映射。"
-  },
-  {
-    "id": 94,
-    "module": "数据准备",
-    "skill": "增量刷新",
-    "difficulty": "高级",
-    "question": "关于【增量刷新】：大事实表只刷新最近数据、保留历史分区，应配置？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "增量刷新",
-      "选择窗格",
-      "钻取",
-      "书签"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 增量刷新。不要把界面展示、权限或建模问题混为一谈。增量刷新用RangeStart/RangeEnd等策略减少刷新量。",
-    "practice": "创建日期参数并配置增量刷新。"
-  },
-  {
-    "id": 95,
-    "module": "数据准备",
-    "skill": "数据类型",
-    "difficulty": "初级",
-    "question": "关于【数据类型】：金额列被识别为文本，无法求和，最先应修正？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "列数据类型",
-      "页面背景",
-      "工作区角色",
-      "按钮动作"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 列数据类型。数值计算依赖正确数据类型。",
-    "practice": "把金额列改为小数。"
-  },
-  {
-    "id": 96,
-    "module": "数据准备",
-    "skill": "区域设置",
-    "difficulty": "中级",
-    "question": "关于【区域设置】：日期文本31/12/2025在当前区域识别错误，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "使用区域设置更改类型",
-      "创建KPI",
-      "隐藏字段",
-      "同步切片器"
-    ],
-    "answer": "A",
-    "explanation": "使用区域设置更改类型 更符合推荐实践。区域设置可按指定文化解析日期和数字。",
-    "practice": "用en-GB区域转换日期。"
-  },
-  {
-    "id": 97,
-    "module": "数据建模与DAX",
-    "skill": "星型模型",
-    "difficulty": "中级",
-    "question": "关于【星型模型】：销售事实表连接客户、产品、日期维表，通常推荐的模型是？ 哪一项是最佳选择？",
-    "options": [
-      "星型模型",
-      "所有表互相多对多",
-      "一个超宽表且无维表",
-      "删除日期表"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 星型模型。关键原因：星型模型清晰、性能好，事实表在多端，维表在一端。",
-    "practice": "建立事实表到维表的一对多关系。"
-  },
-  {
-    "id": 98,
-    "module": "数据建模与DAX",
-    "skill": "日期表",
-    "difficulty": "中级",
-    "question": "关于【日期表】：使用YTD、去年同期等时间智能函数，日期表应满足？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "连续日期并标记为日期表",
-      "只能有年份列",
-      "必须来自Excel",
-      "只包含有交易的日期"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 连续日期并标记为日期表。不要把界面展示、权限或建模问题混为一谈。时间智能依赖连续日期列和正确日期表。",
-    "practice": "创建Calendar并Mark as date table。"
-  },
-  {
-    "id": 99,
-    "module": "数据建模与DAX",
-    "skill": "CALCULATE",
-    "difficulty": "高级",
-    "question": "关于【CALCULATE】：CALCULATE最核心的作用是？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "修改筛选上下文后计算表达式",
-      "替换空值",
-      "导入数据",
-      "发布报表"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 修改筛选上下文后计算表达式。CALCULATE会在新的筛选上下文中计算表达式。",
-    "practice": "写区域销售额度量。"
-  },
-  {
-    "id": 100,
-    "module": "数据建模与DAX",
-    "skill": "度量值",
-    "difficulty": "初级",
-    "question": "关于【度量值】：总销售额需要随切片器动态变化，应创建？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "度量值Measure",
-      "Power Query参数",
-      "计算列",
-      "书签"
-    ],
-    "answer": "A",
-    "explanation": "度量值Measure 更符合推荐实践。度量值根据筛选上下文动态计算。",
-    "practice": "Total Sales = SUM(Sales[Amount])。"
-  },
-  {
-    "id": 101,
-    "module": "数据建模与DAX",
-    "skill": "计算列",
-    "difficulty": "中级",
-    "question": "关于【计算列】：每个订单行固定保存数量*单价，适合创建？ 哪一项是最佳选择？",
-    "options": [
-      "计算列",
-      "仪表板",
-      "工作区",
-      "应用"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 计算列。关键原因：计算列按行计算并存储，适合行级属性。",
-    "practice": "创建Line Amount计算列。"
-  },
-  {
-    "id": 102,
-    "module": "数据建模与DAX",
-    "skill": "RELATED",
-    "difficulty": "中级",
-    "question": "关于【RELATED】：销售表已有到产品表的关系，在销售表计算列取产品类别，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "RELATED",
-      "REMOVEFILTERS",
-      "TOTALYTD",
-      "LOOKUPVALUE一定更优"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 RELATED。不要把界面展示、权限或建模问题混为一谈。RELATED通过现有关系获取一端表字段。",
-    "practice": "用RELATED获取产品类别。"
-  },
-  {
-    "id": 103,
-    "module": "数据建模与DAX",
-    "skill": "多对多",
-    "difficulty": "高级",
-    "question": "关于【多对多】：事实表之间通过非唯一键直接相连导致重复计算，推荐？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "创建共享维度或桥表",
-      "删除事实表",
-      "使用饼图",
-      "开启所有双向关系"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 创建共享维度或桥表。多对多场景应明确建模，优先共享维度/桥表。",
-    "practice": "创建唯一客户桥表。"
-  },
-  {
-    "id": 104,
-    "module": "数据建模与DAX",
-    "skill": "SUMX",
-    "difficulty": "高级",
-    "question": "关于【SUMX】：逐行计算Quantity*Price后再求和，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "SUMX",
-      "SUM",
-      "FORMAT",
-      "COUNT"
-    ],
-    "answer": "A",
-    "explanation": "SUMX 更符合推荐实践。SUMX是迭代函数，逐行计算表达式后聚合。",
-    "practice": "Total = SUMX(Sales, Sales[Qty]*Sales[Price])。"
-  },
-  {
-    "id": 105,
     "module": "数据建模与DAX",
     "skill": "DIVIDE",
     "difficulty": "中级",
-    "question": "关于【DIVIDE】：计算利润率并避免除以零错误，推荐？ 哪一项是最佳选择？",
+    "question": "计算利润率并避免除零错误，推荐使用？",
     "options": [
       "DIVIDE",
-      "APPEND",
-      "普通/永远安全",
-      "RELATED"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 DIVIDE。关键原因：DIVIDE可处理除数为0的替代结果。",
-    "practice": "Margin = DIVIDE([Profit],[Sales])。"
-  },
-  {
-    "id": 106,
-    "module": "数据建模与DAX",
-    "skill": "REMOVEFILTERS",
-    "difficulty": "高级",
-    "question": "关于【REMOVEFILTERS】：计算产品销售占总销售额比例，分母需忽略产品筛选，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "REMOVEFILTERS或ALL",
-      "Publish to web",
-      "Merge",
-      "TRIM"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 REMOVEFILTERS或ALL。不要把界面展示、权限或建模问题混为一谈。REMOVEFILTERS/ALL可移除指定筛选上下文。",
-    "practice": "创建销售占比度量。"
-  },
-  {
-    "id": 107,
-    "module": "数据建模与DAX",
-    "skill": "USERELATIONSHIP",
-    "difficulty": "高级",
-    "question": "关于【USERELATIONSHIP】：订单日期为活动关系，发货日期为非活动关系。按发货日期算销售应使用？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "USERELATIONSHIP",
-      "FORMAT",
-      "Q&A",
-      "UNPIVOT"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 USERELATIONSHIP。USERELATIONSHIP可在CALCULATE中临时启用非活动关系。",
-    "practice": "创建按发货日期销售额。"
-  },
-  {
-    "id": 108,
-    "module": "数据建模与DAX",
-    "skill": "按列排序",
-    "difficulty": "中级",
-    "question": "关于【按列排序】：月份名称按字母排序，应修复为自然月份顺序，使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "按月份序号列排序",
-      "开启RLS",
-      "删除月份",
-      "改为文本"
-    ],
-    "answer": "A",
-    "explanation": "按月份序号列排序 更符合推荐实践。Sort by column可让MonthName按MonthNumber排序。",
-    "practice": "设置MonthName按MonthNumber排序。"
-  },
-  {
-    "id": 109,
-    "module": "数据建模与DAX",
-    "skill": "星型模型",
-    "difficulty": "中级",
-    "question": "关于【星型模型】：销售事实表连接客户、产品、日期维表，通常推荐的模型是？ 哪一项是最佳选择？",
-    "options": [
-      "星型模型",
-      "所有表互相多对多",
-      "一个超宽表且无维表",
-      "删除日期表"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 星型模型。关键原因：星型模型清晰、性能好，事实表在多端，维表在一端。",
-    "practice": "建立事实表到维表的一对多关系。"
-  },
-  {
-    "id": 110,
-    "module": "数据建模与DAX",
-    "skill": "日期表",
-    "difficulty": "中级",
-    "question": "关于【日期表】：使用YTD、去年同期等时间智能函数，日期表应满足？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "连续日期并标记为日期表",
-      "只包含有交易的日期",
-      "必须来自Excel",
-      "只能有年份列"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 连续日期并标记为日期表。不要把界面展示、权限或建模问题混为一谈。时间智能依赖连续日期列和正确日期表。",
-    "practice": "创建Calendar并Mark as date table。"
-  },
-  {
-    "id": 111,
-    "module": "数据建模与DAX",
-    "skill": "CALCULATE",
-    "difficulty": "高级",
-    "question": "关于【CALCULATE】：CALCULATE最核心的作用是？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "修改筛选上下文后计算表达式",
-      "导入数据",
-      "替换空值",
-      "发布报表"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 修改筛选上下文后计算表达式。CALCULATE会在新的筛选上下文中计算表达式。",
-    "practice": "写区域销售额度量。"
-  },
-  {
-    "id": 112,
-    "module": "数据建模与DAX",
-    "skill": "度量值",
-    "difficulty": "初级",
-    "question": "关于【度量值】：总销售额需要随切片器动态变化，应创建？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "度量值Measure",
-      "Power Query参数",
-      "书签",
-      "计算列"
-    ],
-    "answer": "A",
-    "explanation": "度量值Measure 更符合推荐实践。度量值根据筛选上下文动态计算。",
-    "practice": "Total Sales = SUM(Sales[Amount])。"
-  },
-  {
-    "id": 113,
-    "module": "数据建模与DAX",
-    "skill": "计算列",
-    "difficulty": "中级",
-    "question": "关于【计算列】：每个订单行固定保存数量*单价，适合创建？ 哪一项是最佳选择？",
-    "options": [
-      "计算列",
-      "应用",
-      "仪表板",
-      "工作区"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 计算列。关键原因：计算列按行计算并存储，适合行级属性。",
-    "practice": "创建Line Amount计算列。"
-  },
-  {
-    "id": 114,
-    "module": "数据建模与DAX",
-    "skill": "RELATED",
-    "difficulty": "中级",
-    "question": "关于【RELATED】：销售表已有到产品表的关系，在销售表计算列取产品类别，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "RELATED",
-      "TOTALYTD",
-      "REMOVEFILTERS",
-      "LOOKUPVALUE一定更优"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 RELATED。不要把界面展示、权限或建模问题混为一谈。RELATED通过现有关系获取一端表字段。",
-    "practice": "用RELATED获取产品类别。"
-  },
-  {
-    "id": 115,
-    "module": "数据建模与DAX",
-    "skill": "多对多",
-    "difficulty": "高级",
-    "question": "关于【多对多】：事实表之间通过非唯一键直接相连导致重复计算，推荐？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "创建共享维度或桥表",
-      "删除事实表",
-      "开启所有双向关系",
-      "使用饼图"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 创建共享维度或桥表。多对多场景应明确建模，优先共享维度/桥表。",
-    "practice": "创建唯一客户桥表。"
-  },
-  {
-    "id": 116,
-    "module": "数据建模与DAX",
-    "skill": "SUMX",
-    "difficulty": "高级",
-    "question": "关于【SUMX】：逐行计算Quantity*Price后再求和，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "SUMX",
-      "FORMAT",
-      "COUNT",
-      "SUM"
-    ],
-    "answer": "A",
-    "explanation": "SUMX 更符合推荐实践。SUMX是迭代函数，逐行计算表达式后聚合。",
-    "practice": "Total = SUMX(Sales, Sales[Qty]*Sales[Price])。"
-  },
-  {
-    "id": 117,
-    "module": "数据建模与DAX",
-    "skill": "DIVIDE",
-    "difficulty": "中级",
-    "question": "关于【DIVIDE】：计算利润率并避免除以零错误，推荐？ 哪一项是最佳选择？",
-    "options": [
-      "DIVIDE",
-      "RELATED",
-      "普通/永远安全",
-      "APPEND"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 DIVIDE。关键原因：DIVIDE可处理除数为0的替代结果。",
-    "practice": "Margin = DIVIDE([Profit],[Sales])。"
-  },
-  {
-    "id": 118,
-    "module": "数据建模与DAX",
-    "skill": "REMOVEFILTERS",
-    "difficulty": "高级",
-    "question": "关于【REMOVEFILTERS】：计算产品销售占总销售额比例，分母需忽略产品筛选，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "REMOVEFILTERS或ALL",
-      "TRIM",
-      "Publish to web",
-      "Merge"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 REMOVEFILTERS或ALL。不要把界面展示、权限或建模问题混为一谈。REMOVEFILTERS/ALL可移除指定筛选上下文。",
-    "practice": "创建销售占比度量。"
-  },
-  {
-    "id": 119,
-    "module": "数据建模与DAX",
-    "skill": "USERELATIONSHIP",
-    "difficulty": "高级",
-    "question": "关于【USERELATIONSHIP】：订单日期为活动关系，发货日期为非活动关系。按发货日期算销售应使用？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "USERELATIONSHIP",
-      "UNPIVOT",
-      "Q&A",
-      "FORMAT"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 USERELATIONSHIP。USERELATIONSHIP可在CALCULATE中临时启用非活动关系。",
-    "practice": "创建按发货日期销售额。"
-  },
-  {
-    "id": 120,
-    "module": "数据建模与DAX",
-    "skill": "按列排序",
-    "difficulty": "中级",
-    "question": "关于【按列排序】：月份名称按字母排序，应修复为自然月份顺序，使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "按月份序号列排序",
-      "改为文本",
-      "开启RLS",
-      "删除月份"
-    ],
-    "answer": "A",
-    "explanation": "按月份序号列排序 更符合推荐实践。Sort by column可让MonthName按MonthNumber排序。",
-    "practice": "设置MonthName按MonthNumber排序。"
-  },
-  {
-    "id": 121,
-    "module": "数据建模与DAX",
-    "skill": "星型模型",
-    "difficulty": "中级",
-    "question": "关于【星型模型】：销售事实表连接客户、产品、日期维表，通常推荐的模型是？ 哪一项是最佳选择？",
-    "options": [
-      "星型模型",
-      "所有表互相多对多",
-      "一个超宽表且无维表",
-      "删除日期表"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 星型模型。关键原因：星型模型清晰、性能好，事实表在多端，维表在一端。",
-    "practice": "建立事实表到维表的一对多关系。"
-  },
-  {
-    "id": 122,
-    "module": "数据建模与DAX",
-    "skill": "日期表",
-    "difficulty": "中级",
-    "question": "关于【日期表】：使用YTD、去年同期等时间智能函数，日期表应满足？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "连续日期并标记为日期表",
-      "必须来自Excel",
-      "只能有年份列",
-      "只包含有交易的日期"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 连续日期并标记为日期表。不要把界面展示、权限或建模问题混为一谈。时间智能依赖连续日期列和正确日期表。",
-    "practice": "创建Calendar并Mark as date table。"
-  },
-  {
-    "id": 123,
-    "module": "数据建模与DAX",
-    "skill": "CALCULATE",
-    "difficulty": "高级",
-    "question": "关于【CALCULATE】：CALCULATE最核心的作用是？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "修改筛选上下文后计算表达式",
-      "导入数据",
-      "替换空值",
-      "发布报表"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 修改筛选上下文后计算表达式。CALCULATE会在新的筛选上下文中计算表达式。",
-    "practice": "写区域销售额度量。"
-  },
-  {
-    "id": 124,
-    "module": "数据建模与DAX",
-    "skill": "度量值",
-    "difficulty": "初级",
-    "question": "关于【度量值】：总销售额需要随切片器动态变化，应创建？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "度量值Measure",
-      "计算列",
-      "书签",
-      "Power Query参数"
-    ],
-    "answer": "A",
-    "explanation": "度量值Measure 更符合推荐实践。度量值根据筛选上下文动态计算。",
-    "practice": "Total Sales = SUM(Sales[Amount])。"
-  },
-  {
-    "id": 125,
-    "module": "数据建模与DAX",
-    "skill": "计算列",
-    "difficulty": "中级",
-    "question": "关于【计算列】：每个订单行固定保存数量*单价，适合创建？ 哪一项是最佳选择？",
-    "options": [
-      "计算列",
-      "仪表板",
-      "工作区",
-      "应用"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 计算列。关键原因：计算列按行计算并存储，适合行级属性。",
-    "practice": "创建Line Amount计算列。"
-  },
-  {
-    "id": 126,
-    "module": "数据建模与DAX",
-    "skill": "RELATED",
-    "difficulty": "中级",
-    "question": "关于【RELATED】：销售表已有到产品表的关系，在销售表计算列取产品类别，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "RELATED",
-      "LOOKUPVALUE一定更优",
-      "REMOVEFILTERS",
+      "CROSSFILTER",
+      "VAR 变量",
       "TOTALYTD"
     ],
     "answer": "A",
-    "explanation": "正确做法仍是 RELATED。不要把界面展示、权限或建模问题混为一谈。RELATED通过现有关系获取一端表字段。",
-    "practice": "用RELATED获取产品类别。"
+    "explanation": "该题考查模型与 DAX 的“DIVIDE”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“DIVIDE”的实际效果。"
   },
   {
-    "id": 127,
+    "id": 55,
     "module": "数据建模与DAX",
-    "skill": "多对多",
-    "difficulty": "高级",
-    "question": "关于【多对多】：事实表之间通过非唯一键直接相连导致重复计算，推荐？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "创建共享维度或桥表",
-      "删除事实表",
-      "使用饼图",
-      "开启所有双向关系"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 创建共享维度或桥表。多对多场景应明确建模，优先共享维度/桥表。",
-    "practice": "创建唯一客户桥表。"
-  },
-  {
-    "id": 128,
-    "module": "数据建模与DAX",
-    "skill": "SUMX",
-    "difficulty": "高级",
-    "question": "关于【SUMX】：逐行计算Quantity*Price后再求和，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "SUMX",
-      "COUNT",
-      "FORMAT",
-      "SUM"
-    ],
-    "answer": "A",
-    "explanation": "SUMX 更符合推荐实践。SUMX是迭代函数，逐行计算表达式后聚合。",
-    "practice": "Total = SUMX(Sales, Sales[Qty]*Sales[Price])。"
-  },
-  {
-    "id": 129,
-    "module": "数据建模与DAX",
-    "skill": "DIVIDE",
+    "skill": "DISTINCTCOUNT",
     "difficulty": "中级",
-    "question": "关于【DIVIDE】：计算利润率并避免除以零错误，推荐？ 哪一项是最佳选择？",
+    "question": "统计购买客户数，应使用？",
     "options": [
-      "DIVIDE",
-      "APPEND",
-      "普通/永远安全",
-      "RELATED"
+      "复合模型",
+      "DISTINCTCOUNT",
+      "度量值 Measure",
+      "ALL 或 REMOVEFILTERS"
     ],
-    "answer": "A",
-    "explanation": "最佳选择是 DIVIDE。关键原因：DIVIDE可处理除数为0的替代结果。",
-    "practice": "Margin = DIVIDE([Profit],[Sales])。"
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“DISTINCTCOUNT”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“DISTINCTCOUNT”的实际效果。"
   },
   {
-    "id": 130,
+    "id": 56,
     "module": "数据建模与DAX",
-    "skill": "REMOVEFILTERS",
-    "difficulty": "高级",
-    "question": "关于【REMOVEFILTERS】：计算产品销售占总销售额比例，分母需忽略产品筛选，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "REMOVEFILTERS或ALL",
-      "Publish to web",
-      "Merge",
-      "TRIM"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 REMOVEFILTERS或ALL。不要把界面展示、权限或建模问题混为一谈。REMOVEFILTERS/ALL可移除指定筛选上下文。",
-    "practice": "创建销售占比度量。"
-  },
-  {
-    "id": 131,
-    "module": "数据建模与DAX",
-    "skill": "USERELATIONSHIP",
-    "difficulty": "高级",
-    "question": "关于【USERELATIONSHIP】：订单日期为活动关系，发货日期为非活动关系。按发货日期算销售应使用？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "USERELATIONSHIP",
-      "UNPIVOT",
-      "FORMAT",
-      "Q&A"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 USERELATIONSHIP。USERELATIONSHIP可在CALCULATE中临时启用非活动关系。",
-    "practice": "创建按发货日期销售额。"
-  },
-  {
-    "id": 132,
-    "module": "数据建模与DAX",
-    "skill": "按列排序",
+    "skill": "COUNTROWS",
     "difficulty": "中级",
-    "question": "关于【按列排序】：月份名称按字母排序，应修复为自然月份顺序，使用？ 以下哪项最符合Power BI推荐实践？",
+    "question": "统计订单表行数，推荐使用？",
     "options": [
-      "按月份序号列排序",
-      "删除月份",
-      "开启RLS",
-      "改为文本"
+      "FILTER 函数",
+      "创建度量值表",
+      "筛选上下文",
+      "COUNTROWS"
     ],
-    "answer": "A",
-    "explanation": "按月份序号列排序 更符合推荐实践。Sort by column可让MonthName按MonthNumber排序。",
-    "practice": "设置MonthName按MonthNumber排序。"
+    "answer": "D",
+    "explanation": "该题考查模型与 DAX 的“COUNTROWS”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“COUNTROWS”的实际效果。"
   },
   {
-    "id": 133,
-    "module": "数据建模与DAX",
-    "skill": "星型模型",
-    "difficulty": "中级",
-    "question": "关于【星型模型】：销售事实表连接客户、产品、日期维表，通常推荐的模型是？ 哪一项是最佳选择？",
-    "options": [
-      "星型模型",
-      "一个超宽表且无维表",
-      "所有表互相多对多",
-      "删除日期表"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 星型模型。关键原因：星型模型清晰、性能好，事实表在多端，维表在一端。",
-    "practice": "建立事实表到维表的一对多关系。"
-  },
-  {
-    "id": 134,
-    "module": "数据建模与DAX",
-    "skill": "日期表",
-    "difficulty": "中级",
-    "question": "关于【日期表】：使用YTD、去年同期等时间智能函数，日期表应满足？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "连续日期并标记为日期表",
-      "必须来自Excel",
-      "只包含有交易的日期",
-      "只能有年份列"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 连续日期并标记为日期表。不要把界面展示、权限或建模问题混为一谈。时间智能依赖连续日期列和正确日期表。",
-    "practice": "创建Calendar并Mark as date table。"
-  },
-  {
-    "id": 135,
-    "module": "数据建模与DAX",
-    "skill": "CALCULATE",
-    "difficulty": "高级",
-    "question": "关于【CALCULATE】：CALCULATE最核心的作用是？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "修改筛选上下文后计算表达式",
-      "替换空值",
-      "导入数据",
-      "发布报表"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 修改筛选上下文后计算表达式。CALCULATE会在新的筛选上下文中计算表达式。",
-    "practice": "写区域销售额度量。"
-  },
-  {
-    "id": 136,
-    "module": "数据建模与DAX",
-    "skill": "度量值",
-    "difficulty": "初级",
-    "question": "关于【度量值】：总销售额需要随切片器动态变化，应创建？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "度量值Measure",
-      "Power Query参数",
-      "书签",
-      "计算列"
-    ],
-    "answer": "A",
-    "explanation": "度量值Measure 更符合推荐实践。度量值根据筛选上下文动态计算。",
-    "practice": "Total Sales = SUM(Sales[Amount])。"
-  },
-  {
-    "id": 137,
-    "module": "数据建模与DAX",
-    "skill": "计算列",
-    "difficulty": "中级",
-    "question": "关于【计算列】：每个订单行固定保存数量*单价，适合创建？ 哪一项是最佳选择？",
-    "options": [
-      "计算列",
-      "工作区",
-      "应用",
-      "仪表板"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 计算列。关键原因：计算列按行计算并存储，适合行级属性。",
-    "practice": "创建Line Amount计算列。"
-  },
-  {
-    "id": 138,
+    "id": 57,
     "module": "数据建模与DAX",
     "skill": "RELATED",
     "difficulty": "中级",
-    "question": "关于【RELATED】：销售表已有到产品表的关系，在销售表计算列取产品类别，应使用？ 考试场景中最容易混淆的正确做法是？",
+    "question": "销售表计算列中取产品类别且已有关系，应使用？",
     "options": [
       "RELATED",
-      "REMOVEFILTERS",
-      "TOTALYTD",
-      "LOOKUPVALUE一定更优"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 RELATED。不要把界面展示、权限或建模问题混为一谈。RELATED通过现有关系获取一端表字段。",
-    "practice": "用RELATED获取产品类别。"
-  },
-  {
-    "id": 139,
-    "module": "数据建模与DAX",
-    "skill": "多对多",
-    "difficulty": "高级",
-    "question": "关于【多对多】：事实表之间通过非唯一键直接相连导致重复计算，推荐？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
       "创建共享维度或桥表",
-      "开启所有双向关系",
-      "使用饼图",
-      "删除事实表"
+      "ALL 或 REMOVEFILTERS",
+      "TOTALYTD"
     ],
     "answer": "A",
-    "explanation": "应优先选择 创建共享维度或桥表。多对多场景应明确建模，优先共享维度/桥表。",
-    "practice": "创建唯一客户桥表。"
+    "explanation": "该题考查模型与 DAX 的“RELATED”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“RELATED”的实际效果。"
   },
   {
-    "id": 140,
+    "id": 58,
     "module": "数据建模与DAX",
-    "skill": "SUMX",
-    "difficulty": "高级",
-    "question": "关于【SUMX】：逐行计算Quantity*Price后再求和，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "SUMX",
-      "FORMAT",
-      "SUM",
-      "COUNT"
-    ],
-    "answer": "A",
-    "explanation": "SUMX 更符合推荐实践。SUMX是迭代函数，逐行计算表达式后聚合。",
-    "practice": "Total = SUMX(Sales, Sales[Qty]*Sales[Price])。"
-  },
-  {
-    "id": 141,
-    "module": "数据建模与DAX",
-    "skill": "DIVIDE",
+    "skill": "LOOKUPVALUE",
     "difficulty": "中级",
-    "question": "关于【DIVIDE】：计算利润率并避免除以零错误，推荐？ 哪一项是最佳选择？",
+    "question": "没有关系但要按键查找标量值，可考虑？",
     "options": [
-      "DIVIDE",
-      "APPEND",
-      "RELATED",
-      "普通/永远安全"
+      "设置字段格式为百分比",
+      "SAMEPERIODLASTYEAR",
+      "CALCULATE",
+      "LOOKUPVALUE"
     ],
-    "answer": "A",
-    "explanation": "最佳选择是 DIVIDE。关键原因：DIVIDE可处理除数为0的替代结果。",
-    "practice": "Margin = DIVIDE([Profit],[Sales])。"
+    "answer": "D",
+    "explanation": "该题考查模型与 DAX 的“LOOKUPVALUE”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“LOOKUPVALUE”的实际效果。"
   },
   {
-    "id": 142,
-    "module": "数据建模与DAX",
-    "skill": "REMOVEFILTERS",
-    "difficulty": "高级",
-    "question": "关于【REMOVEFILTERS】：计算产品销售占总销售额比例，分母需忽略产品筛选，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "REMOVEFILTERS或ALL",
-      "TRIM",
-      "Publish to web",
-      "Merge"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 REMOVEFILTERS或ALL。不要把界面展示、权限或建模问题混为一谈。REMOVEFILTERS/ALL可移除指定筛选上下文。",
-    "practice": "创建销售占比度量。"
-  },
-  {
-    "id": 143,
+    "id": 59,
     "module": "数据建模与DAX",
     "skill": "USERELATIONSHIP",
-    "difficulty": "高级",
-    "question": "关于【USERELATIONSHIP】：订单日期为活动关系，发货日期为非活动关系。按发货日期算销售应使用？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "USERELATIONSHIP",
-      "FORMAT",
-      "Q&A",
-      "UNPIVOT"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 USERELATIONSHIP。USERELATIONSHIP可在CALCULATE中临时启用非活动关系。",
-    "practice": "创建按发货日期销售额。"
-  },
-  {
-    "id": 144,
-    "module": "数据建模与DAX",
-    "skill": "按列排序",
     "difficulty": "中级",
-    "question": "关于【按列排序】：月份名称按字母排序，应修复为自然月份顺序，使用？ 以下哪项最符合Power BI推荐实践？",
+    "question": "按非活动的发货日期关系计算销售额，应使用？",
     "options": [
-      "按月份序号列排序",
-      "删除月份",
-      "开启RLS",
-      "改为文本"
-    ],
-    "answer": "A",
-    "explanation": "按月份序号列排序 更符合推荐实践。Sort by column可让MonthName按MonthNumber排序。",
-    "practice": "设置MonthName按MonthNumber排序。"
-  },
-  {
-    "id": 145,
-    "module": "数据建模与DAX",
-    "skill": "星型模型",
-    "difficulty": "中级",
-    "question": "关于【星型模型】：销售事实表连接客户、产品、日期维表，通常推荐的模型是？ 哪一项是最佳选择？",
-    "options": [
+      "设置字段格式为百分比",
       "星型模型",
-      "删除日期表",
-      "一个超宽表且无维表",
-      "所有表互相多对多"
+      "AVERAGEX",
+      "USERELATIONSHIP"
     ],
-    "answer": "A",
-    "explanation": "最佳选择是 星型模型。关键原因：星型模型清晰、性能好，事实表在多端，维表在一端。",
-    "practice": "建立事实表到维表的一对多关系。"
+    "answer": "D",
+    "explanation": "该题考查模型与 DAX 的“USERELATIONSHIP”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“USERELATIONSHIP”的实际效果。"
   },
   {
-    "id": 146,
+    "id": 60,
     "module": "数据建模与DAX",
-    "skill": "日期表",
+    "skill": "CROSSFILTER",
     "difficulty": "中级",
-    "question": "关于【日期表】：使用YTD、去年同期等时间智能函数，日期表应满足？ 考试场景中最容易混淆的正确做法是？",
+    "question": "度量中临时改变关系筛选方向或禁用关系，可用？",
     "options": [
-      "连续日期并标记为日期表",
-      "只包含有交易的日期",
-      "必须来自Excel",
-      "只能有年份列"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 连续日期并标记为日期表。不要把界面展示、权限或建模问题混为一谈。时间智能依赖连续日期列和正确日期表。",
-    "practice": "创建Calendar并Mark as date table。"
-  },
-  {
-    "id": 147,
-    "module": "数据建模与DAX",
-    "skill": "CALCULATE",
-    "difficulty": "高级",
-    "question": "关于【CALCULATE】：CALCULATE最核心的作用是？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "修改筛选上下文后计算表达式",
-      "替换空值",
-      "导入数据",
-      "发布报表"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 修改筛选上下文后计算表达式。CALCULATE会在新的筛选上下文中计算表达式。",
-    "practice": "写区域销售额度量。"
-  },
-  {
-    "id": 148,
-    "module": "数据建模与DAX",
-    "skill": "度量值",
-    "difficulty": "初级",
-    "question": "关于【度量值】：总销售额需要随切片器动态变化，应创建？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "度量值Measure",
-      "Power Query参数",
-      "计算列",
-      "书签"
-    ],
-    "answer": "A",
-    "explanation": "度量值Measure 更符合推荐实践。度量值根据筛选上下文动态计算。",
-    "practice": "Total Sales = SUM(Sales[Amount])。"
-  },
-  {
-    "id": 149,
-    "module": "数据建模与DAX",
-    "skill": "计算列",
-    "difficulty": "中级",
-    "question": "关于【计算列】：每个订单行固定保存数量*单价，适合创建？ 哪一项是最佳选择？",
-    "options": [
-      "计算列",
-      "仪表板",
-      "应用",
-      "工作区"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 计算列。关键原因：计算列按行计算并存储，适合行级属性。",
-    "practice": "创建Line Amount计算列。"
-  },
-  {
-    "id": 150,
-    "module": "数据建模与DAX",
-    "skill": "RELATED",
-    "difficulty": "中级",
-    "question": "关于【RELATED】：销售表已有到产品表的关系，在销售表计算列取产品类别，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "RELATED",
-      "TOTALYTD",
-      "REMOVEFILTERS",
-      "LOOKUPVALUE一定更优"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 RELATED。不要把界面展示、权限或建模问题混为一谈。RELATED通过现有关系获取一端表字段。",
-    "practice": "用RELATED获取产品类别。"
-  },
-  {
-    "id": 151,
-    "module": "数据建模与DAX",
-    "skill": "多对多",
-    "difficulty": "高级",
-    "question": "关于【多对多】：事实表之间通过非唯一键直接相连导致重复计算，推荐？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "创建共享维度或桥表",
-      "开启所有双向关系",
-      "删除事实表",
-      "使用饼图"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 创建共享维度或桥表。多对多场景应明确建模，优先共享维度/桥表。",
-    "practice": "创建唯一客户桥表。"
-  },
-  {
-    "id": 152,
-    "module": "数据建模与DAX",
-    "skill": "SUMX",
-    "difficulty": "高级",
-    "question": "关于【SUMX】：逐行计算Quantity*Price后再求和，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "SUMX",
-      "COUNT",
-      "SUM",
-      "FORMAT"
-    ],
-    "answer": "A",
-    "explanation": "SUMX 更符合推荐实践。SUMX是迭代函数，逐行计算表达式后聚合。",
-    "practice": "Total = SUMX(Sales, Sales[Qty]*Sales[Price])。"
-  },
-  {
-    "id": 153,
-    "module": "数据建模与DAX",
-    "skill": "DIVIDE",
-    "difficulty": "中级",
-    "question": "关于【DIVIDE】：计算利润率并避免除以零错误，推荐？ 哪一项是最佳选择？",
-    "options": [
-      "DIVIDE",
-      "普通/永远安全",
-      "RELATED",
-      "APPEND"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 DIVIDE。关键原因：DIVIDE可处理除数为0的替代结果。",
-    "practice": "Margin = DIVIDE([Profit],[Sales])。"
-  },
-  {
-    "id": 154,
-    "module": "数据建模与DAX",
-    "skill": "REMOVEFILTERS",
-    "difficulty": "高级",
-    "question": "关于【REMOVEFILTERS】：计算产品销售占总销售额比例，分母需忽略产品筛选，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "REMOVEFILTERS或ALL",
-      "TRIM",
-      "Merge",
-      "Publish to web"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 REMOVEFILTERS或ALL。不要把界面展示、权限或建模问题混为一谈。REMOVEFILTERS/ALL可移除指定筛选上下文。",
-    "practice": "创建销售占比度量。"
-  },
-  {
-    "id": 155,
-    "module": "可视化与分析",
-    "skill": "图表选择",
-    "difficulty": "初级",
-    "question": "关于【图表选择】：展示月度销售趋势，最合适的视觉对象是？ 哪一项是最佳选择？",
-    "options": [
-      "折线图",
-      "表格",
-      "卡片",
-      "饼图"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 折线图。关键原因：折线图适合连续时间趋势。",
-    "practice": "制作月度销售折线图。"
-  },
-  {
-    "id": 156,
-    "module": "可视化与分析",
-    "skill": "矩阵",
-    "difficulty": "初级",
-    "question": "关于【矩阵】：按区域和产品层级展示销售额、小计和明细，适合？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "矩阵",
-      "地图",
-      "按钮",
-      "卡片"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 矩阵。不要把界面展示、权限或建模问题混为一谈。矩阵支持层级、行列分组和小计。",
-    "practice": "制作区域-产品矩阵。"
-  },
-  {
-    "id": 157,
-    "module": "可视化与分析",
-    "skill": "切片器",
-    "difficulty": "初级",
-    "question": "关于【切片器】：用户需要在页面上按年份筛选报表，应添加？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "切片器",
-      "计算列",
-      "网关",
-      "数据源设置"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 切片器。切片器提供页面交互筛选。",
-    "practice": "添加年份切片器。"
-  },
-  {
-    "id": 158,
-    "module": "可视化与分析",
-    "skill": "同步切片器",
-    "difficulty": "中级",
-    "question": "关于【同步切片器】：多个页面共享同一个年份选择状态，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "同步切片器",
-      "多对多关系",
-      "复制PBIX",
-      "增量刷新"
-    ],
-    "answer": "A",
-    "explanation": "同步切片器 更符合推荐实践。同步切片器可跨页面同步筛选状态。",
-    "practice": "在两个页面同步年份切片器。"
-  },
-  {
-    "id": 159,
-    "module": "可视化与分析",
-    "skill": "钻取",
-    "difficulty": "中级",
-    "question": "关于【钻取】：从产品汇总页跳转到产品明细页并传递产品上下文，应配置？ 哪一项是最佳选择？",
-    "options": [
-      "Drillthrough钻取",
-      "查询折叠",
-      "列质量",
-      "发布到Web"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 Drillthrough钻取。关键原因：钻取页可接收上下文并展示明细。",
-    "practice": "创建产品明细钻取页。"
-  },
-  {
-    "id": 160,
-    "module": "可视化与分析",
-    "skill": "书签",
-    "difficulty": "中级",
-    "question": "关于【书签】：按钮切换不同视图或显示隐藏对象，常用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "书签配合按钮",
-      "数据网关",
-      "RLS",
-      "日期表"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 书签配合按钮。不要把界面展示、权限或建模问题混为一谈。书签保存页面状态，配合按钮实现交互。",
-    "practice": "制作弹窗或指标切换。"
-  },
-  {
-    "id": 161,
-    "module": "可视化与分析",
-    "skill": "编辑交互",
-    "difficulty": "中级",
-    "question": "关于【编辑交互】：一个图表不应影响另一个图表，应设置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "编辑交互为无",
-      "改数据类型",
-      "关闭刷新",
-      "删除关系"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 编辑交互为无。编辑交互控制视觉对象之间筛选、高亮或无影响。",
-    "practice": "关闭柱形图对明细表的影响。"
-  },
-  {
-    "id": 162,
-    "module": "可视化与分析",
-    "skill": "条件格式",
-    "difficulty": "初级",
-    "question": "关于【条件格式】：矩阵中低于目标的利润率标红，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "条件格式",
-      "网关",
-      "Merge",
-      "RLS"
-    ],
-    "answer": "A",
-    "explanation": "条件格式 更符合推荐实践。条件格式用于按规则突出显示数值。",
-    "practice": "给利润率设置颜色规则。"
-  },
-  {
-    "id": 163,
-    "module": "可视化与分析",
-    "skill": "性能分析器",
-    "difficulty": "中级",
-    "question": "关于【性能分析器】：报表页面加载慢，想查看每个视觉对象耗时，应使用？ 哪一项是最佳选择？",
-    "options": [
-      "性能分析器",
-      "工作区角色",
-      "隐私级别",
-      "列质量"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 性能分析器。关键原因：性能分析器记录DAX查询和视觉渲染耗时。",
-    "practice": "录制页面并定位慢视觉对象。"
-  },
-  {
-    "id": 164,
-    "module": "可视化与分析",
-    "skill": "字段参数",
-    "difficulty": "中级",
-    "question": "关于【字段参数】：用户想在同一图表切换销售额、利润、订单数，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "字段参数",
-      "数据源凭据",
-      "发布到Web",
-      "网关集群"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 字段参数。不要把界面展示、权限或建模问题混为一谈。字段参数支持动态切换字段或度量。",
-    "practice": "创建指标切换参数。"
-  },
-  {
-    "id": 165,
-    "module": "可视化与分析",
-    "skill": "关键影响因素",
-    "difficulty": "中级",
-    "question": "关于【关键影响因素】：分析哪些维度影响客户流失，适合？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "关键影响因素视觉对象",
-      "按钮",
-      "表格",
-      "卡片"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 关键影响因素视觉对象。关键影响因素用于探索目标指标的驱动因素。",
-    "practice": "用流失字段创建关键影响因素。"
-  },
-  {
-    "id": 166,
-    "module": "可视化与分析",
-    "skill": "移动布局",
-    "difficulty": "初级",
-    "question": "关于【移动布局】：让报表更适合手机查看，应配置？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "移动布局",
-      "查询折叠",
-      "对象级安全",
-      "RLS"
-    ],
-    "answer": "A",
-    "explanation": "移动布局 更符合推荐实践。移动布局可优化手机端阅读体验。",
-    "practice": "制作手机端首页。"
-  },
-  {
-    "id": 167,
-    "module": "可视化与分析",
-    "skill": "图表选择",
-    "difficulty": "初级",
-    "question": "关于【图表选择】：展示月度销售趋势，最合适的视觉对象是？ 哪一项是最佳选择？",
-    "options": [
-      "折线图",
-      "表格",
-      "饼图",
-      "卡片"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 折线图。关键原因：折线图适合连续时间趋势。",
-    "practice": "制作月度销售折线图。"
-  },
-  {
-    "id": 168,
-    "module": "可视化与分析",
-    "skill": "矩阵",
-    "difficulty": "初级",
-    "question": "关于【矩阵】：按区域和产品层级展示销售额、小计和明细，适合？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "矩阵",
-      "按钮",
-      "地图",
-      "卡片"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 矩阵。不要把界面展示、权限或建模问题混为一谈。矩阵支持层级、行列分组和小计。",
-    "practice": "制作区域-产品矩阵。"
-  },
-  {
-    "id": 169,
-    "module": "可视化与分析",
-    "skill": "切片器",
-    "difficulty": "初级",
-    "question": "关于【切片器】：用户需要在页面上按年份筛选报表，应添加？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "切片器",
-      "数据源设置",
-      "计算列",
-      "网关"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 切片器。切片器提供页面交互筛选。",
-    "practice": "添加年份切片器。"
-  },
-  {
-    "id": 170,
-    "module": "可视化与分析",
-    "skill": "同步切片器",
-    "difficulty": "中级",
-    "question": "关于【同步切片器】：多个页面共享同一个年份选择状态，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "同步切片器",
-      "增量刷新",
-      "多对多关系",
-      "复制PBIX"
-    ],
-    "answer": "A",
-    "explanation": "同步切片器 更符合推荐实践。同步切片器可跨页面同步筛选状态。",
-    "practice": "在两个页面同步年份切片器。"
-  },
-  {
-    "id": 171,
-    "module": "可视化与分析",
-    "skill": "钻取",
-    "difficulty": "中级",
-    "question": "关于【钻取】：从产品汇总页跳转到产品明细页并传递产品上下文，应配置？ 哪一项是最佳选择？",
-    "options": [
-      "Drillthrough钻取",
-      "查询折叠",
-      "列质量",
-      "发布到Web"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 Drillthrough钻取。关键原因：钻取页可接收上下文并展示明细。",
-    "practice": "创建产品明细钻取页。"
-  },
-  {
-    "id": 172,
-    "module": "可视化与分析",
-    "skill": "书签",
-    "difficulty": "中级",
-    "question": "关于【书签】：按钮切换不同视图或显示隐藏对象，常用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "书签配合按钮",
-      "数据网关",
-      "RLS",
-      "日期表"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 书签配合按钮。不要把界面展示、权限或建模问题混为一谈。书签保存页面状态，配合按钮实现交互。",
-    "practice": "制作弹窗或指标切换。"
-  },
-  {
-    "id": 173,
-    "module": "可视化与分析",
-    "skill": "编辑交互",
-    "difficulty": "中级",
-    "question": "关于【编辑交互】：一个图表不应影响另一个图表，应设置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "编辑交互为无",
-      "删除关系",
-      "改数据类型",
-      "关闭刷新"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 编辑交互为无。编辑交互控制视觉对象之间筛选、高亮或无影响。",
-    "practice": "关闭柱形图对明细表的影响。"
-  },
-  {
-    "id": 174,
-    "module": "可视化与分析",
-    "skill": "条件格式",
-    "difficulty": "初级",
-    "question": "关于【条件格式】：矩阵中低于目标的利润率标红，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "条件格式",
-      "RLS",
-      "Merge",
-      "网关"
-    ],
-    "answer": "A",
-    "explanation": "条件格式 更符合推荐实践。条件格式用于按规则突出显示数值。",
-    "practice": "给利润率设置颜色规则。"
-  },
-  {
-    "id": 175,
-    "module": "可视化与分析",
-    "skill": "性能分析器",
-    "difficulty": "中级",
-    "question": "关于【性能分析器】：报表页面加载慢，想查看每个视觉对象耗时，应使用？ 哪一项是最佳选择？",
-    "options": [
-      "性能分析器",
-      "隐私级别",
-      "列质量",
-      "工作区角色"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 性能分析器。关键原因：性能分析器记录DAX查询和视觉渲染耗时。",
-    "practice": "录制页面并定位慢视觉对象。"
-  },
-  {
-    "id": 176,
-    "module": "可视化与分析",
-    "skill": "字段参数",
-    "difficulty": "中级",
-    "question": "关于【字段参数】：用户想在同一图表切换销售额、利润、订单数，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "字段参数",
-      "发布到Web",
-      "数据源凭据",
-      "网关集群"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 字段参数。不要把界面展示、权限或建模问题混为一谈。字段参数支持动态切换字段或度量。",
-    "practice": "创建指标切换参数。"
-  },
-  {
-    "id": 177,
-    "module": "可视化与分析",
-    "skill": "关键影响因素",
-    "difficulty": "中级",
-    "question": "关于【关键影响因素】：分析哪些维度影响客户流失，适合？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "关键影响因素视觉对象",
-      "按钮",
-      "卡片",
-      "表格"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 关键影响因素视觉对象。关键影响因素用于探索目标指标的驱动因素。",
-    "practice": "用流失字段创建关键影响因素。"
-  },
-  {
-    "id": 178,
-    "module": "可视化与分析",
-    "skill": "移动布局",
-    "difficulty": "初级",
-    "question": "关于【移动布局】：让报表更适合手机查看，应配置？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "移动布局",
-      "查询折叠",
-      "对象级安全",
-      "RLS"
-    ],
-    "answer": "A",
-    "explanation": "移动布局 更符合推荐实践。移动布局可优化手机端阅读体验。",
-    "practice": "制作手机端首页。"
-  },
-  {
-    "id": 179,
-    "module": "可视化与分析",
-    "skill": "图表选择",
-    "difficulty": "初级",
-    "question": "关于【图表选择】：展示月度销售趋势，最合适的视觉对象是？ 哪一项是最佳选择？",
-    "options": [
-      "折线图",
-      "表格",
-      "卡片",
-      "饼图"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 折线图。关键原因：折线图适合连续时间趋势。",
-    "practice": "制作月度销售折线图。"
-  },
-  {
-    "id": 180,
-    "module": "可视化与分析",
-    "skill": "矩阵",
-    "difficulty": "初级",
-    "question": "关于【矩阵】：按区域和产品层级展示销售额、小计和明细，适合？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "矩阵",
-      "卡片",
-      "地图",
-      "按钮"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 矩阵。不要把界面展示、权限或建模问题混为一谈。矩阵支持层级、行列分组和小计。",
-    "practice": "制作区域-产品矩阵。"
-  },
-  {
-    "id": 181,
-    "module": "可视化与分析",
-    "skill": "切片器",
-    "difficulty": "初级",
-    "question": "关于【切片器】：用户需要在页面上按年份筛选报表，应添加？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "切片器",
-      "计算列",
-      "网关",
-      "数据源设置"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 切片器。切片器提供页面交互筛选。",
-    "practice": "添加年份切片器。"
-  },
-  {
-    "id": 182,
-    "module": "可视化与分析",
-    "skill": "同步切片器",
-    "difficulty": "中级",
-    "question": "关于【同步切片器】：多个页面共享同一个年份选择状态，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "同步切片器",
-      "多对多关系",
-      "复制PBIX",
-      "增量刷新"
-    ],
-    "answer": "A",
-    "explanation": "同步切片器 更符合推荐实践。同步切片器可跨页面同步筛选状态。",
-    "practice": "在两个页面同步年份切片器。"
-  },
-  {
-    "id": 183,
-    "module": "可视化与分析",
-    "skill": "钻取",
-    "difficulty": "中级",
-    "question": "关于【钻取】：从产品汇总页跳转到产品明细页并传递产品上下文，应配置？ 哪一项是最佳选择？",
-    "options": [
-      "Drillthrough钻取",
-      "列质量",
-      "查询折叠",
-      "发布到Web"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 Drillthrough钻取。关键原因：钻取页可接收上下文并展示明细。",
-    "practice": "创建产品明细钻取页。"
-  },
-  {
-    "id": 184,
-    "module": "可视化与分析",
-    "skill": "书签",
-    "difficulty": "中级",
-    "question": "关于【书签】：按钮切换不同视图或显示隐藏对象，常用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "书签配合按钮",
-      "数据网关",
-      "日期表",
-      "RLS"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 书签配合按钮。不要把界面展示、权限或建模问题混为一谈。书签保存页面状态，配合按钮实现交互。",
-    "practice": "制作弹窗或指标切换。"
-  },
-  {
-    "id": 185,
-    "module": "可视化与分析",
-    "skill": "编辑交互",
-    "difficulty": "中级",
-    "question": "关于【编辑交互】：一个图表不应影响另一个图表，应设置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "编辑交互为无",
-      "删除关系",
-      "关闭刷新",
-      "改数据类型"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 编辑交互为无。编辑交互控制视觉对象之间筛选、高亮或无影响。",
-    "practice": "关闭柱形图对明细表的影响。"
-  },
-  {
-    "id": 186,
-    "module": "可视化与分析",
-    "skill": "条件格式",
-    "difficulty": "初级",
-    "question": "关于【条件格式】：矩阵中低于目标的利润率标红，应使用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "条件格式",
-      "RLS",
-      "Merge",
-      "网关"
-    ],
-    "answer": "A",
-    "explanation": "条件格式 更符合推荐实践。条件格式用于按规则突出显示数值。",
-    "practice": "给利润率设置颜色规则。"
-  },
-  {
-    "id": 187,
-    "module": "可视化与分析",
-    "skill": "性能分析器",
-    "difficulty": "中级",
-    "question": "关于【性能分析器】：报表页面加载慢，想查看每个视觉对象耗时，应使用？ 哪一项是最佳选择？",
-    "options": [
-      "性能分析器",
-      "列质量",
-      "隐私级别",
-      "工作区角色"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 性能分析器。关键原因：性能分析器记录DAX查询和视觉渲染耗时。",
-    "practice": "录制页面并定位慢视觉对象。"
-  },
-  {
-    "id": 188,
-    "module": "可视化与分析",
-    "skill": "字段参数",
-    "difficulty": "中级",
-    "question": "关于【字段参数】：用户想在同一图表切换销售额、利润、订单数，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "字段参数",
-      "数据源凭据",
-      "网关集群",
-      "发布到Web"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 字段参数。不要把界面展示、权限或建模问题混为一谈。字段参数支持动态切换字段或度量。",
-    "practice": "创建指标切换参数。"
-  },
-  {
-    "id": 189,
-    "module": "可视化与分析",
-    "skill": "关键影响因素",
-    "difficulty": "中级",
-    "question": "关于【关键影响因素】：分析哪些维度影响客户流失，适合？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "关键影响因素视觉对象",
-      "表格",
-      "按钮",
-      "卡片"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 关键影响因素视觉对象。关键影响因素用于探索目标指标的驱动因素。",
-    "practice": "用流失字段创建关键影响因素。"
-  },
-  {
-    "id": 190,
-    "module": "可视化与分析",
-    "skill": "移动布局",
-    "difficulty": "初级",
-    "question": "关于【移动布局】：让报表更适合手机查看，应配置？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "移动布局",
-      "RLS",
-      "对象级安全",
-      "查询折叠"
-    ],
-    "answer": "A",
-    "explanation": "移动布局 更符合推荐实践。移动布局可优化手机端阅读体验。",
-    "practice": "制作手机端首页。"
-  },
-  {
-    "id": 191,
-    "module": "可视化与分析",
-    "skill": "图表选择",
-    "difficulty": "初级",
-    "question": "关于【图表选择】：展示月度销售趋势，最合适的视觉对象是？ 哪一项是最佳选择？",
-    "options": [
-      "折线图",
-      "卡片",
-      "饼图",
-      "表格"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 折线图。关键原因：折线图适合连续时间趋势。",
-    "practice": "制作月度销售折线图。"
-  },
-  {
-    "id": 192,
-    "module": "可视化与分析",
-    "skill": "矩阵",
-    "difficulty": "初级",
-    "question": "关于【矩阵】：按区域和产品层级展示销售额、小计和明细，适合？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "矩阵",
-      "按钮",
-      "卡片",
-      "地图"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 矩阵。不要把界面展示、权限或建模问题混为一谈。矩阵支持层级、行列分组和小计。",
-    "practice": "制作区域-产品矩阵。"
-  },
-  {
-    "id": 193,
-    "module": "可视化与分析",
-    "skill": "切片器",
-    "difficulty": "初级",
-    "question": "关于【切片器】：用户需要在页面上按年份筛选报表，应添加？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "切片器",
-      "数据源设置",
-      "网关",
+      "设置字段格式为百分比",
+      "CROSSFILTER",
+      "关闭自动日期/时间并使用统一日期表",
       "计算列"
     ],
-    "answer": "A",
-    "explanation": "应优先选择 切片器。切片器提供页面交互筛选。",
-    "practice": "添加年份切片器。"
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“CROSSFILTER”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“CROSSFILTER”的实际效果。"
   },
   {
-    "id": 194,
-    "module": "可视化与分析",
-    "skill": "同步切片器",
+    "id": 61,
+    "module": "数据建模与DAX",
+    "skill": "创建共享维度或桥表",
     "difficulty": "中级",
-    "question": "关于【同步切片器】：多个页面共享同一个年份选择状态，应使用？ 以下哪项最符合Power BI推荐实践？",
+    "question": "两个事实表通过非唯一客户编号直接相连导致重复，应优先？",
     "options": [
-      "同步切片器",
-      "多对多关系",
-      "增量刷新",
-      "复制PBIX"
-    ],
-    "answer": "A",
-    "explanation": "同步切片器 更符合推荐实践。同步切片器可跨页面同步筛选状态。",
-    "practice": "在两个页面同步年份切片器。"
-  },
-  {
-    "id": 195,
-    "module": "可视化与分析",
-    "skill": "钻取",
-    "difficulty": "中级",
-    "question": "关于【钻取】：从产品汇总页跳转到产品明细页并传递产品上下文，应配置？ 哪一项是最佳选择？",
-    "options": [
-      "Drillthrough钻取",
-      "查询折叠",
-      "发布到Web",
-      "列质量"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 Drillthrough钻取。关键原因：钻取页可接收上下文并展示明细。",
-    "practice": "创建产品明细钻取页。"
-  },
-  {
-    "id": 196,
-    "module": "可视化与分析",
-    "skill": "书签",
-    "difficulty": "中级",
-    "question": "关于【书签】：按钮切换不同视图或显示隐藏对象，常用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "书签配合按钮",
-      "日期表",
-      "RLS",
-      "数据网关"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 书签配合按钮。不要把界面展示、权限或建模问题混为一谈。书签保存页面状态，配合按钮实现交互。",
-    "practice": "制作弹窗或指标切换。"
-  },
-  {
-    "id": 197,
-    "module": "可视化与分析",
-    "skill": "编辑交互",
-    "difficulty": "中级",
-    "question": "关于【编辑交互】：一个图表不应影响另一个图表，应设置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "编辑交互为无",
-      "删除关系",
-      "关闭刷新",
-      "改数据类型"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 编辑交互为无。编辑交互控制视觉对象之间筛选、高亮或无影响。",
-    "practice": "关闭柱形图对明细表的影响。"
-  },
-  {
-    "id": 198,
-    "module": "管理与安全",
-    "skill": "工作区",
-    "difficulty": "初级",
-    "question": "关于【工作区】：Power BI Service中用于协作管理报表、语义模型和仪表板的容器是？ 哪一项是最佳选择？",
-    "options": [
-      "工作区",
-      "切片器",
-      "计算列",
-      "查询步骤"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 工作区。关键原因：工作区是Service中协作和内容管理的基本容器。",
-    "practice": "创建工作区并分配角色。"
-  },
-  {
-    "id": 199,
-    "module": "管理与安全",
-    "skill": "App发布",
-    "difficulty": "中级",
-    "question": "关于【App发布】：向大量业务用户分发稳定版本内容，推荐？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "发布Power BI App",
-      "发布到Web",
-      "复制截图",
-      "邮件发送PBIX"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 发布Power BI App。不要把界面展示、权限或建模问题混为一谈。App适合面向消费者分发工作区内容并控制受众。",
-    "practice": "从工作区发布App。"
-  },
-  {
-    "id": 200,
-    "module": "管理与安全",
-    "skill": "RLS",
-    "difficulty": "中级",
-    "question": "关于【RLS】：区域经理只能看到本区域销售数据，应配置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "行级安全RLS",
-      "主题",
-      "书签",
-      "列质量"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 行级安全RLS。RLS通过角色规则限制用户可见数据行。",
-    "practice": "创建Region过滤角色并测试。"
-  },
-  {
-    "id": 201,
-    "module": "管理与安全",
-    "skill": "动态RLS",
-    "difficulty": "高级",
-    "question": "关于【动态RLS】：根据登录用户邮箱自动筛选其负责区域，常用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "USERPRINCIPALNAME()加用户映射表",
-      "复制多个报表",
-      "隐藏区域列",
-      "页面筛选器"
-    ],
-    "answer": "A",
-    "explanation": "USERPRINCIPALNAME()加用户映射表 更符合推荐实践。动态RLS可降低维护成本并随用户映射变化。",
-    "practice": "实现用户-区域映射表。"
-  },
-  {
-    "id": 202,
-    "module": "管理与安全",
-    "skill": "敏感度标签",
-    "difficulty": "中级",
-    "question": "关于【敏感度标签】：报表包含机密财务数据，需要进行信息保护标识，应使用？ 哪一项是最佳选择？",
-    "options": [
-      "敏感度标签",
-      "Unpivot",
-      "散点图",
-      "字段参数"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 敏感度标签。关键原因：敏感度标签用于合规和数据保护。",
-    "practice": "给报表应用敏感度标签。"
-  },
-  {
-    "id": 203,
-    "module": "管理与安全",
-    "skill": "认证内容",
-    "difficulty": "中级",
-    "question": "关于【认证内容】：企业希望标识某语义模型为权威可信来源，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "Certified或Promoted背书",
-      "双向关系",
+      "创建共享维度或桥表",
       "隐藏字段",
-      "手机布局"
+      "创建聚合表",
+      "连续日期且标记为日期表"
     ],
     "answer": "A",
-    "explanation": "正确做法仍是 Certified或Promoted背书。不要把界面展示、权限或建模问题混为一谈。背书帮助用户发现可信内容。",
-    "practice": "申请认证语义模型。"
+    "explanation": "该题考查模型与 DAX 的“创建共享维度或桥表”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“创建共享维度或桥表”的实际效果。"
   },
   {
-    "id": 204,
-    "module": "管理与安全",
-    "skill": "计划刷新",
-    "difficulty": "初级",
-    "question": "关于【计划刷新】：Import模式数据集需要定期更新，应配置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "计划刷新",
-      "视觉排序",
-      "页面导航",
-      "替代文本"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 计划刷新。Import模式需要刷新以获取源数据变化。",
-    "practice": "设置每日刷新。"
-  },
-  {
-    "id": 205,
-    "module": "管理与安全",
-    "skill": "刷新失败",
+    "id": 62,
+    "module": "数据建模与DAX",
+    "skill": "两个事实表共享日期和产品维度",
     "difficulty": "中级",
-    "question": "关于【刷新失败】：刷新失败提示凭据无效，第一步检查？ 以下哪项最符合Power BI推荐实践？",
+    "question": "销售按订单行、预算按月产品粒度，最佳设计是？",
     "options": [
-      "数据源凭据",
-      "页面背景",
-      "图表颜色",
-      "月份排序"
-    ],
-    "answer": "A",
-    "explanation": "数据源凭据 更符合推荐实践。凭据和网关是刷新失败高频原因。",
-    "practice": "在Service更新凭据。"
-  },
-  {
-    "id": 206,
-    "module": "管理与安全",
-    "skill": "部署管道",
-    "difficulty": "高级",
-    "question": "关于【部署管道】：开发、测试、生产环境之间迁移内容，推荐？ 哪一项是最佳选择？",
-    "options": [
-      "部署管道",
-      "列分布",
-      "Q&A",
-      "散点图"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 部署管道。关键原因：部署管道支持内容生命周期管理。",
-    "practice": "配置Dev/Test/Prod管道。"
-  },
-  {
-    "id": 207,
-    "module": "管理与安全",
-    "skill": "血缘视图",
-    "difficulty": "中级",
-    "question": "关于【血缘视图】：查看报表依赖哪个语义模型和数据源，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "血缘视图",
-      "同步切片器",
-      "手机布局",
-      "焦点模式"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 血缘视图。不要把界面展示、权限或建模问题混为一谈。血缘视图展示内容依赖关系。",
-    "practice": "打开工作区Lineage view。"
-  },
-  {
-    "id": 208,
-    "module": "管理与安全",
-    "skill": "发布到Web",
-    "difficulty": "高级",
-    "question": "关于【发布到Web】：包含内部财务数据的报表适合Publish to web吗？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "不适合，可能公开到互联网",
-      "只有管理员可见",
-      "自动应用RLS",
-      "适合所有内部数据"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 不适合，可能公开到互联网。Publish to web适合公开内容，不适合敏感数据。",
-    "practice": "区分共享、App和Publish to web。"
-  },
-  {
-    "id": 209,
-    "module": "管理与安全",
-    "skill": "对象级安全",
-    "difficulty": "高级",
-    "question": "关于【对象级安全】：需要限制用户看不到某些敏感列或表，应考虑？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "OLS对象级安全",
-      "视觉级筛选",
-      "页面级筛选",
-      "书签"
-    ],
-    "answer": "A",
-    "explanation": "OLS对象级安全 更符合推荐实践。OLS限制表/列对象，RLS限制行。",
-    "practice": "比较RLS和OLS。"
-  },
-  {
-    "id": 210,
-    "module": "管理与安全",
-    "skill": "工作区",
-    "difficulty": "初级",
-    "question": "关于【工作区】：Power BI Service中用于协作管理报表、语义模型和仪表板的容器是？ 哪一项是最佳选择？",
-    "options": [
-      "工作区",
-      "查询步骤",
-      "切片器",
-      "计算列"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 工作区。关键原因：工作区是Service中协作和内容管理的基本容器。",
-    "practice": "创建工作区并分配角色。"
-  },
-  {
-    "id": 211,
-    "module": "管理与安全",
-    "skill": "App发布",
-    "difficulty": "中级",
-    "question": "关于【App发布】：向大量业务用户分发稳定版本内容，推荐？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "发布Power BI App",
-      "邮件发送PBIX",
-      "复制截图",
-      "发布到Web"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 发布Power BI App。不要把界面展示、权限或建模问题混为一谈。App适合面向消费者分发工作区内容并控制受众。",
-    "practice": "从工作区发布App。"
-  },
-  {
-    "id": 212,
-    "module": "管理与安全",
-    "skill": "RLS",
-    "difficulty": "中级",
-    "question": "关于【RLS】：区域经理只能看到本区域销售数据，应配置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "行级安全RLS",
-      "书签",
-      "列质量",
-      "主题"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 行级安全RLS。RLS通过角色规则限制用户可见数据行。",
-    "practice": "创建Region过滤角色并测试。"
-  },
-  {
-    "id": 213,
-    "module": "管理与安全",
-    "skill": "动态RLS",
-    "difficulty": "高级",
-    "question": "关于【动态RLS】：根据登录用户邮箱自动筛选其负责区域，常用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "USERPRINCIPALNAME()加用户映射表",
-      "页面筛选器",
-      "隐藏区域列",
-      "复制多个报表"
-    ],
-    "answer": "A",
-    "explanation": "USERPRINCIPALNAME()加用户映射表 更符合推荐实践。动态RLS可降低维护成本并随用户映射变化。",
-    "practice": "实现用户-区域映射表。"
-  },
-  {
-    "id": 214,
-    "module": "管理与安全",
-    "skill": "敏感度标签",
-    "difficulty": "中级",
-    "question": "关于【敏感度标签】：报表包含机密财务数据，需要进行信息保护标识，应使用？ 哪一项是最佳选择？",
-    "options": [
-      "敏感度标签",
-      "字段参数",
-      "散点图",
-      "Unpivot"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 敏感度标签。关键原因：敏感度标签用于合规和数据保护。",
-    "practice": "给报表应用敏感度标签。"
-  },
-  {
-    "id": 215,
-    "module": "管理与安全",
-    "skill": "认证内容",
-    "difficulty": "中级",
-    "question": "关于【认证内容】：企业希望标识某语义模型为权威可信来源，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "Certified或Promoted背书",
-      "手机布局",
-      "双向关系",
+      "两个事实表共享日期和产品维度",
+      "TOTALYTD",
+      "一对多关系",
       "隐藏字段"
     ],
     "answer": "A",
-    "explanation": "正确做法仍是 Certified或Promoted背书。不要把界面展示、权限或建模问题混为一谈。背书帮助用户发现可信内容。",
-    "practice": "申请认证语义模型。"
+    "explanation": "该题考查模型与 DAX 的“两个事实表共享日期和产品维度”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“两个事实表共享日期和产品维度”的实际效果。"
   },
   {
-    "id": 216,
-    "module": "管理与安全",
-    "skill": "计划刷新",
-    "difficulty": "初级",
-    "question": "关于【计划刷新】：Import模式数据集需要定期更新，应配置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "计划刷新",
-      "视觉排序",
-      "页面导航",
-      "替代文本"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 计划刷新。Import模式需要刷新以获取源数据变化。",
-    "practice": "设置每日刷新。"
-  },
-  {
-    "id": 217,
-    "module": "管理与安全",
-    "skill": "刷新失败",
+    "id": 63,
+    "module": "数据建模与DAX",
+    "skill": "用月份序号设置按列排序",
     "difficulty": "中级",
-    "question": "关于【刷新失败】：刷新失败提示凭据无效，第一步检查？ 以下哪项最符合Power BI推荐实践？",
+    "question": "月份名称按字母排序，如何按自然月显示？",
     "options": [
-      "数据源凭据",
-      "页面背景",
-      "月份排序",
-      "图表颜色"
+      "用月份序号设置按列排序",
+      "HASONEVALUE",
+      "双向筛选谨慎使用",
+      "创建共享维度或桥表"
     ],
     "answer": "A",
-    "explanation": "数据源凭据 更符合推荐实践。凭据和网关是刷新失败高频原因。",
-    "practice": "在Service更新凭据。"
+    "explanation": "该题考查模型与 DAX 的“用月份序号设置按列排序”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“用月份序号设置按列排序”的实际效果。"
   },
   {
-    "id": 218,
-    "module": "管理与安全",
-    "skill": "部署管道",
-    "difficulty": "高级",
-    "question": "关于【部署管道】：开发、测试、生产环境之间迁移内容，推荐？ 哪一项是最佳选择？",
-    "options": [
-      "部署管道",
-      "散点图",
-      "Q&A",
-      "列分布"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 部署管道。关键原因：部署管道支持内容生命周期管理。",
-    "practice": "配置Dev/Test/Prod管道。"
-  },
-  {
-    "id": 219,
-    "module": "管理与安全",
-    "skill": "血缘视图",
+    "id": 64,
+    "module": "数据建模与DAX",
+    "skill": "隐藏字段",
     "difficulty": "中级",
-    "question": "关于【血缘视图】：查看报表依赖哪个语义模型和数据源，应使用？ 考试场景中最容易混淆的正确做法是？",
+    "question": "技术键和辅助排序列不希望报表作者误用，应？",
     "options": [
-      "血缘视图",
-      "焦点模式",
-      "同步切片器",
-      "手机布局"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 血缘视图。不要把界面展示、权限或建模问题混为一谈。血缘视图展示内容依赖关系。",
-    "practice": "打开工作区Lineage view。"
-  },
-  {
-    "id": 220,
-    "module": "管理与安全",
-    "skill": "发布到Web",
-    "difficulty": "高级",
-    "question": "关于【发布到Web】：包含内部财务数据的报表适合Publish to web吗？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "不适合，可能公开到互联网",
-      "适合所有内部数据",
-      "只有管理员可见",
-      "自动应用RLS"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 不适合，可能公开到互联网。Publish to web适合公开内容，不适合敏感数据。",
-    "practice": "区分共享、App和Publish to web。"
-  },
-  {
-    "id": 221,
-    "module": "管理与安全",
-    "skill": "对象级安全",
-    "difficulty": "高级",
-    "question": "关于【对象级安全】：需要限制用户看不到某些敏感列或表，应考虑？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "OLS对象级安全",
-      "视觉级筛选",
-      "页面级筛选",
-      "书签"
-    ],
-    "answer": "A",
-    "explanation": "OLS对象级安全 更符合推荐实践。OLS限制表/列对象，RLS限制行。",
-    "practice": "比较RLS和OLS。"
-  },
-  {
-    "id": 222,
-    "module": "管理与安全",
-    "skill": "工作区",
-    "difficulty": "初级",
-    "question": "关于【工作区】：Power BI Service中用于协作管理报表、语义模型和仪表板的容器是？ 哪一项是最佳选择？",
-    "options": [
-      "工作区",
-      "切片器",
-      "查询步骤",
-      "计算列"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 工作区。关键原因：工作区是Service中协作和内容管理的基本容器。",
-    "practice": "创建工作区并分配角色。"
-  },
-  {
-    "id": 223,
-    "module": "管理与安全",
-    "skill": "App发布",
-    "difficulty": "中级",
-    "question": "关于【App发布】：向大量业务用户分发稳定版本内容，推荐？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "发布Power BI App",
-      "发布到Web",
-      "邮件发送PBIX",
-      "复制截图"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 发布Power BI App。不要把界面展示、权限或建模问题混为一谈。App适合面向消费者分发工作区内容并控制受众。",
-    "practice": "从工作区发布App。"
-  },
-  {
-    "id": 224,
-    "module": "管理与安全",
-    "skill": "RLS",
-    "difficulty": "中级",
-    "question": "关于【RLS】：区域经理只能看到本区域销售数据，应配置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "行级安全RLS",
-      "列质量",
-      "主题",
-      "书签"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 行级安全RLS。RLS通过角色规则限制用户可见数据行。",
-    "practice": "创建Region过滤角色并测试。"
-  },
-  {
-    "id": 225,
-    "module": "管理与安全",
-    "skill": "动态RLS",
-    "difficulty": "高级",
-    "question": "关于【动态RLS】：根据登录用户邮箱自动筛选其负责区域，常用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "USERPRINCIPALNAME()加用户映射表",
-      "隐藏区域列",
-      "复制多个报表",
-      "页面筛选器"
-    ],
-    "answer": "A",
-    "explanation": "USERPRINCIPALNAME()加用户映射表 更符合推荐实践。动态RLS可降低维护成本并随用户映射变化。",
-    "practice": "实现用户-区域映射表。"
-  },
-  {
-    "id": 226,
-    "module": "管理与安全",
-    "skill": "敏感度标签",
-    "difficulty": "中级",
-    "question": "关于【敏感度标签】：报表包含机密财务数据，需要进行信息保护标识，应使用？ 哪一项是最佳选择？",
-    "options": [
-      "敏感度标签",
-      "散点图",
-      "字段参数",
-      "Unpivot"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 敏感度标签。关键原因：敏感度标签用于合规和数据保护。",
-    "practice": "给报表应用敏感度标签。"
-  },
-  {
-    "id": 227,
-    "module": "管理与安全",
-    "skill": "认证内容",
-    "difficulty": "中级",
-    "question": "关于【认证内容】：企业希望标识某语义模型为权威可信来源，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "Certified或Promoted背书",
-      "手机布局",
+      "创建共享维度或桥表",
+      "KEEPFILTERS",
       "隐藏字段",
-      "双向关系"
+      "CROSSFILTER"
     ],
-    "answer": "A",
-    "explanation": "正确做法仍是 Certified或Promoted背书。不要把界面展示、权限或建模问题混为一谈。背书帮助用户发现可信内容。",
-    "practice": "申请认证语义模型。"
+    "answer": "C",
+    "explanation": "该题考查模型与 DAX 的“隐藏字段”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“隐藏字段”的实际效果。"
   },
   {
-    "id": 228,
-    "module": "管理与安全",
-    "skill": "计划刷新",
+    "id": 65,
+    "module": "数据建模与DAX",
+    "skill": "默认汇总为不汇总",
+    "difficulty": "中级",
+    "question": "订单编号不应自动求和，应设置？",
+    "options": [
+      "SELECTEDVALUE",
+      "ISINSCOPE",
+      "默认汇总为不汇总",
+      "行上下文"
+    ],
+    "answer": "C",
+    "explanation": "该题考查模型与 DAX 的“默认汇总为不汇总”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“默认汇总为不汇总”的实际效果。"
+  },
+  {
+    "id": 66,
+    "module": "数据建模与DAX",
+    "skill": "设置字段格式为百分比",
+    "difficulty": "中级",
+    "question": "利润率 0.25 要显示为 25%，最佳方式是？",
+    "options": [
+      "FILTER 函数",
+      "TREATAS",
+      "CALENDAR 或 CALENDARAUTO",
+      "设置字段格式为百分比"
+    ],
+    "answer": "D",
+    "explanation": "该题考查模型与 DAX 的“设置字段格式为百分比”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“设置字段格式为百分比”的实际效果。"
+  },
+  {
+    "id": 67,
+    "module": "数据建模与DAX",
+    "skill": "FORMAT 返回文本会影响排序和聚合",
+    "difficulty": "中级",
+    "question": "用 FORMAT 把数值转文本的主要风险是？",
+    "options": [
+      "创建度量值表",
+      "SAMEPERIODLASTYEAR",
+      "FORMAT 返回文本会影响排序和聚合",
+      "CALCULATE"
+    ],
+    "answer": "C",
+    "explanation": "该题考查模型与 DAX 的“FORMAT 返回文本会影响排序和聚合”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“FORMAT 返回文本会影响排序和聚合”的实际效果。"
+  },
+  {
+    "id": 68,
+    "module": "数据建模与DAX",
+    "skill": "ALL 或 REMOVEFILTERS",
+    "difficulty": "中级",
+    "question": "产品销售占比的分母需忽略产品筛选，应使用？",
+    "options": [
+      "TREATAS",
+      "DIVIDE",
+      "ALL 或 REMOVEFILTERS",
+      "ALLEXCEPT"
+    ],
+    "answer": "C",
+    "explanation": "该题考查模型与 DAX 的“ALL 或 REMOVEFILTERS”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“ALL 或 REMOVEFILTERS”的实际效果。"
+  },
+  {
+    "id": 69,
+    "module": "数据建模与DAX",
+    "skill": "ALLEXCEPT",
+    "difficulty": "中级",
+    "question": "保留年份筛选但移除其他筛选，可考虑？",
+    "options": [
+      "VAR 变量",
+      "SELECTEDVALUE",
+      "ALLEXCEPT",
+      "两个事实表共享日期和产品维度"
+    ],
+    "answer": "C",
+    "explanation": "该题考查模型与 DAX 的“ALLEXCEPT”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“ALLEXCEPT”的实际效果。"
+  },
+  {
+    "id": 70,
+    "module": "数据建模与DAX",
+    "skill": "KEEPFILTERS",
+    "difficulty": "高级",
+    "question": "CALCULATE 新增筛选希望与已有筛选取交集，应使用？",
+    "options": [
+      "关闭自动日期/时间并使用统一日期表",
+      "KEEPFILTERS",
+      "双向筛选谨慎使用",
+      "DISTINCTCOUNT"
+    ],
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“KEEPFILTERS”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“KEEPFILTERS”的实际效果。"
+  },
+  {
+    "id": 71,
+    "module": "数据建模与DAX",
+    "skill": "SELECTEDVALUE",
+    "difficulty": "中级",
+    "question": "动态标题读取当前单选年份，常用？",
+    "options": [
+      "SELECTEDVALUE",
+      "PARALLELPERIOD",
+      "设置字段格式为百分比",
+      "单向：维度筛选事实"
+    ],
+    "answer": "A",
+    "explanation": "该题考查模型与 DAX 的“SELECTEDVALUE”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“SELECTEDVALUE”的实际效果。"
+  },
+  {
+    "id": 72,
+    "module": "数据建模与DAX",
+    "skill": "HASONEVALUE",
+    "difficulty": "中级",
+    "question": "度量只在单选一个产品时显示，否则为空，可用？",
+    "options": [
+      "创建聚合表",
+      "SUMX",
+      "AVERAGEX",
+      "HASONEVALUE"
+    ],
+    "answer": "D",
+    "explanation": "该题考查模型与 DAX 的“HASONEVALUE”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“HASONEVALUE”的实际效果。"
+  },
+  {
+    "id": 73,
+    "module": "数据建模与DAX",
+    "skill": "ISINSCOPE",
+    "difficulty": "中级",
+    "question": "矩阵不同层级显示不同逻辑，可使用？",
+    "options": [
+      "单向：维度筛选事实",
+      "ISINSCOPE",
+      "DATEADD",
+      "创建聚合表"
+    ],
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“ISINSCOPE”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“ISINSCOPE”的实际效果。"
+  },
+  {
+    "id": 74,
+    "module": "数据建模与DAX",
+    "skill": "TOTALYTD",
+    "difficulty": "中级",
+    "question": "计算年初至今累计销售额，常用？",
+    "options": [
+      "TOTALYTD",
+      "连续日期且标记为日期表",
+      "ALLEXCEPT",
+      "创建聚合表"
+    ],
+    "answer": "A",
+    "explanation": "该题考查模型与 DAX 的“TOTALYTD”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“TOTALYTD”的实际效果。"
+  },
+  {
+    "id": 75,
+    "module": "数据建模与DAX",
+    "skill": "SAMEPERIODLASTYEAR",
+    "difficulty": "中级",
+    "question": "计算去年同期销售额，常用？",
+    "options": [
+      "SELECTEDVALUE",
+      "SAMEPERIODLASTYEAR",
+      "双向筛选谨慎使用",
+      "AVERAGEX"
+    ],
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“SAMEPERIODLASTYEAR”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“SAMEPERIODLASTYEAR”的实际效果。"
+  },
+  {
+    "id": 76,
+    "module": "数据建模与DAX",
+    "skill": "DATEADD",
+    "difficulty": "中级",
+    "question": "将当前日期上下文平移一个月计算上月销售，可用？",
+    "options": [
+      "筛选上下文",
+      "创建聚合表",
+      "一对多关系",
+      "DATEADD"
+    ],
+    "answer": "D",
+    "explanation": "该题考查模型与 DAX 的“DATEADD”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“DATEADD”的实际效果。"
+  },
+  {
+    "id": 77,
+    "module": "数据建模与DAX",
+    "skill": "PARALLELPERIOD",
+    "difficulty": "中级",
+    "question": "按完整期间平移日期上下文可考虑？",
+    "options": [
+      "DIVIDE",
+      "TOTALYTD",
+      "筛选上下文",
+      "PARALLELPERIOD"
+    ],
+    "answer": "D",
+    "explanation": "该题考查模型与 DAX 的“PARALLELPERIOD”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“PARALLELPERIOD”的实际效果。"
+  },
+  {
+    "id": 78,
+    "module": "数据建模与DAX",
+    "skill": "CALENDAR 或 CALENDARAUTO",
+    "difficulty": "中级",
+    "question": "用 DAX 生成日期表，常用？",
+    "options": [
+      "SUMX",
+      "CALENDAR 或 CALENDARAUTO",
+      "FILTER 函数",
+      "复合模型"
+    ],
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“CALENDAR 或 CALENDARAUTO”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“CALENDAR 或 CALENDARAUTO”的实际效果。"
+  },
+  {
+    "id": 79,
+    "module": "数据建模与DAX",
+    "skill": "创建度量值表",
+    "difficulty": "中级",
+    "question": "集中管理所有度量值，常见做法是？",
+    "options": [
+      "ALL 或 REMOVEFILTERS",
+      "创建度量值表",
+      "LOOKUPVALUE",
+      "默认汇总为不汇总"
+    ],
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“创建度量值表”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“创建度量值表”的实际效果。"
+  },
+  {
+    "id": 80,
+    "module": "数据建模与DAX",
+    "skill": "VAR 变量",
+    "difficulty": "中级",
+    "question": "复杂 DAX 中提升可读性并避免重复计算，可使用？",
+    "options": [
+      "度量值 Measure",
+      "FORMAT 返回文本会影响排序和聚合",
+      "SAMEPERIODLASTYEAR",
+      "VAR 变量"
+    ],
+    "answer": "D",
+    "explanation": "该题考查模型与 DAX 的“VAR 变量”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“VAR 变量”的实际效果。"
+  },
+  {
+    "id": 81,
+    "module": "数据建模与DAX",
+    "skill": "TREATAS",
+    "difficulty": "中级",
+    "question": "断开表选择值需要在度量中应用到事实表，可用？",
+    "options": [
+      "SUMX",
+      "CROSSFILTER",
+      "TREATAS",
+      "默认汇总为不汇总"
+    ],
+    "answer": "C",
+    "explanation": "该题考查模型与 DAX 的“TREATAS”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“TREATAS”的实际效果。"
+  },
+  {
+    "id": 82,
+    "module": "数据建模与DAX",
+    "skill": "删除或维度化高基数字符串列",
+    "difficulty": "中级",
+    "question": "模型文件过大且有大量无用文本备注列，应？",
+    "options": [
+      "删除或维度化高基数字符串列",
+      "RELATED",
+      "SUMX",
+      "用月份序号设置按列排序"
+    ],
+    "answer": "A",
+    "explanation": "该题考查模型与 DAX 的“删除或维度化高基数字符串列”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“删除或维度化高基数字符串列”的实际效果。"
+  },
+  {
+    "id": 83,
+    "module": "数据建模与DAX",
+    "skill": "创建聚合表",
+    "difficulty": "高级",
+    "question": "DirectQuery 明细很慢，高层级查询可用什么优化？",
+    "options": [
+      "HASONEVALUE",
+      "创建聚合表",
+      "FORMAT 返回文本会影响排序和聚合",
+      "KEEPFILTERS"
+    ],
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“创建聚合表”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“创建聚合表”的实际效果。"
+  },
+  {
+    "id": 84,
+    "module": "数据建模与DAX",
+    "skill": "复合模型",
+    "difficulty": "高级",
+    "question": "部分表 Import、部分表 DirectQuery 的模型称为？",
+    "options": [
+      "复合模型",
+      "USERELATIONSHIP",
+      "KEEPFILTERS",
+      "SUMX"
+    ],
+    "answer": "A",
+    "explanation": "该题考查模型与 DAX 的“复合模型”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“复合模型”的实际效果。"
+  },
+  {
+    "id": 85,
+    "module": "数据建模与DAX",
+    "skill": "双向筛选谨慎使用",
+    "difficulty": "中级",
+    "question": "为什么不建议默认把所有关系设为双向？",
+    "options": [
+      "TOTALYTD",
+      "双向筛选谨慎使用",
+      "创建共享维度或桥表",
+      "SELECTEDVALUE"
+    ],
+    "answer": "B",
+    "explanation": "该题考查模型与 DAX 的“双向筛选谨慎使用”。重点是理解筛选上下文、粒度、关系与性能。",
+    "practice": "创建一个小模型验证“双向筛选谨慎使用”的实际效果。"
+  },
+  {
+    "id": 86,
+    "module": "可视化与分析",
+    "skill": "折线图",
+    "difficulty": "中级",
+    "question": "展示月度销售趋势，最合适的视觉对象是？",
+    "options": [
+      "折线图",
+      "替代文本和 Tab 顺序",
+      "导出数据权限和租户设置",
+      "编辑交互为无"
+    ],
+    "answer": "A",
+    "explanation": "该题考查报表设计与分析中的“折线图”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“折线图”。"
+  },
+  {
+    "id": 87,
+    "module": "可视化与分析",
+    "skill": "柱形图或条形图",
+    "difficulty": "中级",
+    "question": "比较不同产品类别销售额，适合使用？",
+    "options": [
+      "导出数据权限和租户设置",
+      "关键影响因素视觉对象",
+      "柱形图或条形图",
+      "同步切片器"
+    ],
+    "answer": "C",
+    "explanation": "该题考查报表设计与分析中的“柱形图或条形图”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“柱形图或条形图”。"
+  },
+  {
+    "id": 88,
+    "module": "可视化与分析",
+    "skill": "卡片",
+    "difficulty": "中级",
+    "question": "展示一个关键指标如总销售额，适合？",
+    "options": [
+      "折线图",
+      "条件格式",
+      "卡片",
+      "页面导航"
+    ],
+    "answer": "C",
+    "explanation": "该题考查报表设计与分析中的“卡片”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“卡片”。"
+  },
+  {
+    "id": 89,
+    "module": "可视化与分析",
+    "skill": "矩阵",
     "difficulty": "初级",
-    "question": "关于【计划刷新】：Import模式数据集需要定期更新，应配置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
+    "question": "按区域和产品层级展示销售额与小计，适合？",
     "options": [
-      "计划刷新",
-      "视觉排序",
-      "页面导航",
-      "替代文本"
+      "切片器",
+      "矩阵",
+      "小倍数 Small multiples",
+      "报表主题"
     ],
-    "answer": "A",
-    "explanation": "应优先选择 计划刷新。Import模式需要刷新以获取源数据变化。",
-    "practice": "设置每日刷新。"
+    "answer": "B",
+    "explanation": "该题考查报表设计与分析中的“矩阵”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“矩阵”。"
   },
   {
-    "id": 229,
-    "module": "管理与安全",
-    "skill": "刷新失败",
+    "id": 90,
+    "module": "可视化与分析",
+    "skill": "散点图",
     "difficulty": "中级",
-    "question": "关于【刷新失败】：刷新失败提示凭据无效，第一步检查？ 以下哪项最符合Power BI推荐实践？",
+    "question": "分析折扣率与利润率的关系，适合？",
     "options": [
-      "数据源凭据",
-      "页面背景",
-      "图表颜色",
-      "月份排序"
-    ],
-    "answer": "A",
-    "explanation": "数据源凭据 更符合推荐实践。凭据和网关是刷新失败高频原因。",
-    "practice": "在Service更新凭据。"
-  },
-  {
-    "id": 230,
-    "module": "管理与安全",
-    "skill": "部署管道",
-    "difficulty": "高级",
-    "question": "关于【部署管道】：开发、测试、生产环境之间迁移内容，推荐？ 哪一项是最佳选择？",
-    "options": [
-      "部署管道",
-      "散点图",
-      "列分布",
-      "Q&A"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 部署管道。关键原因：部署管道支持内容生命周期管理。",
-    "practice": "配置Dev/Test/Prod管道。"
-  },
-  {
-    "id": 231,
-    "module": "管理与安全",
-    "skill": "血缘视图",
-    "difficulty": "中级",
-    "question": "关于【血缘视图】：查看报表依赖哪个语义模型和数据源，应使用？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "血缘视图",
-      "同步切片器",
-      "手机布局",
-      "焦点模式"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 血缘视图。不要把界面展示、权限或建模问题混为一谈。血缘视图展示内容依赖关系。",
-    "practice": "打开工作区Lineage view。"
-  },
-  {
-    "id": 232,
-    "module": "管理与安全",
-    "skill": "发布到Web",
-    "difficulty": "高级",
-    "question": "关于【发布到Web】：包含内部财务数据的报表适合Publish to web吗？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "不适合，可能公开到互联网",
-      "适合所有内部数据",
-      "自动应用RLS",
-      "只有管理员可见"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 不适合，可能公开到互联网。Publish to web适合公开内容，不适合敏感数据。",
-    "practice": "区分共享、App和Publish to web。"
-  },
-  {
-    "id": 233,
-    "module": "管理与安全",
-    "skill": "对象级安全",
-    "difficulty": "高级",
-    "question": "关于【对象级安全】：需要限制用户看不到某些敏感列或表，应考虑？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "OLS对象级安全",
-      "书签",
-      "视觉级筛选",
-      "页面级筛选"
-    ],
-    "answer": "A",
-    "explanation": "OLS对象级安全 更符合推荐实践。OLS限制表/列对象，RLS限制行。",
-    "practice": "比较RLS和OLS。"
-  },
-  {
-    "id": 234,
-    "module": "管理与安全",
-    "skill": "工作区",
-    "difficulty": "初级",
-    "question": "关于【工作区】：Power BI Service中用于协作管理报表、语义模型和仪表板的容器是？ 哪一项是最佳选择？",
-    "options": [
-      "工作区",
-      "计算列",
-      "查询步骤",
-      "切片器"
-    ],
-    "answer": "A",
-    "explanation": "最佳选择是 工作区。关键原因：工作区是Service中协作和内容管理的基本容器。",
-    "practice": "创建工作区并分配角色。"
-  },
-  {
-    "id": 235,
-    "module": "管理与安全",
-    "skill": "App发布",
-    "difficulty": "中级",
-    "question": "关于【App发布】：向大量业务用户分发稳定版本内容，推荐？ 考试场景中最容易混淆的正确做法是？",
-    "options": [
-      "发布Power BI App",
-      "发布到Web",
-      "复制截图",
-      "邮件发送PBIX"
-    ],
-    "answer": "A",
-    "explanation": "正确做法仍是 发布Power BI App。不要把界面展示、权限或建模问题混为一谈。App适合面向消费者分发工作区内容并控制受众。",
-    "practice": "从工作区发布App。"
-  },
-  {
-    "id": 236,
-    "module": "管理与安全",
-    "skill": "RLS",
-    "difficulty": "中级",
-    "question": "关于【RLS】：区域经理只能看到本区域销售数据，应配置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
-    "options": [
-      "行级安全RLS",
-      "主题",
-      "列质量",
-      "书签"
-    ],
-    "answer": "A",
-    "explanation": "应优先选择 行级安全RLS。RLS通过角色规则限制用户可见数据行。",
-    "practice": "创建Region过滤角色并测试。"
-  },
-  {
-    "id": 237,
-    "module": "管理与安全",
-    "skill": "动态RLS",
-    "difficulty": "高级",
-    "question": "关于【动态RLS】：根据登录用户邮箱自动筛选其负责区域，常用？ 以下哪项最符合Power BI推荐实践？",
-    "options": [
-      "USERPRINCIPALNAME()加用户映射表",
-      "页面筛选器",
-      "隐藏区域列",
-      "复制多个报表"
-    ],
-    "answer": "A",
-    "explanation": "USERPRINCIPALNAME()加用户映射表 更符合推荐实践。动态RLS可降低维护成本并随用户映射变化。",
-    "practice": "实现用户-区域映射表。"
-  },
-  {
-    "id": 238,
-    "module": "管理与安全",
-    "skill": "敏感度标签",
-    "difficulty": "中级",
-    "question": "关于【敏感度标签】：报表包含机密财务数据，需要进行信息保护标识，应使用？ 哪一项是最佳选择？",
-    "options": [
-      "敏感度标签",
       "字段参数",
-      "Unpivot",
+      "订阅",
+      "书签 + 按钮",
       "散点图"
     ],
-    "answer": "A",
-    "explanation": "最佳选择是 敏感度标签。关键原因：敏感度标签用于合规和数据保护。",
-    "practice": "给报表应用敏感度标签。"
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“散点图”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“散点图”。"
   },
   {
-    "id": 239,
-    "module": "管理与安全",
-    "skill": "认证内容",
+    "id": 91,
+    "module": "可视化与分析",
+    "skill": "地图视觉对象",
     "difficulty": "中级",
-    "question": "关于【认证内容】：企业希望标识某语义模型为权威可信来源，应使用？ 考试场景中最容易混淆的正确做法是？",
+    "question": "展示各城市销售分布，适合？",
     "options": [
-      "Certified或Promoted背书",
-      "隐藏字段",
-      "双向关系",
-      "手机布局"
+      "Top N 筛选",
+      "柱形图或条形图",
+      "地图视觉对象",
+      "报表页工具提示"
+    ],
+    "answer": "C",
+    "explanation": "该题考查报表设计与分析中的“地图视觉对象”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“地图视觉对象”。"
+  },
+  {
+    "id": 92,
+    "module": "可视化与分析",
+    "skill": "切片器",
+    "difficulty": "中级",
+    "question": "用户需要按年份筛选页面，应添加？",
+    "options": [
+      "Top N 筛选",
+      "焦点模式",
+      "数据警报",
+      "切片器"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“切片器”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“切片器”。"
+  },
+  {
+    "id": 93,
+    "module": "可视化与分析",
+    "skill": "同步切片器",
+    "difficulty": "初级",
+    "question": "多个页面需要共享同一筛选状态，应使用？",
+    "options": [
+      "同步切片器",
+      "编辑交互为无",
+      "订阅",
+      "页面导航"
     ],
     "answer": "A",
-    "explanation": "正确做法仍是 Certified或Promoted背书。不要把界面展示、权限或建模问题混为一谈。背书帮助用户发现可信内容。",
-    "practice": "申请认证语义模型。"
+    "explanation": "该题考查报表设计与分析中的“同步切片器”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“同步切片器”。"
   },
   {
-    "id": 240,
+    "id": 94,
+    "module": "可视化与分析",
+    "skill": "编辑交互为无",
+    "difficulty": "中级",
+    "question": "一个图不应该影响另一个图，应设置？",
+    "options": [
+      "数据警报",
+      "关键影响因素视觉对象",
+      "编辑交互为无",
+      "焦点模式"
+    ],
+    "answer": "C",
+    "explanation": "该题考查报表设计与分析中的“编辑交互为无”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“编辑交互为无”。"
+  },
+  {
+    "id": 95,
+    "module": "可视化与分析",
+    "skill": "钻取页 Drillthrough",
+    "difficulty": "中级",
+    "question": "从产品汇总页跳转到产品明细页并传递上下文，应配置？",
+    "options": [
+      "钻取页 Drillthrough",
+      "焦点模式",
+      "页面导航",
+      "分解树"
+    ],
+    "answer": "A",
+    "explanation": "该题考查报表设计与分析中的“钻取页 Drillthrough”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“钻取页 Drillthrough”。"
+  },
+  {
+    "id": 96,
+    "module": "可视化与分析",
+    "skill": "向下钻取 Drill down",
+    "difficulty": "中级",
+    "question": "年-季度-月层级图表需要逐层查看，应使用？",
+    "options": [
+      "焦点模式",
+      "关键影响因素视觉对象",
+      "向下钻取 Drill down",
+      "数据警报"
+    ],
+    "answer": "C",
+    "explanation": "该题考查报表设计与分析中的“向下钻取 Drill down”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“向下钻取 Drill down”。"
+  },
+  {
+    "id": 97,
+    "module": "可视化与分析",
+    "skill": "报表页工具提示",
+    "difficulty": "初级",
+    "question": "悬停时显示额外指标和小图，应使用？",
+    "options": [
+      "异常检测",
+      "报表页工具提示",
+      "切片器",
+      "编辑交互为无"
+    ],
+    "answer": "B",
+    "explanation": "该题考查报表设计与分析中的“报表页工具提示”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“报表页工具提示”。"
+  },
+  {
+    "id": 98,
+    "module": "可视化与分析",
+    "skill": "书签 + 按钮",
+    "difficulty": "中级",
+    "question": "按钮切换不同视觉对象显示状态，常用？",
+    "options": [
+      "书签 + 按钮",
+      "向下钻取 Drill down",
+      "切片器",
+      "SELECTEDVALUE 动态标题"
+    ],
+    "answer": "A",
+    "explanation": "该题考查报表设计与分析中的“书签 + 按钮”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“书签 + 按钮”。"
+  },
+  {
+    "id": 99,
+    "module": "可视化与分析",
+    "skill": "选择窗格",
+    "difficulty": "中级",
+    "question": "控制对象显示或隐藏并配合书签，应使用？",
+    "options": [
+      "Top N 筛选",
+      "切片器",
+      "矩阵",
+      "选择窗格"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“选择窗格”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“选择窗格”。"
+  },
+  {
+    "id": 100,
+    "module": "可视化与分析",
+    "skill": "页面导航",
+    "difficulty": "中级",
+    "question": "点击按钮跳转到另一个报表页，应设置动作为？",
+    "options": [
+      "报表页工具提示",
+      "页面导航",
+      "减少视觉对象并拆分页面",
+      "切片器"
+    ],
+    "answer": "B",
+    "explanation": "该题考查报表设计与分析中的“页面导航”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“页面导航”。"
+  },
+  {
+    "id": 101,
+    "module": "可视化与分析",
+    "skill": "条件格式",
+    "difficulty": "初级",
+    "question": "矩阵中低于目标的值标红，应使用？",
+    "options": [
+      "条件格式",
+      "关键影响因素视觉对象",
+      "智能叙述",
+      "交叉突出显示"
+    ],
+    "answer": "A",
+    "explanation": "该题考查报表设计与分析中的“条件格式”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“条件格式”。"
+  },
+  {
+    "id": 102,
+    "module": "可视化与分析",
+    "skill": "分析窗格",
+    "difficulty": "中级",
+    "question": "折线图中添加平均线或常量线，应使用？",
+    "options": [
+      "智能叙述",
+      "分解树",
+      "散点图",
+      "分析窗格"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“分析窗格”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“分析窗格”。"
+  },
+  {
+    "id": 103,
+    "module": "可视化与分析",
+    "skill": "异常检测",
+    "difficulty": "中级",
+    "question": "时间序列中自动识别异常波动，可使用？",
+    "options": [
+      "向下钻取 Drill down",
+      "分析窗格",
+      "散点图",
+      "异常检测"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“异常检测”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“异常检测”。"
+  },
+  {
+    "id": 104,
+    "module": "可视化与分析",
+    "skill": "关键影响因素视觉对象",
+    "difficulty": "中级",
+    "question": "分析影响客户流失的字段，适合？",
+    "options": [
+      "分析窗格",
+      "折线图",
+      "字段参数",
+      "关键影响因素视觉对象"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“关键影响因素视觉对象”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“关键影响因素视觉对象”。"
+  },
+  {
+    "id": 105,
+    "module": "可视化与分析",
+    "skill": "分解树",
+    "difficulty": "初级",
+    "question": "逐层探索销售额由哪些维度构成，适合？",
+    "options": [
+      "矩阵",
+      "折线图",
+      "字段参数",
+      "分解树"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“分解树”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“分解树”。"
+  },
+  {
+    "id": 106,
+    "module": "可视化与分析",
+    "skill": "Q&A 视觉对象",
+    "difficulty": "中级",
+    "question": "用户希望用自然语言提问生成图表，可用？",
+    "options": [
+      "切片器",
+      "Q&A 视觉对象",
+      "条件格式",
+      "柱形图或条形图"
+    ],
+    "answer": "B",
+    "explanation": "该题考查报表设计与分析中的“Q&A 视觉对象”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“Q&A 视觉对象”。"
+  },
+  {
+    "id": 107,
+    "module": "可视化与分析",
+    "skill": "智能叙述",
+    "difficulty": "中级",
+    "question": "希望自动生成动态文字摘要，可使用？",
+    "options": [
+      "同步切片器",
+      "智能叙述",
+      "切片器",
+      "分解树"
+    ],
+    "answer": "B",
+    "explanation": "该题考查报表设计与分析中的“智能叙述”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“智能叙述”。"
+  },
+  {
+    "id": 108,
+    "module": "可视化与分析",
+    "skill": "小倍数 Small multiples",
+    "difficulty": "中级",
+    "question": "按地区分别显示同一趋势图以便比较，应使用？",
+    "options": [
+      "焦点模式",
+      "数据警报",
+      "Top N 筛选",
+      "小倍数 Small multiples"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“小倍数 Small multiples”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“小倍数 Small multiples”。"
+  },
+  {
+    "id": 109,
+    "module": "可视化与分析",
+    "skill": "Top N 筛选",
+    "difficulty": "初级",
+    "question": "展示销售最高的 10 个产品，应配置？",
+    "options": [
+      "报表主题",
+      "Q&A 视觉对象",
+      "关键指标、趋势和异常优先",
+      "Top N 筛选"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“Top N 筛选”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“Top N 筛选”。"
+  },
+  {
+    "id": 110,
+    "module": "可视化与分析",
+    "skill": "视觉对象级筛选器",
+    "difficulty": "中级",
+    "question": "只让一个图显示 Top 10，不影响其他图，应使用？",
+    "options": [
+      "卡片",
+      "报表级筛选器",
+      "Q&A 视觉对象",
+      "视觉对象级筛选器"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“视觉对象级筛选器”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“视觉对象级筛选器”。"
+  },
+  {
+    "id": 111,
+    "module": "可视化与分析",
+    "skill": "页面级筛选器",
+    "difficulty": "中级",
+    "question": "筛选只影响当前页面所有视觉对象，应使用？",
+    "options": [
+      "报表主题",
+      "关键指标、趋势和异常优先",
+      "选择窗格",
+      "页面级筛选器"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“页面级筛选器”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“页面级筛选器”。"
+  },
+  {
+    "id": 112,
+    "module": "可视化与分析",
+    "skill": "报表级筛选器",
+    "difficulty": "中级",
+    "question": "筛选需要影响整个报表所有页面，应使用？",
+    "options": [
+      "报表级筛选器",
+      "同步切片器",
+      "Top N 筛选",
+      "SELECTEDVALUE 动态标题"
+    ],
+    "answer": "A",
+    "explanation": "该题考查报表设计与分析中的“报表级筛选器”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“报表级筛选器”。"
+  },
+  {
+    "id": 113,
+    "module": "可视化与分析",
+    "skill": "字段参数",
+    "difficulty": "初级",
+    "question": "用户希望在同一图表切换销售额、利润和订单数，应使用？",
+    "options": [
+      "字段参数",
+      "分析窗格",
+      "视觉对象级筛选器",
+      "减少视觉对象并拆分页面"
+    ],
+    "answer": "A",
+    "explanation": "该题考查报表设计与分析中的“字段参数”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“字段参数”。"
+  },
+  {
+    "id": 114,
+    "module": "可视化与分析",
+    "skill": "SELECTEDVALUE 动态标题",
+    "difficulty": "中级",
+    "question": "标题显示当前选择年份，常用哪种做法？",
+    "options": [
+      "小倍数 Small multiples",
+      "SELECTEDVALUE 动态标题",
+      "矩阵",
+      "关键影响因素视觉对象"
+    ],
+    "answer": "B",
+    "explanation": "该题考查报表设计与分析中的“SELECTEDVALUE 动态标题”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“SELECTEDVALUE 动态标题”。"
+  },
+  {
+    "id": 115,
+    "module": "可视化与分析",
+    "skill": "替代文本和 Tab 顺序",
+    "difficulty": "中级",
+    "question": "让屏幕阅读器理解图表，应配置？",
+    "options": [
+      "关键影响因素视觉对象",
+      "替代文本和 Tab 顺序",
+      "字段参数",
+      "柱形图或条形图"
+    ],
+    "answer": "B",
+    "explanation": "该题考查报表设计与分析中的“替代文本和 Tab 顺序”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“替代文本和 Tab 顺序”。"
+  },
+  {
+    "id": 116,
+    "module": "可视化与分析",
+    "skill": "报表主题",
+    "difficulty": "中级",
+    "question": "统一报表颜色、字体和格式，应使用？",
+    "options": [
+      "智能叙述",
+      "关键影响因素视觉对象",
+      "报表主题",
+      "同步切片器"
+    ],
+    "answer": "C",
+    "explanation": "该题考查报表设计与分析中的“报表主题”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“报表主题”。"
+  },
+  {
+    "id": 117,
+    "module": "可视化与分析",
+    "skill": "移动布局",
+    "difficulty": "初级",
+    "question": "提升手机端查看体验，应配置？",
+    "options": [
+      "分解树",
+      "报表级筛选器",
+      "移动布局",
+      "Q&A 视觉对象"
+    ],
+    "answer": "C",
+    "explanation": "该题考查报表设计与分析中的“移动布局”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“移动布局”。"
+  },
+  {
+    "id": 118,
+    "module": "可视化与分析",
+    "skill": "性能分析器",
+    "difficulty": "中级",
+    "question": "页面加载慢，想查看每个视觉对象耗时，应使用？",
+    "options": [
+      "性能分析器",
+      "交叉突出显示",
+      "柱形图或条形图",
+      "订阅"
+    ],
+    "answer": "A",
+    "explanation": "该题考查报表设计与分析中的“性能分析器”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“性能分析器”。"
+  },
+  {
+    "id": 119,
+    "module": "可视化与分析",
+    "skill": "减少视觉对象并拆分页面",
+    "difficulty": "中级",
+    "question": "报表页面视觉对象过多导致慢，优化建议是？",
+    "options": [
+      "智能叙述",
+      "减少视觉对象并拆分页面",
+      "书签 + 按钮",
+      "数据警报"
+    ],
+    "answer": "B",
+    "explanation": "该题考查报表设计与分析中的“减少视觉对象并拆分页面”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“减少视觉对象并拆分页面”。"
+  },
+  {
+    "id": 120,
+    "module": "可视化与分析",
+    "skill": "导出数据权限和租户设置",
+    "difficulty": "中级",
+    "question": "不希望用户导出明细数据，应检查？",
+    "options": [
+      "同步切片器",
+      "矩阵",
+      "导出数据权限和租户设置",
+      "向下钻取 Drill down"
+    ],
+    "answer": "C",
+    "explanation": "该题考查报表设计与分析中的“导出数据权限和租户设置”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“导出数据权限和租户设置”。"
+  },
+  {
+    "id": 121,
+    "module": "可视化与分析",
+    "skill": "订阅",
+    "difficulty": "初级",
+    "question": "用户希望每天收到报表快照邮件，应配置？",
+    "options": [
+      "编辑交互为无",
+      "同步切片器",
+      "卡片",
+      "订阅"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“订阅”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“订阅”。"
+  },
+  {
+    "id": 122,
+    "module": "可视化与分析",
+    "skill": "数据警报",
+    "difficulty": "中级",
+    "question": "仪表板卡片值超过阈值时通知用户，可配置？",
+    "options": [
+      "小倍数 Small multiples",
+      "数据警报",
+      "关键指标、趋势和异常优先",
+      "减少视觉对象并拆分页面"
+    ],
+    "answer": "B",
+    "explanation": "该题考查报表设计与分析中的“数据警报”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“数据警报”。"
+  },
+  {
+    "id": 123,
+    "module": "可视化与分析",
+    "skill": "焦点模式",
+    "difficulty": "中级",
+    "question": "演示时临时放大一个视觉对象，应使用？",
+    "options": [
+      "焦点模式",
+      "字段参数",
+      "分解树",
+      "柱形图或条形图"
+    ],
+    "answer": "A",
+    "explanation": "该题考查报表设计与分析中的“焦点模式”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“焦点模式”。"
+  },
+  {
+    "id": 124,
+    "module": "可视化与分析",
+    "skill": "交叉突出显示",
+    "difficulty": "中级",
+    "question": "点击柱形图后另一个图只高亮相关部分，这是？",
+    "options": [
+      "编辑交互为无",
+      "小倍数 Small multiples",
+      "焦点模式",
+      "交叉突出显示"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“交叉突出显示”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“交叉突出显示”。"
+  },
+  {
+    "id": 125,
+    "module": "可视化与分析",
+    "skill": "关键指标、趋势和异常优先",
+    "difficulty": "初级",
+    "question": "管理驾驶舱首页最应该优先展示什么？",
+    "options": [
+      "条件格式",
+      "报表级筛选器",
+      "视觉对象级筛选器",
+      "关键指标、趋势和异常优先"
+    ],
+    "answer": "D",
+    "explanation": "该题考查报表设计与分析中的“关键指标、趋势和异常优先”。选择视觉对象时要围绕业务问题、交互和用户体验。",
+    "practice": "在一页报表中练习“关键指标、趋势和异常优先”。"
+  },
+  {
+    "id": 126,
+    "module": "管理与安全",
+    "skill": "工作区",
+    "difficulty": "高级",
+    "question": "Service 中协作管理报表、语义模型和仪表板的容器是？",
+    "options": [
+      "敏感度标签",
+      "工作区",
+      "部署管道",
+      "刷新历史记录"
+    ],
+    "answer": "B",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“工作区”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“工作区”相关配置。"
+  },
+  {
+    "id": 127,
+    "module": "管理与安全",
+    "skill": "Contributor 或 Member",
+    "difficulty": "中级",
+    "question": "用户需要编辑和发布工作区内容，通常至少需要？",
+    "options": [
+      "Contributor 或 Member",
+      "发布 Power BI App",
+      "大型语义模型存储格式",
+      "数据源凭据"
+    ],
+    "answer": "A",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“Contributor 或 Member”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“Contributor 或 Member”相关配置。"
+  },
+  {
+    "id": 128,
+    "module": "管理与安全",
+    "skill": "发布 Power BI App",
+    "difficulty": "中级",
+    "question": "向大量业务用户分发稳定版本报表，推荐？",
+    "options": [
+      "Certified 或 Promoted",
+      "血缘视图",
+      "部署管道",
+      "发布 Power BI App"
+    ],
+    "answer": "D",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“发布 Power BI App”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“发布 Power BI App”相关配置。"
+  },
+  {
+    "id": 129,
+    "module": "管理与安全",
+    "skill": "App 受众 Audience",
+    "difficulty": "中级",
+    "question": "同一个 App 中让不同部门看到不同内容，可配置？",
+    "options": [
+      "Contributor 或 Member",
+      "影响分析",
+      "App 受众 Audience",
+      "链接不等于权限"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“App 受众 Audience”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“App 受众 Audience”相关配置。"
+  },
+  {
+    "id": 130,
+    "module": "管理与安全",
+    "skill": "共享语义模型",
+    "difficulty": "中级",
+    "question": "多个报表需要统一指标口径，应优先？",
+    "options": [
+      "血缘视图",
+      "仪表板 Dashboard",
+      "共享语义模型",
+      "刷新历史记录"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“共享语义模型”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“共享语义模型”相关配置。"
+  },
+  {
+    "id": 131,
+    "module": "管理与安全",
+    "skill": "行级安全 RLS",
+    "difficulty": "中级",
+    "question": "区域经理只能看本区域数据，应配置？",
+    "options": [
+      "行级安全 RLS",
+      "数据源凭据",
+      "USERPRINCIPALNAME() 加映射表",
+      "敏感度标签"
+    ],
+    "answer": "A",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“行级安全 RLS”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“行级安全 RLS”相关配置。"
+  },
+  {
+    "id": 132,
+    "module": "管理与安全",
+    "skill": "USERPRINCIPALNAME() 加映射表",
+    "difficulty": "中级",
+    "question": "根据登录用户邮箱自动筛选负责区域，应使用？",
+    "options": [
+      "血缘视图",
+      "发布 Power BI App",
+      "USERPRINCIPALNAME() 加映射表",
+      "组织策略、许可、权限和数据安全"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“USERPRINCIPALNAME() 加映射表”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“USERPRINCIPALNAME() 加映射表”相关配置。"
+  },
+  {
+    "id": 133,
+    "module": "管理与安全",
+    "skill": "以角色身份查看 View as",
+    "difficulty": "中级",
+    "question": "发布前验证某角色能看到什么数据，应使用？",
+    "options": [
+      "仪表板 Dashboard",
+      "不建议生产依赖个人工作区",
+      "以角色身份查看 View as",
+      "订阅"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“以角色身份查看 View as”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“以角色身份查看 View as”相关配置。"
+  },
+  {
+    "id": 134,
+    "module": "管理与安全",
+    "skill": "对象级安全 OLS",
+    "difficulty": "中级",
+    "question": "需要隐藏敏感列或表，而不是只限制行，应考虑？",
+    "options": [
+      "工作区",
+      "部署规则",
+      "App 受众 Audience",
+      "对象级安全 OLS"
+    ],
+    "answer": "D",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“对象级安全 OLS”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“对象级安全 OLS”相关配置。"
+  },
+  {
+    "id": 135,
+    "module": "管理与安全",
+    "skill": "敏感度标签",
+    "difficulty": "中级",
+    "question": "报表含机密财务数据，需要信息保护标识，应使用？",
+    "options": [
+      "敏感度标签",
+      "链接不等于权限",
+      "部署管道",
+      "App 受众 Audience"
+    ],
+    "answer": "A",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“敏感度标签”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“敏感度标签”相关配置。"
+  },
+  {
+    "id": 136,
+    "module": "管理与安全",
+    "skill": "Certified 或 Promoted",
+    "difficulty": "中级",
+    "question": "企业希望标识某语义模型为权威可信来源，可使用？",
+    "options": [
+      "敏感度标签",
+      "组织策略、许可、权限和数据安全",
+      "大型语义模型存储格式",
+      "Certified 或 Promoted"
+    ],
+    "answer": "D",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“Certified 或 Promoted”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“Certified 或 Promoted”相关配置。"
+  },
+  {
+    "id": 137,
     "module": "管理与安全",
     "skill": "计划刷新",
-    "difficulty": "初级",
-    "question": "关于【计划刷新】：Import模式数据集需要定期更新，应配置？ 如果目标是提升可维护性和通过刷新复用，应该优先选择？",
+    "difficulty": "中级",
+    "question": "Import 模式数据集需要定期更新，应配置？",
     "options": [
+      "部署管道",
+      "影响分析",
+      "租户设置",
+      "计划刷新"
+    ],
+    "answer": "D",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“计划刷新”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“计划刷新”相关配置。"
+  },
+  {
+    "id": 138,
+    "module": "管理与安全",
+    "skill": "数据源凭据",
+    "difficulty": "中级",
+    "question": "刷新失败提示凭据无效，首先检查？",
+    "options": [
+      "租户设置",
+      "数据源凭据",
+      "网关服务和数据源映射",
+      "订阅"
+    ],
+    "answer": "B",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“数据源凭据”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“数据源凭据”相关配置。"
+  },
+  {
+    "id": 139,
+    "module": "管理与安全",
+    "skill": "网关服务和数据源映射",
+    "difficulty": "中级",
+    "question": "本地数据源刷新失败提示网关不可用，应检查？",
+    "options": [
+      "审计日志或活动日志",
+      "链接不等于权限",
+      "网关服务和数据源映射",
+      "组织认证流程"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“网关服务和数据源映射”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“网关服务和数据源映射”相关配置。"
+  },
+  {
+    "id": 140,
+    "module": "管理与安全",
+    "skill": "网关集群",
+    "difficulty": "中级",
+    "question": "提高本地网关可用性，可以配置？",
+    "options": [
+      "许可证、容量和权限",
+      "网关集群",
+      "Certified 或 Promoted",
+      "数据源凭据"
+    ],
+    "answer": "B",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“网关集群”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“网关集群”相关配置。"
+  },
+  {
+    "id": 141,
+    "module": "管理与安全",
+    "skill": "部署管道",
+    "difficulty": "中级",
+    "question": "开发、测试、生产工作区之间迁移内容，应使用？",
+    "options": [
+      "敏感度标签",
+      "部署管道",
+      "刷新历史记录",
+      "容量可能允许免费用户消费但仍需权限"
+    ],
+    "answer": "B",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“部署管道”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“部署管道”相关配置。"
+  },
+  {
+    "id": 142,
+    "module": "管理与安全",
+    "skill": "部署规则",
+    "difficulty": "中级",
+    "question": "不同环境数据源连接不同，部署管道中应配置？",
+    "options": [
+      "不建议生产依赖个人工作区",
+      "部署规则",
+      "审计日志或活动日志",
+      "工作区"
+    ],
+    "answer": "B",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“部署规则”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“部署规则”相关配置。"
+  },
+  {
+    "id": 143,
+    "module": "管理与安全",
+    "skill": "血缘视图",
+    "difficulty": "中级",
+    "question": "想查看报表依赖哪个语义模型和数据源，应使用？",
+    "options": [
+      "发布 Power BI App",
+      "刷新历史记录",
+      "血缘视图",
+      "计划刷新"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“血缘视图”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“血缘视图”相关配置。"
+  },
+  {
+    "id": 144,
+    "module": "管理与安全",
+    "skill": "影响分析",
+    "difficulty": "中级",
+    "question": "修改共享语义模型前想知道影响哪些报表，应查看？",
+    "options": [
+      "影响分析",
+      "租户设置",
+      "许可证、容量和权限",
+      "行级安全 RLS"
+    ],
+    "answer": "A",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“影响分析”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“影响分析”相关配置。"
+  },
+  {
+    "id": 145,
+    "module": "管理与安全",
+    "skill": "不适合，可能公开到互联网",
+    "difficulty": "高级",
+    "question": "包含内部财务数据的报表适合 Publish to web 吗？",
+    "options": [
+      "部署规则",
+      "对象级安全 OLS",
+      "不适合，可能公开到互联网",
+      "USERPRINCIPALNAME() 加映射表"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“不适合，可能公开到互联网”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“不适合，可能公开到互联网”相关配置。"
+  },
+  {
+    "id": 146,
+    "module": "管理与安全",
+    "skill": "许可证、容量和权限",
+    "difficulty": "中级",
+    "question": "用户访问共享内容通常受什么共同影响？",
+    "options": [
+      "网关服务和数据源映射",
+      "Contributor 或 Member",
+      "不适合，可能公开到互联网",
+      "许可证、容量和权限"
+    ],
+    "answer": "D",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“许可证、容量和权限”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“许可证、容量和权限”相关配置。"
+  },
+  {
+    "id": 147,
+    "module": "管理与安全",
+    "skill": "仪表板 Dashboard",
+    "difficulty": "中级",
+    "question": "把多个报表视觉固定到单页概览，形成？",
+    "options": [
+      "发布 Power BI App",
+      "仪表板 Dashboard",
+      "大型语义模型存储格式",
+      "OneDrive/SharePoint 文件同步"
+    ],
+    "answer": "B",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“仪表板 Dashboard”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“仪表板 Dashboard”相关配置。"
+  },
+  {
+    "id": 148,
+    "module": "管理与安全",
+    "skill": "订阅",
+    "difficulty": "中级",
+    "question": "业务用户希望定期收到报表页面邮件，应配置？",
+    "options": [
+      "不建议生产依赖个人工作区",
+      "订阅",
+      "Certified 或 Promoted",
+      "组织策略、许可、权限和数据安全"
+    ],
+    "answer": "B",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“订阅”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“订阅”相关配置。"
+  },
+  {
+    "id": 149,
+    "module": "管理与安全",
+    "skill": "审计日志或活动日志",
+    "difficulty": "中级",
+    "question": "管理员要追踪访问、共享、导出行为，应查看？",
+    "options": [
+      "敏感度标签",
+      "行级安全 RLS",
+      "审计日志或活动日志",
+      "USERPRINCIPALNAME() 加映射表"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“审计日志或活动日志”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“审计日志或活动日志”相关配置。"
+  },
+  {
+    "id": 150,
+    "module": "管理与安全",
+    "skill": "租户设置",
+    "difficulty": "高级",
+    "question": "组织要禁用导出数据或 Publish to web，应由管理员配置？",
+    "options": [
+      "租户设置",
+      "部署规则",
+      "仪表板 Dashboard",
+      "OneDrive/SharePoint 文件同步"
+    ],
+    "answer": "A",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“租户设置”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“租户设置”相关配置。"
+  },
+  {
+    "id": 151,
+    "module": "管理与安全",
+    "skill": "OneDrive/SharePoint 文件同步",
+    "difficulty": "高级",
+    "question": "PBIX 存在 OneDrive/SharePoint，Service 可同步文件更改，这属于？",
+    "options": [
+      "发布 Power BI App",
+      "OneDrive/SharePoint 文件同步",
+      "不适合，可能公开到互联网",
+      "数据源凭据"
+    ],
+    "answer": "B",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“OneDrive/SharePoint 文件同步”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“OneDrive/SharePoint 文件同步”相关配置。"
+  },
+  {
+    "id": 152,
+    "module": "管理与安全",
+    "skill": "大型语义模型存储格式",
+    "difficulty": "中级",
+    "question": "在容量中处理非常大的语义模型，可考虑？",
+    "options": [
+      "Certified 或 Promoted",
+      "影响分析",
+      "大型语义模型存储格式",
+      "订阅"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“大型语义模型存储格式”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“大型语义模型存储格式”相关配置。"
+  },
+  {
+    "id": 153,
+    "module": "管理与安全",
+    "skill": "刷新历史记录",
+    "difficulty": "中级",
+    "question": "要查看计划刷新是否成功以及错误详情，应查看？",
+    "options": [
+      "对象级安全 OLS",
+      "数据源凭据",
+      "刷新历史记录",
+      "租户设置"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“刷新历史记录”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“刷新历史记录”相关配置。"
+  },
+  {
+    "id": 154,
+    "module": "管理与安全",
+    "skill": "语义模型 Build 权限",
+    "difficulty": "中级",
+    "question": "用户能打开报表但无法基于模型构建新报表，可能缺少？",
+    "options": [
+      "链接不等于权限",
+      "语义模型 Build 权限",
+      "刷新历史记录",
+      "工作区"
+    ],
+    "answer": "B",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“语义模型 Build 权限”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“语义模型 Build 权限”相关配置。"
+  },
+  {
+    "id": 155,
+    "module": "管理与安全",
+    "skill": "独立工作区和部署管道",
+    "difficulty": "中级",
+    "question": "为了区分开发和生产内容，推荐？",
+    "options": [
+      "不建议生产依赖个人工作区",
+      "订阅",
+      "独立工作区和部署管道",
+      "Certified 或 Promoted"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“独立工作区和部署管道”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“独立工作区和部署管道”相关配置。"
+  },
+  {
+    "id": 156,
+    "module": "管理与安全",
+    "skill": "组织认证流程",
+    "difficulty": "中级",
+    "question": "Certified 认证通常需要什么？",
+    "options": [
+      "Contributor 或 Member",
       "计划刷新",
+      "许可证、容量和权限",
+      "组织认证流程"
+    ],
+    "answer": "D",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“组织认证流程”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“组织认证流程”相关配置。"
+  },
+  {
+    "id": 157,
+    "module": "管理与安全",
+    "skill": "链接不等于权限",
+    "difficulty": "中级",
+    "question": "仅发送报表链接但用户无权限，结果通常是？",
+    "options": [
+      "Certified 或 Promoted",
+      "敏感度标签",
+      "链接不等于权限",
+      "Contributor 或 Member"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“链接不等于权限”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“链接不等于权限”相关配置。"
+  },
+  {
+    "id": 158,
+    "module": "管理与安全",
+    "skill": "容量可能允许免费用户消费但仍需权限",
+    "difficulty": "高级",
+    "question": "内容位于 Premium/Fabric 容量时，对免费用户访问可能有什么影响？",
+    "options": [
+      "容量可能允许免费用户消费但仍需权限",
+      "以角色身份查看 View as",
+      "组织策略、许可、权限和数据安全",
+      "工作区"
+    ],
+    "answer": "A",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“容量可能允许免费用户消费但仍需权限”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“容量可能允许免费用户消费但仍需权限”相关配置。"
+  },
+  {
+    "id": 159,
+    "module": "管理与安全",
+    "skill": "组织策略、许可、权限和数据安全",
+    "difficulty": "中级",
+    "question": "与外部来宾共享报表时，首先应考虑？",
+    "options": [
+      "审计日志或活动日志",
+      "不适合，可能公开到互联网",
+      "组织策略、许可、权限和数据安全",
+      "共享语义模型"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“组织策略、许可、权限和数据安全”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“组织策略、许可、权限和数据安全”相关配置。"
+  },
+  {
+    "id": 160,
+    "module": "管理与安全",
+    "skill": "不建议生产依赖个人工作区",
+    "difficulty": "中级",
+    "question": "正式团队协作和生产分发不建议依赖什么？",
+    "options": [
+      "网关服务和数据源映射",
+      "部署管道",
+      "不建议生产依赖个人工作区",
+      "敏感度标签"
+    ],
+    "answer": "C",
+    "explanation": "该题考查 Power BI Service 管理与安全中的“不建议生产依赖个人工作区”。重点是权限、分发、刷新和治理。",
+    "practice": "在 Service 中找到或模拟“不建议生产依赖个人工作区”相关配置。"
+  },
+  {
+    "id": 161,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "端到端财务驾驶舱：本地SQL每日刷新、区域权限、指标统一，最合理组合是？",
+    "options": [
+      "每人一个 PBIX + 邮件发送",
+      "Publish to web + 手工刷新",
+      "网关 + 共享语义模型 + RLS + App 分发",
+      "只用页面筛选器"
+    ],
+    "answer": "C",
+    "explanation": "该场景同时涉及刷新、安全、语义模型治理和分发。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 162,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "DirectQuery 报表很慢，优先排查顺序更合理的是？",
+    "options": [
+      "先复制更多页面",
+      "性能分析器、源查询、视觉数量和模型设计",
+      "先开启所有双向关系",
+      "先改主题颜色"
+    ],
+    "answer": "B",
+    "explanation": "DirectQuery 性能受源系统、DAX、视觉数量和模型影响。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 163,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "销售经理换区频繁，仍需自动看到新区域数据，最适合？",
+    "options": [
+      "只隐藏区域列",
+      "只用页面筛选器",
+      "每次复制一个报表",
+      "动态 RLS + 用户区域映射表"
+    ],
+    "answer": "D",
+    "explanation": "动态 RLS 通过映射表维护权限，适合组织变化。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 164,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "销售事实和预算事实粒度不同，报表要比较实际与预算，应？",
+    "options": [
+      "把预算复制到每一条订单",
+      "共享日期、产品等维度，不直接事实表互连",
+      "事实表直接多对多",
+      "删除预算表"
+    ],
+    "answer": "B",
+    "explanation": "不同粒度事实表应通过共享维度对齐。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 165,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "YTD 结果异常，发现日期表只包含有交易日期，最可能原因？",
+    "options": [
+      "日期表不连续",
+      "字段名称太短",
+      "没有发布 App",
+      "卡片颜色错误"
+    ],
+    "answer": "A",
+    "explanation": "时间智能要求完整连续日期表。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 166,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "客户合并匹配率低，发现编码有空格、大小写和不可打印字符，应先？",
+    "options": [
+      "清洗标准化匹配键",
+      "发布应用",
+      "隐藏编码列",
+      "强制多对多关系"
+    ],
+    "answer": "A",
+    "explanation": "合并前应标准化键字段。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 167,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "各部门复制模型导致口径不一致，最佳治理方向？",
+    "options": [
+      "鼓励每人复制",
+      "只发 Excel 截图",
+      "全部发布到 Web",
+      "建设共享认证语义模型"
+    ],
+    "answer": "D",
+    "explanation": "共享认证语义模型统一口径并提升可信度。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 168,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "管理层手机查看首页，最重要的是？",
+    "options": [
+      "只提供 PBIX",
+      "放入所有明细列",
+      "使用大量小字体表格",
+      "移动布局与关键 KPI 优先"
+    ],
+    "answer": "D",
+    "explanation": "移动端需要专门布局和信息优先级。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 169,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "利润率总计不等于各行利润率简单平均，通常原因是？",
+    "options": [
+      "度量在总计上下文重新计算",
+      "必须用计算列",
+      "视觉对象坏了",
+      "Power BI 算错"
+    ],
+    "answer": "A",
+    "explanation": "度量值在每个筛选上下文独立计算。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 170,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "用户能打开 App 但某些报表不可见，可能应检查？",
+    "options": [
+      "月份格式",
+      "列分布",
+      "Power Query 排序",
+      "App 受众和权限配置"
+    ],
+    "answer": "D",
+    "explanation": "App 受众控制不同用户可见内容。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 171,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "计划刷新失败但 Desktop 本地可刷新，可能原因？",
+    "options": [
+      "视觉对象太少",
+      "Service 凭据或网关配置问题",
+      "没有书签",
+      "报表主题不一致"
+    ],
+    "answer": "B",
+    "explanation": "Service 刷新环境与 Desktop 不同，需要凭据和网关。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 172,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "模型文件过大，发现大量不参与分析的文本备注列，应？",
+    "options": [
+      "开启更多双向关系",
+      "删除无用高基数字符串列",
+      "增加切片器",
+      "转成 FORMAT 文本"
+    ],
+    "answer": "B",
+    "explanation": "高基数字符串列会显著增加模型大小。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 173,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "用户可查看汇总但不应导出明细，应该关注？",
+    "options": [
+      "只改标题",
+      "只改视觉颜色",
+      "只开启 Drill down",
+      "导出设置、权限和租户策略"
+    ],
+    "answer": "D",
+    "explanation": "导出能力受多个层级设置控制。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 174,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "生产数据源与测试数据源不同，使用部署管道时应配置？",
+    "options": [
+      "小倍数",
+      "条件格式",
+      "部署规则",
+      "焦点模式"
+    ],
+    "answer": "C",
+    "explanation": "部署规则可替换参数或数据源。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 175,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "业务问销售下降由哪些地区产品造成，最合适起点？",
+    "options": [
+      "分解树或关键影响因素",
+      "仅 RLS",
+      "仅卡片图",
+      "仅数据源设置"
+    ],
+    "answer": "A",
+    "explanation": "这些视觉对象适合探索驱动因素。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 176,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "用户经常误解当前筛选条件，改进方式？",
+    "options": [
+      "动态标题和筛选说明",
+      "只发截图",
+      "隐藏所有切片器",
+      "删除标题"
+    ],
+    "answer": "A",
+    "explanation": "动态文本能提升上下文可解释性。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
+  },
+  {
+    "id": 177,
+    "module": "综合场景模拟",
+    "skill": "综合判断",
+    "difficulty": "高级",
+    "question": "合并两个不同隐私级别数据源时刷新受阻，应该检查？",
+    "options": [
+      "隐私级别与数据组合设置",
+      "卡片格式",
       "页面导航",
-      "替代文本",
-      "视觉排序"
+      "移动布局"
     ],
     "answer": "A",
-    "explanation": "应优先选择 计划刷新。Import模式需要刷新以获取源数据变化。",
-    "practice": "设置每日刷新。"
+    "explanation": "隐私设置会影响跨源合并和刷新。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
   },
   {
-    "id": 241,
+    "id": 178,
     "module": "综合场景模拟",
-    "skill": "时间智能DAX",
+    "skill": "综合判断",
     "difficulty": "高级",
-    "question": "综合案例1：企业希望围绕“时间智能DAX”解决实际业务问题。考试中最应该采用的答题思路是？",
+    "question": "PL-300 场景题最应避免的刷题方式是？",
     "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的时间智能DAX方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
+      "围绕技能域练实操",
+      "用官方指南查缺补漏",
+      "只背选项不理解业务场景",
+      "错题复盘"
     ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟时间智能DAX场景，写下为什么选择该方案。"
+    "answer": "C",
+    "explanation": "考试强调角色技能和场景判断，而非纯记忆。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
   },
   {
-    "id": 242,
+    "id": 179,
     "module": "综合场景模拟",
-    "skill": "App分发",
+    "skill": "综合判断",
     "difficulty": "高级",
-    "question": "综合案例2：企业希望围绕“App分发”解决实际业务问题。考试中最应该采用的答题思路是？",
+    "question": "事实表日期列存在未来日期和空值，时间趋势异常，应先？",
     "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的App分发方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
+      "在图表中隐藏异常",
+      "改主题颜色",
+      "发布 App",
+      "在 Power Query 中剖析并清洗日期列"
     ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟App分发场景，写下为什么选择该方案。"
+    "answer": "D",
+    "explanation": "数据质量问题应在数据准备阶段解决。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
   },
   {
-    "id": 243,
+    "id": 180,
     "module": "综合场景模拟",
-    "skill": "App分发",
+    "skill": "综合判断",
     "difficulty": "高级",
-    "question": "综合案例3：企业希望围绕“App分发”解决实际业务问题。考试中最应该采用的答题思路是？",
+    "question": "业务用户只消费报表、不参与编辑，最佳授权通常是？",
     "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的App分发方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
+      "通过 App 或 Viewer 权限分发",
+      "给所有人 Admin",
+      "Publish to web",
+      "发送 PBIX"
     ],
     "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟App分发场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 244,
-    "module": "综合场景模拟",
-    "skill": "Power Query清洗",
-    "difficulty": "高级",
-    "question": "综合案例4：企业希望围绕“Power Query清洗”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的Power Query清洗方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟Power Query清洗场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 245,
-    "module": "综合场景模拟",
-    "skill": "App分发",
-    "difficulty": "高级",
-    "question": "综合案例5：企业希望围绕“App分发”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的App分发方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟App分发场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 246,
-    "module": "综合场景模拟",
-    "skill": "星型模型",
-    "difficulty": "高级",
-    "question": "综合案例6：企业希望围绕“星型模型”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的星型模型方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟星型模型场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 247,
-    "module": "综合场景模拟",
-    "skill": "App分发",
-    "difficulty": "高级",
-    "question": "综合案例7：企业希望围绕“App分发”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的App分发方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟App分发场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 248,
-    "module": "综合场景模拟",
-    "skill": "查询折叠",
-    "difficulty": "高级",
-    "question": "综合案例8：企业希望围绕“查询折叠”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的查询折叠方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟查询折叠场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 249,
-    "module": "综合场景模拟",
-    "skill": "字段参数",
-    "difficulty": "高级",
-    "question": "综合案例9：企业希望围绕“字段参数”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的字段参数方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟字段参数场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 250,
-    "module": "综合场景模拟",
-    "skill": "字段参数",
-    "difficulty": "高级",
-    "question": "综合案例10：企业希望围绕“字段参数”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的字段参数方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟字段参数场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 251,
-    "module": "综合场景模拟",
-    "skill": "星型模型",
-    "difficulty": "高级",
-    "question": "综合案例11：企业希望围绕“星型模型”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的星型模型方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟星型模型场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 252,
-    "module": "综合场景模拟",
-    "skill": "增量刷新",
-    "difficulty": "高级",
-    "question": "综合案例12：企业希望围绕“增量刷新”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的增量刷新方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟增量刷新场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 253,
-    "module": "综合场景模拟",
-    "skill": "App分发",
-    "difficulty": "高级",
-    "question": "综合案例13：企业希望围绕“App分发”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的App分发方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟App分发场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 254,
-    "module": "综合场景模拟",
-    "skill": "查询折叠",
-    "difficulty": "高级",
-    "question": "综合案例14：企业希望围绕“查询折叠”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的查询折叠方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟查询折叠场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 255,
-    "module": "综合场景模拟",
-    "skill": "共享语义模型",
-    "difficulty": "高级",
-    "question": "综合案例15：企业希望围绕“共享语义模型”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的共享语义模型方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟共享语义模型场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 256,
-    "module": "综合场景模拟",
-    "skill": "报表性能",
-    "difficulty": "高级",
-    "question": "综合案例16：企业希望围绕“报表性能”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的报表性能方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟报表性能场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 257,
-    "module": "综合场景模拟",
-    "skill": "查询折叠",
-    "difficulty": "高级",
-    "question": "综合案例17：企业希望围绕“查询折叠”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的查询折叠方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟查询折叠场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 258,
-    "module": "综合场景模拟",
-    "skill": "Power Query清洗",
-    "difficulty": "高级",
-    "question": "综合案例18：企业希望围绕“Power Query清洗”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的Power Query清洗方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟Power Query清洗场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 259,
-    "module": "综合场景模拟",
-    "skill": "Power Query清洗",
-    "difficulty": "高级",
-    "question": "综合案例19：企业希望围绕“Power Query清洗”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的Power Query清洗方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟Power Query清洗场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 260,
-    "module": "综合场景模拟",
-    "skill": "时间智能DAX",
-    "difficulty": "高级",
-    "question": "综合案例20：企业希望围绕“时间智能DAX”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的时间智能DAX方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟时间智能DAX场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 261,
-    "module": "综合场景模拟",
-    "skill": "Power Query清洗",
-    "difficulty": "高级",
-    "question": "综合案例21：企业希望围绕“Power Query清洗”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的Power Query清洗方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟Power Query清洗场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 262,
-    "module": "综合场景模拟",
-    "skill": "Power Query清洗",
-    "difficulty": "高级",
-    "question": "综合案例22：企业希望围绕“Power Query清洗”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的Power Query清洗方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟Power Query清洗场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 263,
-    "module": "综合场景模拟",
-    "skill": "报表性能",
-    "difficulty": "高级",
-    "question": "综合案例23：企业希望围绕“报表性能”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的报表性能方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟报表性能场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 264,
-    "module": "综合场景模拟",
-    "skill": "报表性能",
-    "difficulty": "高级",
-    "question": "综合案例24：企业希望围绕“报表性能”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的报表性能方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟报表性能场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 265,
-    "module": "综合场景模拟",
-    "skill": "星型模型",
-    "difficulty": "高级",
-    "question": "综合案例25：企业希望围绕“星型模型”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的星型模型方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟星型模型场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 266,
-    "module": "综合场景模拟",
-    "skill": "动态RLS",
-    "difficulty": "高级",
-    "question": "综合案例26：企业希望围绕“动态RLS”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的动态RLS方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟动态RLS场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 267,
-    "module": "综合场景模拟",
-    "skill": "报表性能",
-    "difficulty": "高级",
-    "question": "综合案例27：企业希望围绕“报表性能”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的报表性能方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟报表性能场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 268,
-    "module": "综合场景模拟",
-    "skill": "动态RLS",
-    "difficulty": "高级",
-    "question": "综合案例28：企业希望围绕“动态RLS”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的动态RLS方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟动态RLS场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 269,
-    "module": "综合场景模拟",
-    "skill": "增量刷新",
-    "difficulty": "高级",
-    "question": "综合案例29：企业希望围绕“增量刷新”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的增量刷新方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟增量刷新场景，写下为什么选择该方案。"
-  },
-  {
-    "id": 270,
-    "module": "综合场景模拟",
-    "skill": "报表性能",
-    "difficulty": "高级",
-    "question": "综合案例30：企业希望围绕“报表性能”解决实际业务问题。考试中最应该采用的答题思路是？",
-    "options": [
-      "先识别业务目标、数据粒度、权限和刷新要求，再选择合适的报表性能方案",
-      "优先记忆按钮位置，不需要理解场景",
-      "所有问题都用双向关系解决",
-      "所有报表都发布到Web以便访问"
-    ],
-    "answer": "A",
-    "explanation": "PL-300偏场景应用，核心是把业务目标映射到Power Query、模型、DAX、可视化和Service治理能力。",
-    "practice": "用一个小数据集模拟报表性能场景，写下为什么选择该方案。"
+    "explanation": "消费者应最小权限访问。",
+    "practice": "将该场景画成“数据源→模型→报表→分发→权限”的流程图。"
   }
 ]
