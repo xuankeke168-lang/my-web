@@ -70,6 +70,33 @@ export default function Academy() {
                 </span>
               </div>
             </Link>
+
+            {/* Power BI PL-300 互动题库 */}
+            <Link
+              href="/academy/pl300-quiz"
+              className="group p-6 bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-2xl text-white hover:shadow-xl transition-all"
+            >
+              <div className="text-3xl mb-3">🎯</div>
+              <h3 className="text-xl font-bold mb-2">
+                Power BI PL-300 互动题库
+              </h3>
+              <p className="text-indigo-100 text-sm mb-4">
+                270 道考点训练题 · 5 大模块 · 章节/随机/错题/收藏四模式 ·
+                本机进度持久化
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs">
+                <span className="px-2 py-1 bg-white/20 rounded-full">
+                  270道题
+                </span>
+                <span className="px-2 py-1 bg-white/20 rounded-full">
+                  5大模块
+                </span>
+                <span className="px-2 py-1 bg-white/20 rounded-full">
+                  错题本
+                </span>
+                <span className="px-2 py-1 bg-white/20 rounded-full">收藏</span>
+              </div>
+            </Link>
           </div>
         </div>
 
