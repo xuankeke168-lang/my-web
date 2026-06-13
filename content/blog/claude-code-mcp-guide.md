@@ -1,7 +1,7 @@
 ---
 title: 'Claude Code MCP 入门指南：给AI装上插件，能力翻倍'
 date: '2026-04-25'
-category: 'AI编程工具'
+category: 工具
 tags: ['Claude Code', 'AI编程', 'MCP', '插件扩展']
 ---
 

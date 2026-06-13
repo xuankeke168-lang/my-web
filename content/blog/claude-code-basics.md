@@ -1,7 +1,7 @@
 ---
 title: 'Claude Code 交互模式完全指南：天天都在用的干货'
 date: '2026-04-25'
-category: 'AI编程工具'
+category: 工具
 tags: ['Claude Code', 'AI编程', '交互模式', 'Slash命令']
 ---
 

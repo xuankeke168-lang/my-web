@@ -1,7 +1,7 @@
 ---
 title: '2024 年值得关注的前端趋势'
 date: '2024-01-05'
-category: '技术观察'
+category: 感悟
 tags: ['趋势', '技术', '展望']
 cover: '/blog/covers/frontend-trends-2024.jpg'
 ---

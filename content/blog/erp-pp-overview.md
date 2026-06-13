@@ -1,7 +1,7 @@
 ---
 title: '油田ERP生产计划模块：搞懂PP模块核心概念'
 date: '2026-04-26'
-category: 'ERP深化应用'
+category: 学习
 tags: ['油田ERP', '生产计划', 'PP模块', '配产计划', 'MRP', '产量分析']
 ---
 

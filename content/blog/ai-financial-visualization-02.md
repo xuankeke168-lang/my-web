@@ -1,7 +1,7 @@
 ---
 title: 'AI财务工具选型避坑指南：500万砸进去，为什么打水漂了？'
 date: '2026-05-13'
-category: 'AI财务'
+category: 案例
 tags: ['工具选型', 'BI系统', '帆软', 'Power BI', 'SAP', '数据治理']
 excerpt: '我们买了帆软，又上了Power BI，还接了SAP的报表模块。现在财务用3套系统，做1份报表。'
 ---

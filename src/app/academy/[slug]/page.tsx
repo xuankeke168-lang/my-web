@@ -88,9 +88,9 @@ export default async function AcademyPost({
         {/* Back button */}
         <Link
           href="/academy"
-          className="inline-flex items-center text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8"
+          className="inline-flex items-center text-sm text-[var(--zinc-soft)] hover:text-[var(--ink)] link-underline mb-8"
         >
-          ← 返回AI学院
+          ← 回到成长记录
         </Link>
 
         {/* Article */}

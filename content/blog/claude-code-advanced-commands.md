@@ -1,7 +1,7 @@
 ---
 title: 'Claude Code 高效使用指南：这些技巧让我效率翻倍'
 date: '2026-04-25'
-category: 'AI编程工具'
+category: 工具
 tags: ['Claude Code', 'AI编程', '效率技巧', '进阶']
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: '如何从零开始学习前端开发'
 date: '2024-01-15'
-category: '技术教程'
+category: 学习
 tags: ['前端', '学习路线', '新手指南']
 cover: '/blog/covers/frontend-learning.jpg'
 ---

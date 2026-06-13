@@ -1,7 +1,7 @@
 ---
 title: '油田ERP财务会计模块：搞懂FI模块核心概念'
 date: '2026-04-26'
-category: 'ERP深化应用'
+category: 学习
 tags: ['油田ERP', '财务会计', 'FI模块', '统驭科目', '成本归集']
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: '设计师与开发者如何高效协作'
 date: '2024-01-10'
-category: '职场心得'
+category: 学习
 tags: ['协作', '设计', '沟通']
 cover: '/blog/covers/design-dev-collab.jpg'
 ---

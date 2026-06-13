@@ -1,7 +1,7 @@
 ---
 title: '用Claude Code做需求分析：如何正确提问才能一次搞定'
 date: '2026-04-25'
-category: 'AI编程工具'
+category: 工具
 tags: ['Claude Code', 'AI编程', '需求分析', '提问技巧']
 ---
 

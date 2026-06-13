@@ -7,14 +7,17 @@ export default async function Courses() {
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
-      <div className="max-w-5xl mx-auto px-6 py-12">
+      <div className="max-w-5xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-zinc-900 dark:text-white mb-4">
-            课程推荐
+          <div className="font-mono text-xs text-[var(--zinc-soft)] mb-4">
+            #courses / 学过的课
+          </div>
+          <h1 className="text-4xl font-bold text-[var(--ink)] mb-4 tracking-tight">
+            学过的课
           </h1>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400">
-            精选优质 AI 课程，帮你快速入门，少走弯路
+          <p className="text-lg text-[var(--ink-soft)]">
+            财务老登自己学过、觉得值得的 AI/财务相关课程
           </p>
         </div>
 
@@ -129,10 +132,13 @@ export default async function Courses() {
         )}
 
         {/* Disclaimer */}
-        <div className="mt-12 p-6 bg-zinc-100 dark:bg-zinc-800 rounded-xl">
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            ⚠️
-            以上课程链接为推广链接，我可能会获得一定佣金。作为共学者，我只会推荐自己真正学习过且认为有价值的课程。
+        <div className="mt-12 p-6 border border-[var(--line)]">
+          <p className="text-sm text-[var(--zinc-soft)] font-mono">
+            ⚠ 以上课程链接为推广链接，老登可能会获得佣金。
+            <br />
+            <span className="text-[var(--ink-soft)]">
+              但只推荐自己真学过的、写过的、觉得有价值的。
+            </span>
           </p>
         </div>
       </div>
