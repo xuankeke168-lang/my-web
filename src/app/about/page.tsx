@@ -39,16 +39,28 @@ export default function About() {
             </div>
             <div className="space-y-4 text-base text-[var(--ink-soft)] leading-relaxed">
               <p>
-                10+ 年企业财务管理经验，做过 SAP ERP
-                实施、财务共享、预算系统、管理会计报表。
+                <strong className="text-[var(--ink)]">10+ 年</strong>
+                企业财务管理经验，主攻四条线：
+                <strong className="text-[var(--ink)]">
+                  预算编制 · 成本核算 · 经营分析 · 数智化转型
+                </strong>
+                。
               </p>
               <p>
-                这些年亲历的事：把单井成本算明白、把 200
+                这些年亲历的事：把单井成本算到能进决策会议、把
+                <strong className="text-[var(--ink)]"> 200
                 张没人看的报表砍到 20
-                张、把月报从熬夜拼材料变成 AI 出初稿。
+                张</strong>
+                能用的、把月报从熬夜拼材料变成
+                <strong className="text-[var(--amber)]"> AI 出初稿</strong>
+                。
               </p>
               <p>
-                现在想做的：把"今天又进步了一点点"的过程记录下来。
+                现在想做的：把这些
+                <em className="text-[var(--ink)] not-italic font-medium">
+                  "把活儿做对、做少、做巧"
+                </em>
+                的过程，一笔一笔写下来。
               </p>
             </div>
           </section>
